@@ -1,3 +1,11 @@
-//Title Page
+import React from 'react';
 
-// here will be the title
+const titlepage = () => {
+    return (
+        <div>
+            <h1>Title Page Placeholder</h1>
+        </div>
+    )
+}
+
+export default titlepage;
