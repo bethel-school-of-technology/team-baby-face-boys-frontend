@@ -1,11 +1,11 @@
 import React from 'react';
 
-const registrationpage = () => {
+const Registrationpage = () => {
     return (
-        <>
+        <section>
             <h1>Registration Page Placeholder</h1>
-        </>
-    )
-}
+        </section>
+    );
+};
 
-export default registrationpage;
+export default Registrationpage;
