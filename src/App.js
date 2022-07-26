@@ -1,36 +1,31 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import footer from "./components/footer";
-import header from "./components/header";
-import titlepage from "./screens/titlepage";
-import signuplogin from './screens/signuplogin';
-import registrationpage from './screens/registrationpage';
-import profilepage from './screens/profilepage';
-import users12 from './screens/users12';
-import users13 from './screens/users13';
-import forum from './screens/forum';
-import leaderboard from './screens/leaderboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Forum from './screens/forum';
+import Leaderboard from './screens/leaderboard';
+import Profilepage from './screens/profilepage';
+import Registrationpage from './screens/registrationpage';
+import Signuplogin from './screens/signuplogin';
+import Titlepage from './screens/titlepage';
+import Preteen from './screens/users12';
+import Teen from './screens/users13';
 
 function App() {
-  // // return (
-  // //   <>
-  // //     <header />
-  // //     <Router>
-  // //       <Routes>
-  // //         <Route path="/" element={<titlepage />} />
-  // //         <Route path="/login" element={<signuplogin/>} />
-  // //         <Route path="/registration" element={<registrationpage/>} />
-  // //         <Route path="/profile" element={<profilepage/>} />
-  // //         <Route path="/users12" element={<users12/>} />
-  // //         <Route path="/users13" element={<users13/>} />
-  // //         <Route path="/forum" element={<forum/>} />
-  // //         <Route path="/leaderboard" element={<leaderboard/>} />
-  // //       </Routes>
-  // //     </Router>
-  // //     <footer />
-  //   </>
-  // );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/profile" element={<Profilepage />} />
+        <Route path="/registration" element={<Registrationpage />} />
+        <Route path="/account" element={<Signuplogin />} />
+        <Route path="/" element={<Titlepage />} />
+        <Route path="/games" element={<Preteen />} />
+        <Route path="/allgames" element={<Teen />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

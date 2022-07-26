@@ -1,12 +1,12 @@
 import React from 'react';
 
-const leaderboard = () => {
+const Leaderboard = () => {
     return (
-        <>
-            <h1>Add Posts Here!</h1>
-        </>
-    )
-}
+        <section>
+            <h1>Leaderboard Page!</h1>
+        </section>
+    );
+};
 
-export default leaderboard;
+export default Leaderboard;
 

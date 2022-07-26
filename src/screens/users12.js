@@ -1,11 +1,11 @@
 import React from 'react';
 
-const users12 = () => {
+const Preteen = () => {
     return (
-        <>
+        <section>
             <h1>Y'all are too young for the good stuff!</h1>
-        </>
-    )
-}
+        </section>
+    );
+};
 
-export default users12;
+export default Preteen;

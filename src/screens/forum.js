@@ -1,11 +1,11 @@
 import React from 'react';
 
-const forum = () => {
+const Forum = () => {
     return (
-        <>
+        <section>
             <h1>Add Posts Here!</h1>
-        </>
-    )
-}
+        </section>
+    );
+};
 
-export default forum;
+export default Forum;
