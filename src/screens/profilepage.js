@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const Profilepage = () => {
     return (
-        <section>
+        <div>
+            <Navbar />
             <h1>Your Profile</h1>
-        </section>
+            <Footer />
+        </div>
     );
 };
 

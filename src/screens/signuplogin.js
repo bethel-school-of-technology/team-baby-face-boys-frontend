@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 const Signuplogin = () => {
     return (
-        <section>
+        <div>
+            <Header />
             <h1>Sign Up/Log in</h1>
-        </section>
+            <Footer />
+        </div>
     )
 }
 
