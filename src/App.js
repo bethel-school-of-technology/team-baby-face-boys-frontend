@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Footer from './components/footer';
+import Header from './components/header';
+
 import Forum from './screens/forum';
 import Leaderboard from './screens/leaderboard';
 import Profilepage from './screens/profilepage';
@@ -10,6 +13,7 @@ import Signuplogin from './screens/signuplogin';
 import Titlepage from './screens/titlepage';
 import Preteen from './screens/users12';
 import Teen from './screens/users13';
+
 
 function App() {
   return (
