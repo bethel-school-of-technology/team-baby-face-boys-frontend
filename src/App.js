@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import Footer from './components/footer';
-import Header from './components/header';
 import axios from "axios";
+
 import Forum from './screens/forum';
 import Leaderboard from './screens/leaderboard';
 import Profilepage from './screens/profilepage';
