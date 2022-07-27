@@ -1,0 +1,16 @@
+div[class*="col"] {
+    border: 3px solid black;
+}
+
+div {
+    background-color: cornflowerblue;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+.bgnd_img {
+    background-color: rgb(38, 57, 92);
+    height: 500px;
+}
