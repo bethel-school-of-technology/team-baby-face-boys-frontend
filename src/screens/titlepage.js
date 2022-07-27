@@ -16,9 +16,11 @@ const Titlepage = () => {
       <div class="row bgnd_img align-items-center">
         <div class="col text-center">
           <h3>Click the button to enter!</h3>
-          <div class="col ">
-            <h1>Title Page Placeholder</h1>
-          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col text-center">
+          <h3>Title page placeholder</h3>
         </div>
       </div>
       <div class="row footer">
