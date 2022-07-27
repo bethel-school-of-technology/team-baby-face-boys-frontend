@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const Leaderboard = () => {
     return (
-        <section>
+        <div>
+            <Navbar />
             <h1>Leaderboard Page!</h1>
-        </section>
+            <Footer />
+        </div>
     );
 };
 

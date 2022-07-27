@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const Preteen = () => {
     return (
-        <section>
+        <div>
+            <Navbar />
             <h1>Y'all are too young for the good stuff!</h1>
-        </section>
+            <Footer />
+        </div>
     );
 };
 
