@@ -4,9 +4,9 @@ import Footer from '../components/footer';
 
 const Teen = () => {
     return (
-        <div>
+        <div class="container">
             <Navbar />
-            <h1>You're finally cool!</h1>
+            <h1>Games List</h1>
             <Footer />
         </div>
     );
