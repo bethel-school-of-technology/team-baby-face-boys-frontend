@@ -28,3 +28,11 @@ Once the grid is designed and working then we can add flair and play around with
 Add post
 forum post
 list of users
+
+
+------------Git Process------------------
+start in master
+git pull origin master
+git merge master (merges git hub master)
+go into branch and follow same commands
+whenever you create a new branch go to main first and then create

@@ -1,3 +1,4 @@
+/* ------------------Global settings------------------ */
 div[class*="col"] {
     border: 0px solid black;
 }
@@ -5,9 +6,10 @@ div[class*="col"] {
 .container {
     border-radius: 30px;
 }
+/* ------------------Global settings------------------ */
 
 .bgnd_img-ttlpg {
-    background-image: url('./Rabbit-Hole.jpg');
+    background-image: url('./images/Rabbit-Hole.jpg');
     height: 750PX;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,12 +18,9 @@ div[class*="col"] {
 }
 
 .car_btn {
+    background-image: url('./images/car-gaf6cfc371_640.png');
     height: 150px;
     width: 300px;
 }
-/* 
-div {
-    background-color: cornflowerblue;
-}
- */
+/* ---------------Title page settings------------------ */
 
