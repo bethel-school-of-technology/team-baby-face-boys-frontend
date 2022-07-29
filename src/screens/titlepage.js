@@ -7,7 +7,6 @@ const Titlepage = () => {
     <div class="container">
       <div class="row">
         <div class="col-sm-8">
-          <Header />
         </div>
         <div class="col-sm-4">
           <h1>Right side icons</h1>
@@ -25,10 +24,11 @@ const Titlepage = () => {
       </div>
       <div class="row footer">
         <div class="col text-center">
-          <Footer />
         </div>
       </div>
     </div>
+          <Header />
+          <Footer />
   );
 };
 
