@@ -1,6 +1,7 @@
 /* ------------------Global settings------------------ */
-div[class*="col"] {
-    border: 0px solid black;
+div[class*="container"] {
+    background-color: hsl(208, 86%, 13%);
+    color:rgb(230, 230, 230);
 }
 
 .container {
@@ -10,7 +11,7 @@ div[class*="col"] {
 
 .bgnd_img-ttlpg {
     background-image: url('./images/Rabbit-Hole.jpg');
-    height: 750PX;
+    height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,6 +20,8 @@ div[class*="col"] {
 
 .car_btn {
     background-image: url('./images/car-gaf6cfc371_640.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 150px;
     width: 300px;
 }
