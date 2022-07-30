@@ -4,9 +4,9 @@ import Footer from '../components/footer';
 
 const Leaderboard = () => {
     return (
-        <div>
+        <div class="container">
             <Navbar />
-            <h1>Leaderboard Page!</h1>
+            <h1>Top Rabbit Leaderboard</h1>
             <Footer />
         </div>
     );
