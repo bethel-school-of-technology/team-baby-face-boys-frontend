@@ -1,16 +1,29 @@
-div[class*="col"] {
-    border: 3px solid black;
+/* ------------------Global settings------------------ */
+div[class*="container"] {
+    background-color: hsl(208, 86%, 13%);
+    color:rgb(230, 230, 230);
 }
 
-div {
-    background-color: cornflowerblue;
+.container {
+    border-radius: 30px;
 }
+/* ------------------Global settings------------------ */
 
-body {
-    background-color: cornflowerblue;
-}
-
-.bgnd_img {
+.bgnd_img-ttlpg {
+    background-image: url('./images/Rabbit-Hole.jpg');
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgb(38, 57, 92);
-    height: 500px;
 }
+
+.car_btn {
+    background-image: url('./images/car-gaf6cfc371_640.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 300px;
+}
+/* ---------------Title page settings------------------ */
+

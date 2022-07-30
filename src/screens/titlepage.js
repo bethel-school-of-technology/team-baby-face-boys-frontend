@@ -4,31 +4,27 @@ import Footer from "../components/footer";
 
 const Titlepage = () => {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <Header />
-        </div>
-        <div class="col-sm-4">
-          <h1>Right side icons</h1>
-        </div>
-      </div>
-      <div class="row bgnd_img align-items-center">
-        <div class="col text-center">
-          <h3>Click the button to enter!</h3>
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col text-center">
-          <h3>Title page placeholder</h3>
-        </div>
-      </div>
-      <div class="row footer">
-        <div class="col text-center">
-          <Footer />
-        </div>
-      </div>
+    <div class="container-fluid  d-flex flex-column">
+    <div class="row">
+      <div class="col-sm p-3 text-center">
+        <Header/>
+      </div>{/* 
+      <div class="col-sm-4 p-3">
+        <p>Right side icons?</p>
+      </div> */}
     </div>
+    <div class="row text-secondary bgnd_img-ttlpg align-items-center ">
+         <div class="col text-center">
+        <h3><strong>Click The Logo To Enter!</strong></h3> <br></br>
+        <div class="car_btn  mx-auto d-block" ></div>
+      </div>
+  </div>
+    <div class="row footer">
+      <div class="col text-center p-3">
+        <Footer/>
+        </div>
+    </div>
+  </div>
   );
 };
 
