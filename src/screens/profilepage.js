@@ -28,7 +28,7 @@ const Profilepage = () => {
         <div>
             <Navbar />
             <div>
-                <h1>Welcome User!</h1>
+                <h1>Welcome, User!</h1>
             </div>
             <div>
                 <h3>Profile Photo Placeholder</h3>
