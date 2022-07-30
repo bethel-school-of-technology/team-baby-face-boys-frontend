@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <h3>Designed & Manufactured by the Baby Faced Boys Construction Crew</h3>
+            <h3>Designed & Manufactured by the Baby Faced Boys Coding Crew</h3>
         </div>
     );
 };
