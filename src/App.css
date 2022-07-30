@@ -35,9 +35,9 @@ div[class*="container"] {
     height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;/* 
     filter: blur(10px);
-    background-color: rgb(38, 57, 92);
-    animation: blur_fadeout 3s 1;
+    animation: blur_fadeout 3s 1; */
 
 }
 
