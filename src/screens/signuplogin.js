@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import { Link } from 'react-router-dom';
 
 const Signuplogin = () => {
     const {
@@ -31,7 +32,7 @@ const Signuplogin = () => {
                 <input type="gamerID" {...register("gamerID", { required: true })} />
                 {errors.email && <span >*Email* is mandatory </span>}<br></br>
                 <input type="password" {...register("password")} /><br></br>
-                <input type={"submit"} />
+                <Link to= '/profile'><input type={"submit"} /></Link>
             </form>
             <Footer />
         </div>
