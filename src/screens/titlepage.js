@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 const Titlepage = () => {
   return (
@@ -16,7 +17,7 @@ const Titlepage = () => {
     <div class="row text-secondary bgnd_img-ttlpg align-items-center ">
          <div class="col text-center">
         <h3><strong>Click The Logo To Enter!</strong></h3> <br></br>
-        <div class="car_btn  mx-auto d-block" ></div>
+        <Link to='/account'><div class="car_btn  mx-auto d-block" ></div></Link>
       </div>
   </div>
     <div class="row footer">

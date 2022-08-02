@@ -6,6 +6,8 @@ import Footer from '../components/footer';
 const Registrationpage = () => {
     const { register, handleSubmit } = useForm();
     const handleRegistration = (data) => console.log(data);
+
+
     return (
         <div>
             <Header />
@@ -17,23 +19,23 @@ const Registrationpage = () => {
                     <form onSubmit={handleSubmit(handleRegistration)}>
                         <div>
                             <label>Full Name: </label>
-                            <input name="fullName" {...register('fullName')} />
+                            <input name="fullName" {...register('fullName', { required: true })} />
                         </div>
                         <div>
                             <label>Gamer ID: </label>
-                            <input name="gamerID" {...register('gamerID')} />
+                            <input name="gamerID" {...register('gamerID', { required: true })} />
                         </div>
                         <div>
                             <label>Date of Birth: </label>
-                            <input name="DOB" {...register('DOB')} />
+                            <input name="DOB" {...register('DOB', { required: true })} />
                         </div>
                         <div>
                             <label>Email: </label>
-                            <input type="email" name="email" {...register('email')} />
+                            <input type="email" name="email" {...register('email', { required: true })} />
                         </div>
                         <div>
                             <label>Password:</label>
-                            <input type="password" name="password" {...register('password')} />
+                            <input type="password" name="password" {...register('password', { required: true })} />
                         </div>
                         <button>Submit</button>
                     </form>
