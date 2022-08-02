@@ -46,3 +46,9 @@ div[class*="container"] {
   to {filter: blur(10px);}
 }
 /* ---------------users12 page settings------------------ */
+
+.game_tile {
+    background-color: yellowgreen;
+    height: 200px;
+    width: 200px;
+}
