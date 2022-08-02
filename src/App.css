@@ -49,6 +49,6 @@ div[class*="container"] {
 
 .game_tile {
     background-color: yellowgreen;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 275px;
 }
