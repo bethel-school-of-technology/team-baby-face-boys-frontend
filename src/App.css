@@ -27,3 +27,22 @@ div[class*="container"] {
 }
 /* ---------------Title page settings------------------ */
 
+
+/* ---------------users12 page settings------------------ */
+
+.bgnd_img-12under {
+    background-image: url('./images/12underb_kgnd.jpg');
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/* 
+    filter: blur(10px);
+    animation: blur_fadeout 3s 1; */
+
+}
+
+@keyframes blur_fadeout {
+  from {filter: blur(0px);}
+  to {filter: blur(10px);}
+}
+/* ---------------users12 page settings------------------ */
