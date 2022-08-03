@@ -9,6 +9,7 @@ div[class*="container"] {
     border-radius: 30px;
 }
 
+
 /* ---------------Title page settings------------------ */
 
 .bgnd_img-ttlpg {
@@ -30,6 +31,18 @@ div[class*="container"] {
 
 
 /* ---------------Games page settings------------------ */
+
+.bgnd_img-leaderboard {
+    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+    height: 1000px;
+    overflow-x: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/* 
+    filter: blur(10px);
+    animation: blur_fadeout 3s 1; */
+
+}
 
 .bgnd_img-12under {
     background-image: url('./images/page_bkgnds/12underb_kgnd.jpg');
@@ -55,4 +68,36 @@ div[class*="container"] {
 .img_grid {display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+/* ---------------Leaderboard settings------------------ */
+
+/* .scoreboard {
+    background-color: rgba(196, 227, 255, 0.232);
+    height:50vh;
+    overflow-y: scroll;
+} */
+
+.scoreboard {
+    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+    height: 1000px;
+    overflow-x: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+th {
+    color: rgb(255, 0, 230);
+}
+
+.table {
+    color: chartreuse;
+    overflow-x: scroll;
+}
+
+.table_holder {
+    background-color: rgba(6, 15, 14, 0.628);
+    height: 70vh;
+    width: 100vw;
 }
