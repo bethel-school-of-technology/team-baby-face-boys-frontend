@@ -8,9 +8,9 @@ const Blog = () => {
     let [items, setItems] = useState([]);
     let [inputTxt, setInputTxt] = useState("");
 
-    const changeTitle = (e) => {
+/*     const changeTitle = (e) => {
         setInputTxt(e.target.value)
-    }
+    } */
 
     const changeText = (e) => {
         setInputTxt(e.target.value)
@@ -26,18 +26,22 @@ const Blog = () => {
         setItems(newItems)
     }
 
-    const onComplete = () => {
+    const onComplete = (complete, idx) => {
+        let updatedItems = [...items];
 
+        updatedItems[idx].completed = complete
+
+        setItems(updatedItems)
     }
 
     return (
         <div>
             <label>Post Title: </label>
-            <Input onChange={changeTitle} onClick={submitInput} title={'Add Post'} />
+           {/*  <Input onChange={changeTitle} onClick={submitInput} title={'Add Post'} /> */}
             <label>Post Body : </label>
             <Input onChange={changeText} onClick={submitInput} title={'Add Post'} />
             <h4>Forum Posts:</h4>
-            <List items={items} />
+            <List items={items} onComplete={onComplete} />
         </div>
     );
 
