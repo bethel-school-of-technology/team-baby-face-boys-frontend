@@ -18,11 +18,20 @@ const Preteen = () => {
              
         <div className="row">
           <div className="col" >
-          <div className="game_tile rounded float-left mt-5 mx-3 "></div>
-          <div className="game_tile rounded float-left mt-5 mx-3 "></div>
-          <div className="game_tile rounded float-left mt-5 mx-3 "></div>
-          <div className="game_tile rounded float-left mt-5 mx-3 "></div>
-          <div className="game_tile rounded float-left mt-5 mx-3 "></div>
+          {/* <div className="game_snap_1 rounded float-left mt-5 mx-3 "></div> */}
+          <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/breakout.jpg') } />
+          <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/cnnct4.jpg') } />
+          <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/memory.jpg') } />
+          <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/rockpaperscissors.jpg') } />
+          <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/whackamole.jpg') } />
+          
+          
+          {/* 
+          <div className="game_snap_2 rounded float-left mt-5 mx-3 "></div>
+          <div className="game_snap_3 rounded float-left mt-5 mx-3 "></div>
+          <div className="game_snap_4 rounded float-left mt-5 mx-3 "></div>
+          <div className="game_snap_5 rounded float-left mt-5 mx-3 "></div> */}
+          
           </div>
         </div>
       </div>

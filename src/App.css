@@ -7,6 +7,15 @@ div[class*="container"] {
 .container {
     border-radius: 30px;
 }
+
+/* .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(208, 86%, 13%);
+    color:rgb(230, 230, 230);
+    text-align: center;
+  } */
 /* ------------------Global settings------------------ */
 
 .bgnd_img-ttlpg {
@@ -28,7 +37,7 @@ div[class*="container"] {
 /* ---------------Title page settings------------------ */
 
 
-/* ---------------users12 page settings------------------ */
+/* ---------------Games page settings------------------ */
 
 .bgnd_img-12under {
     background-image: url('./images/12underb_kgnd.jpg');
@@ -47,8 +56,9 @@ div[class*="container"] {
   to {filter: blur(10px);}
 }
 
-.game_tile {
-    background-color: yellowgreen;
-    height: 300px;
-    width: 275px;
+
+
+.game_thumb {
+    max-height: 250px;
+
 }
