@@ -2,6 +2,7 @@
 div[class*="container"] {
     background-color: hsl(208, 86%, 13%);
     color:rgb(230, 230, 230);
+    height: 100vh;
 }
 
 .container {
