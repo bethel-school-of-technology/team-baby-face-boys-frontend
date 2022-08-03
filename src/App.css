@@ -9,18 +9,10 @@ div[class*="container"] {
     border-radius: 30px;
 }
 
-/* .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: hsl(208, 86%, 13%);
-    color:rgb(230, 230, 230);
-    text-align: center;
-  } */
-/* ------------------Global settings------------------ */
+/* ---------------Title page settings------------------ */
 
 .bgnd_img-ttlpg {
-    background-image: url('./images/Rabbit-Hole.jpg');
+    background-image: url('./images/page_bkgnds/Rabbit-Hole.jpg');
     height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,13 +27,12 @@ div[class*="container"] {
     height: 150px;
     width: 300px;
 }
-/* ---------------Title page settings------------------ */
 
 
 /* ---------------Games page settings------------------ */
 
 .bgnd_img-12under {
-    background-image: url('./images/12underb_kgnd.jpg');
+    background-image: url('./images/page_bkgnds/12underb_kgnd.jpg');
     height: 1000px;
     overflow-x: scroll;
     background-position: center;
@@ -57,9 +48,11 @@ div[class*="container"] {
   to {filter: blur(10px);}
 }
 
-
-
 .game_thumb {
     max-height: 250px;
+}
 
+.img_grid {display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
