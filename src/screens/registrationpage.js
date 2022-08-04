@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
+import Navbar from '../components/navbar';
 
 const Registrationpage = () => {
 
@@ -50,7 +51,7 @@ const Registrationpage = () => {
 
     return (
         <div>
-            <Header />
+            <Navbar />
             <div>
                 <div id="container">
                     <h4>Photo Placeholder</h4>
