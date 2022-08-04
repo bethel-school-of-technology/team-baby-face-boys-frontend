@@ -17,7 +17,7 @@ const Leaderboard = () => {
       <tr>
         <th>Username</th>
         <th>Game</th>
-        <th>Hi score</th>
+        <th>High score</th>
       </tr>
     </thead>
     <tbody>
