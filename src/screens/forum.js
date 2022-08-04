@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Forum = () => {
     return (
-        <div class="container">
+        <div class="container  bg-primary">
             <Navbar />
             <h1>Rabbit Water Cooler</h1>
             <h4>Create Post:</h4>
