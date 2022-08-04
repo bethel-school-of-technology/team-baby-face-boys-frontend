@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../components/navbar';
 
 const Signuplogin = () => {
 
@@ -71,7 +72,7 @@ const Signuplogin = () => {
 
     return (
         <div>
-            <Header />
+            <Navbar />
             <h4 className="title">Login Form</h4>
 
             <form className="Login" onSubmit={handleSubmit}>

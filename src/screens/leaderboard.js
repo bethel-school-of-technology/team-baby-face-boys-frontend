@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 const Leaderboard = () => {
   return (
-    <div className="container-fluid  d-flex flex-column">
+    <div className="container-fluid  bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Navbar />
@@ -17,7 +17,7 @@ const Leaderboard = () => {
       <tr>
         <th>Username</th>
         <th>Game</th>
-        <th>Hi score</th>
+        <th>High score</th>
       </tr>
     </thead>
     <tbody>
@@ -39,7 +39,7 @@ const Leaderboard = () => {
       <tr>
         <td>huzzahmeow</td>
         <td>Connect 4</td>
-        <td>Fifty Straight Wins!</td>
+        <td>50</td>
       </tr>
     </tbody>
   </table></div>

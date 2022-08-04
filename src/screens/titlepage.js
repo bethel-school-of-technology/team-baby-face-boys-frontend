@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Titlepage = () => {
   return (
-    <div class="container-fluid  d-flex flex-column">
+    <div class="container-fluid  bg-primary d-flex flex-column">
     <div class="row">
       <div class="col-sm p-3 text-center">
         <Header/>

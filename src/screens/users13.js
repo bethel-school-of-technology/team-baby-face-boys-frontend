@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 const Teen = () => {
   return (
-    <div className="container-fluid  d-flex flex-column">
+    <div className="container-fluid  bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Navbar />
