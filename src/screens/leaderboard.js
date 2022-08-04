@@ -10,7 +10,7 @@ const Leaderboard = () => {
           <Navbar />
         </div>
       </div>
-      <div className="container  scoreboard align-items-center"><div className="table_holder mx-auto" >
+      <div className="container  scoreboard"><div className="table_holder" >
       <table class="table table-striped">
     <thead>
         
