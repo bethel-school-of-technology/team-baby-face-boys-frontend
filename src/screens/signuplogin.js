@@ -57,14 +57,16 @@ const Signuplogin = () => {
         e.preventDefault();
 
 
-        axios.get("http://localhost:3000/User", user.gamerID).then(response => {
-            console.log(response)
+        // axios.post("http://localhost:3000/User", user).then(response => {
+        //     console.log(response);
+        //     // TODO store response in localstorage
+        //     navigate("/profile")
+        // })
+
+        axios.get("http://localhost:3000/User", user.gamerID ).then(response => {
+            console.log(response);
+            navigate("/profile")
         })
-
-
-
-        navigate("/profile")
-
 
     }
 
@@ -84,8 +86,11 @@ const Signuplogin = () => {
                 <input onChange={handleChange} name="password" /><br></br>
 
                 {/* <Link to='/profile'><input type={"submit"} /></Link> */}
-                <button type="submit">Submit</button>
+                <button type="submit">Login</button>
             </form>
+            <div>
+                <Link to="/registration"><button>Sign Up</button></Link>
+            </div>
             <Footer />
         </div>
     )

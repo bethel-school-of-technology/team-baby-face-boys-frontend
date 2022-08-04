@@ -1,12 +1,20 @@
 {
-    "User": [
-        {
-            "id": 1,
-            "fullName": "BrandonSchraven",
-            "gamerID": "ShiningWarrior",
-            "DOB": "04/08/1989",
-            "Email": "strongestsaiyan@planetvegeta.com",
-            "password": "Iamnumber1"
-        }
-    ]
+  "User": [
+    {
+      "id": 1,
+      "fullName": "BrandonSchraven",
+      "gamerID": "ShiningWarrior",
+      "DOB": "04/08/1989",
+      "Email": "strongestsaiyan@planetvegeta.com",
+      "password": "Iamnumber1"
+    },
+    {
+      "fullName": "Son Goku",
+      "gamerID": "KakarotClown",
+      "DOB": "04/09/1986",
+      "email": "saiyanpauper@planetvegeta.com",
+      "password": "ThirdClassSaiyan",
+      "id": 2
+    }
+  ]
 }
