@@ -5,30 +5,36 @@ import { useState } from 'react';
 
 
 const Profilepage = () => {
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
+    // const [title, setTitle] = useState("");
+    // const [body, setBody] = useState("");
+    // const [userProfile, setUserProfile] = useState({gamerID:''});
 
-    const onTitleChange = e => setTitle(e.target.value);
-    const onBodyChange = e => setBody(e.target.value);
+    // const onTitleChange = e => setTitle(e.target.value);
+    // const onBodyChange = e => setBody(e.target.value);
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    //     axios.get("http://localhost:3000/User" + user.gamerID ).then(userProfile => {
+    //         console.log(userProfile)
+    //         setUserProfile(userProfile);
+    //     })
 
-        const data = { title, body };
-        const requestOptions = {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        };
-        fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
-            .then(response => response.json())
-            .then(res => console.log(res));
-    };
+    // const handleSubmit = e => {
+    //     e.preventDefault();
+
+    //     const data = { title, body };
+    //     const requestOptions = {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json" },
+    //         body: JSON.stringify(data)
+    //     };
+    //     fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+    //         .then(response => response.json())
+    //         .then(res => console.log(res));
+    // };
     return (
         <div>
             <Navbar />
             <div>
-                <h1>Welcome, User!</h1>
+                {/* <h1>Welcome, User { userProfile.gamerID }</h1> */}
             </div>
             <div>
                 <h3>Profile Photo Placeholder</h3>
@@ -39,11 +45,11 @@ const Profilepage = () => {
             <div>
                 <h3>Joke of the Day Placeholder</h3>
             </div>
-            <div>
+            {/* <div>
                 <div className="Post">
                     <form>
-                        {/* <input placeholder="Title" value={title}
-                            onChange={onTitleChange} required /><br></br> */}
+                        <input placeholder="Title" value={title}
+                            onChange={onTitleChange} required /><br></br>
                         <textarea placeholder="Tell us of your exploits" value={body}
                             onChange={onBodyChange} required /><br></br>
                         <button type="submit" onClick={handleSubmit}>
@@ -51,7 +57,7 @@ const Profilepage = () => {
                         </button>
                     </form>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </div>
     );
