@@ -38,6 +38,8 @@ const Registrationpage = () => {
 
         axios.post("http://localhost:3000/User", user).then(response => {
             console.log(response);
+
+            localStorage.setItem("userId", JSON.stringify(response.data.id))
             // TODO store response in localstorage
             navigate("/profile")
         })
