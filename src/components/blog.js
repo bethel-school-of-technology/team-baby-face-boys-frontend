@@ -12,8 +12,8 @@ function Blog() {
 
     const addPost = () => {
         Axios.post('http://localhost:3000/forum', {
-            postTitle: postTitle,
-            postBody: postBody
+            postTitle: setTitle,
+            postBody: setBody
         }).then(response => {
             setPostList([...postList, response
             ]);
