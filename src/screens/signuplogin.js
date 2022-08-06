@@ -63,7 +63,7 @@ const Signuplogin = () => {
         //     navigate("/profile")
         // })
 
-        axios.get("http://localhost:3000/User", user.gamerID ).then(response => {
+        axios.post("http://localhost:3000/login", user.gamerID ).then(response => {
             console.log(response);
             navigate("/profile")
         })

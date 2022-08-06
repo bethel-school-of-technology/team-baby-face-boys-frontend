@@ -36,7 +36,7 @@ const Registrationpage = () => {
         e.preventDefault();
 
 
-        axios.post("http://localhost:3000/User", user).then(response => {
+        axios.post("http://localhost:3000/createaccount", user).then(response => {
             console.log(response);
 
             localStorage.setItem("userId", JSON.stringify(response.data.id))
