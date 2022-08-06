@@ -15,6 +15,54 @@
       "email": "saiyanpauper@planetvegeta.com",
       "password": "ThirdClassSaiyan",
       "id": 2
+    },
+    {
+      "fullName": "Ivan Torres",
+      "gamerID": "Soccer Fan",
+      "DOB": "10/15/1987",
+      "email": "ivan.torres@bethel.com",
+      "password": "Ilovefutbol",
+      "id": 3
+    },
+    {
+      "fullName": "Daniel",
+      "gamerID": "vargasboi",
+      "DOB": "01/45/1800",
+      "email": "danielskywalker@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "fullName": "asdf",
+      "gamerID": "asdf",
+      "DOB": "asdf",
+      "email": "asdf",
+      "password": "asdf",
+      "id": 5
+    },
+    {
+      "fullName": "asdf",
+      "gamerID": "asdf",
+      "DOB": "erwg",
+      "email": "qerg",
+      "password": "erg",
+      "id": 6
+    },
+    {
+      "fullName": "Son Goku",
+      "gamerID": "KakarotClown",
+      "DOB": "04/09/1986",
+      "email": "brandon.schraven@bethel.com",
+      "password": "Iamnumber1",
+      "id": 7
+    },
+    {
+      "fullName": "Son Gohan",
+      "gamerID": "HalfSaiyan",
+      "DOB": "02/14/1986",
+      "email": "halfbreed@earth.com",
+      "password": "4889",
+      "id": 8
     }
   ]
 }
