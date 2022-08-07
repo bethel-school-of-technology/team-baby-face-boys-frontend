@@ -10,9 +10,9 @@ but will soon be advancing to more creative options as we progress
 Global Elements list - These items will almost always have
 the exact same set up on every page
 
-Navbar
-Header
-footer
+COMPLETE - Navbar
+COMPLETE - Header
+COMPLETE - footer
 Text - we can pull in a few groovy fonts from Google fonts
 Backgrounds - 
 Buttons - The buttons will probably have some variety between them
@@ -22,7 +22,7 @@ Unique Elements List - These items should be considered to be creatively flexibl
 Sign up form - 
 input fields - Consider using inner glow or a drop shadow
 
-Game grid - Basic design first then complex design later if we get to it.
+COMPLETE - Game grid - Basic design first then complex design later if we get to it.
 Once the grid is designed and working then we can add flair and play around with creative ideas
 
 Add post

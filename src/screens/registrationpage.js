@@ -52,60 +52,70 @@ const Registrationpage = () => {
     
 
     return (
-        <div>
-            <Navbar />
-            <div>
-                <div id="container">
-                    <h4>Photo Placeholder</h4>
-                </div>
-                <div>
-                <form className="Create Account" onSubmit={handleSubmit}>
-                {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
-                <label>Full Name: </label>
-                <input onChange={handleChange} name="fullName" /><br></br>
-                <label>Gamer ID: </label>
-                <input onChange={handleChange} name="gamerID" /><br></br>
-                <label>Date of Birth: </label>
-                <input onChange={handleChange} name="DOB" /><br></br>
-                <label>Email: </label>
-                <input onChange={handleChange} name="email" /><br></br>
-                {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
-                {/* <input type="password" {...register("password")} /><br></br> */}
-                <label>Password: </label>
-                <input onChange={handleChange} name="password" /><br></br>
-
-                {/* <Link to='/profile'><input type={"submit"} /></Link> */}
-                <button type="submit">Create Account</button>
-            </form>
-                </div>
-                {/* <div>
-                    <form onSubmit={handleSubmit(handleRegistration)}>
-                        <div>
-                            <label>Full Name: </label>
-                            <input name="fullName" {...register('fullName', { required: true })} />
-                        </div>
-                        <div>
-                            <label>Gamer ID: </label>
-                            <input name="gamerID" {...register('gamerID', { required: true })} />
-                        </div>
-                        <div>
-                            <label>Date of Birth: </label>
-                            <input name="DOB" {...register('DOB', { required: true })} />
-                        </div>
-                        <div>
-                            <label>Email: </label>
-                            <input type="email" name="email" {...register('email', { required: true })} />
-                        </div>
-                        <div>
-                            <label>Password:</label>
-                            <input type="password" name="password" {...register('password', { required: true })} />
-                        </div>
-                        <button>Submit</button>
-                    </form>
-                </div> */}
-            </div>
-            <Footer />
+        <div className="container-fluid  bg-primary d-flex flex-column">
+        <div className="row">
+          <div className="col-sm p-3 text-center">
+            <Header/>
+          </div>
         </div>
+        <div className="row text-secondary bgnd_img-registration align-items-center ">
+             <div className="col text-center">
+                 <div className="col-sm">
+            <form className="Create Account form_regis mx-auto p-3" onSubmit={handleSubmit}>
+                <h4>Photo Placeholder</h4>
+            {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
+            <label>Full Name: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="fullName" /><br></br>
+            <label>Gamer ID: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="gamerID" /><br></br>
+            <label>Date of Birth: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="DOB" /><br></br>
+            <label>Email: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="email" /><br></br>
+            {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
+            {/* <input type="password" {...register("password")} /><br></br> */}
+            <label className='mb-2'>Password: </label><br></br>
+            <input onChange={handleChange} name="password" /><br></br>
+
+            {/* <Link to='/profile'><input type={"submit"} /></Link> */}
+            <button className='my-4 ' type="submit">Create Account</button>
+        </form>
+            {/* <div>
+                <form onSubmit={handleSubmit(handleRegistration)}>
+                    <div>
+                        <label>Full Name: </label>
+                        <input name="fullName" {...register('fullName', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Gamer ID: </label>
+                        <input name="gamerID" {...register('gamerID', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Date of Birth: </label>
+                        <input name="DOB" {...register('DOB', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <input type="email" name="email" {...register('email', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password" {...register('password', { required: true })} />
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div> */}
+            </div>
+          </div>
+          
+      </div>
+        <div className="row footer">
+          <div className="col text-center p-3">
+          <script src="./" ></script>
+            <Footer/>
+            </div>
+        </div>
+      </div>
     );
 };
 
