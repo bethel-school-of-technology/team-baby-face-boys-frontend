@@ -10,39 +10,99 @@ const Leaderboard = () => {
           <Navbar />
         </div>
       </div>
-      <div className="container  scoreboard"><div className="table_holder" >
-      <table class="table table-striped">
-    <thead>
-        
-      <tr>
-        <th>Username</th>
-        <th>Game</th>
-        <th>High score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>fripperybonkers</td>
-        <td>Whack-A-Mole</td>
-        <td>863</td>
-      </tr>
-      <tr>
-        <td>doodadjumbo</td>
-        <td>Memory</td>
-        <td>185</td>
-      </tr>
-      <tr>
-        <td>poofmumu</td>
-        <td>Breakout</td>
-        <td>2,773</td>
-      </tr>
-      <tr>
-        <td>huzzahmeow</td>
-        <td>Connect 4</td>
-        <td>50</td>
-      </tr>
-    </tbody>
-  </table></div>
+      <div className="row">
+        <div className="col-sm p-3 text-center">
+         <h1>Top Rabbits</h1>
+        </div>
+      </div>
+      <div className="container px-0 leaderboard">
+        <div className="table_holder">
+        <table className="table table-striped  table-borderless text-center">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Breakout Masters</th>
+              <th></th>
+            </tr>
+            <tr>
+              <th>Ranking</th>
+              <th>Username</th>
+              <th>High Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>JingleJunket</td>
+              <td>829</td>
+              
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>DingdongJargogle</td>
+              <td>766</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>PeeweeFizgig</td>
+              <td>529</td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Whack-A-Mole Smashers</th>
+              <th></th>
+            </tr>
+            <tr>
+              <th>Ranking</th>
+              <th>Username</th>
+              <th>High Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>HarumphThwack</td>
+              <td>156</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>HotfootMojo</td>
+              <td>98</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>TalismanGossamer</td>
+              <td>29</td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Connect 4 Champions</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>AzureSway</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GlitchKerplunk</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>YoyoHokum</td>
+              <td>15</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
       </div>
       <div className="row footer">
         <div className="col text-center p-3">

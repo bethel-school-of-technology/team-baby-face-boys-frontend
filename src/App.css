@@ -88,30 +88,34 @@ h4.title {
     overflow-y: scroll;
 } */
 
-.scoreboard {
+.leaderboard {
     background-image: url('./images/page_bkgnds/leaderboard.jpg');
     height: 1000px;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 th {
-    background-color: rgba(230, 230, 230, 0.069);
-    color: rgb(255, 0, 230);
+    background-color: rgba(125, 44, 1, 0.861);
+    color: rgb(255, 242, 0);
 }
 
 .table {
     color: chartreuse;
-    overflow-x: scroll;
 }
 
 .table_holder {
-    background-color: rgba(255, 89, 0, 0.673);
+    background-color: rgba(125, 45, 1, 0.673);
     height: 100vh;
     min-width: 320px;
  
+}
+
+.game_name {
+
 }
 
 /* ---------------Login Page settings------------------ */

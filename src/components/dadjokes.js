@@ -1,41 +1,29 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import React from "react";
 
-const Dadjokes = () => {
-  const jokeButton = document.querySelector(".getJoke");
-  const jokeHolder = document.querySelector(".joke");
+const API_URL = 'http://api.icndb.com/jokes/random';
 
-  const buttonText = [
-    "Ugh.",
-    "🤦🏻‍♂️",
-    "omg dad.",
-    "you are the worst",
-    "seriously",
-    "stop it.",
-    "please stop",
-    "that was the worst one",
-  ];
+function Dadjokes() {
+  
+    const [joke, setJoke] = useState('');
 
-  async function fetchJoke() {
-    const response = await fetch("https://icanhazdadjoke.com", {
-      headers: { Accept: "application/json" },
-    });
+const generateJoke = () => {
+  
+      fetch(API_URL)
+      .then(res => res.json())
+      .then(data => setJoke(data.value.joke));
+}
 
-    return response.json();
-  }
-
-  async function handleClick() {
-    const { joke } = await fetchJoke();
-    jokeHolder.textContent = joke;
-  }
-
-  /* jokeButton.addEventListener("click", handleClick); */
+    useEffect(() => {
+    },[])
       
   return (
     <div class="wrapper">
       <div class="joke">
-        <p>Dad Jokes</p>
+        <p>{joke}</p>
       </div>
-      <button class="getJoke" >Get a Joke</button>
+      <button onClick={generateJoke} >Get a Joke</button>
     </div>
   );
 };
