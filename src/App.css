@@ -1,3 +1,9 @@
+/* ------------------Font and text settings------------------ */
+
+label,input {
+    font-size: 1.25rem;
+}
+
 /* ------------------Global settings------------------ */
 div[class*="container"] {/* 
     background-color: hsl(208, 86%, 13%); */
@@ -7,6 +13,10 @@ div[class*="container"] {/*
 
 .container {
     border-radius: 30px;
+}
+
+h4.title {
+    color:crimson ;
 }
 
 
@@ -102,4 +112,70 @@ th {
     height: 100vh;
     min-width: 320px;
  
+}
+
+/* ---------------Login Page settings------------------ */
+
+.bgnd_img-signup_login {
+    background-image: url('./images/page_bkgnds/signup_login.jpg');
+    height: 1000px;
+    overflow-x:hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*animation: blur_fadeout 3s 1; */
+
+}
+
+.fuzzy_glass {
+    background-color: rgba(37, 5, 71, 0.843);
+    font-size: 1.2rem;
+    width: 100vw;
+}
+
+.purple_glow_grntext {
+    color: rgb(237, 241, 0);
+    background-color: rgb(53, 5, 53);
+    box-shadow: 1px 1px 4px fuchsia ;
+}
+
+
+
+.signup_btn {
+    width: 130px;
+    background-color:crimson;
+    font-size: 1.5rem;
+    border: 0px none white;
+    border-radius:30px;
+    color:antiquewhite;
+    box-shadow: 3px 3px 9px fuchsia ;
+}
+
+.login_btn {
+    width: 130px;
+    background-color:crimson;
+    font-size: 1.5rem;
+    border: 0px none white;
+    border-radius:30px;
+    color:antiquewhite;
+    box-shadow: 3px 3px 9px fuchsia ;
+}
+
+/* ---------------Registration Page settings------------------ */
+
+.bgnd_img-registration {
+    background-image: url('./images/page_bkgnds/registration.jpg');
+    height: 1000px;
+    overflow-x:hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*animation: blur_fadeout 3s 1; */
+
+}
+
+.form_regis {
+    color: crimson;
+    background-color: rgba(255, 255, 255, 0.45);
+    max-width: 450px;
 }
