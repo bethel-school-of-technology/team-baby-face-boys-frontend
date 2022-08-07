@@ -4,12 +4,17 @@ label,input {
     font-size: 1.25rem;
 }
 
+
+.footer {
+    font-size: 1.2rem;
+}
+
 /* ------------------Global settings------------------ */
 div[class*="container"] {/* 
     background-color: hsl(208, 86%, 13%); */
     color:rgb(230, 230, 230);
     height: 100vh;
-    border: 15px inset rgb(44, 44, 100);
+    border: 10px inset rgb(30, 30, 67);
     box-shadow: 1px 1px 8px black outset;
 }
 
@@ -51,9 +56,7 @@ h4.title {
     overflow-x: scroll;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;/* 
-    filter: blur(10px);
-    animation: blur_fadeout 3s 1; */
+    background-size: cover;
 
 }
 
@@ -63,9 +66,7 @@ h4.title {
     overflow-x: scroll;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;/* 
-    filter: blur(10px);
-    animation: blur_fadeout 3s 1; */
+    background-size: cover;
 
 }
 
