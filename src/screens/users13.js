@@ -12,7 +12,7 @@ const Teen = () => {
       </div>
       {/* the game name Should be in a mostly transparent colored stripe across the top?*/}
       {/* <div className="game_name"> </div>*/}
-      <div className="container text-secondary  bgnd_img-12under align-items-center">
+      <div className="container text-secondary  bgnd_img-13up align-items-center">
         <div className="row">
           <div className="col img_grid">
             <img

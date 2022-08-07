@@ -9,6 +9,8 @@ div[class*="container"] {/*
     background-color: hsl(208, 86%, 13%); */
     color:rgb(230, 230, 230);
     height: 100vh;
+    border: 15px inset rgb(44, 44, 100);
+    box-shadow: 1px 1px 8px black outset;
 }
 
 .container {
@@ -42,8 +44,9 @@ h4.title {
 
 /* ---------------Games page settings------------------ */
 
-.bgnd_img-leaderboard {
-    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+
+.bgnd_img-12under {
+    background-image: url('./images/page_bkgnds/12underb_kgnd_blur.jpg');
     height: 1000px;
     overflow-x: scroll;
     background-position: center;
@@ -54,8 +57,8 @@ h4.title {
 
 }
 
-.bgnd_img-12under {
-    background-image: url('./images/page_bkgnds/12underb_kgnd.jpg');
+.bgnd_img-13up {
+    background-image: url('./images/page_bkgnds/all_games_blur.jpg');
     height: 1000px;
     overflow-x: scroll;
     background-position: center;
@@ -89,26 +92,29 @@ h4.title {
 } */
 
 .leaderboard {
-    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+    background-image: url('./images/page_bkgnds/leaderboard_blur.jpg');
     height: 1000px;
     overflow-x: hidden;
-    overflow-y: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+th,td {
+    height: 10px;
+}
+
 th {
-    background-color: rgba(125, 44, 1, 0.861);
-    color: rgb(255, 242, 0);
+    background-color:#004c93ae;
+    color: rgb(255, 230, 0);
 }
 
 .table {
-    color: chartreuse;
+    color: rgb(128, 255, 0);
 }
 
 .table_holder {
-    background-color: rgba(125, 45, 1, 0.673);
+    background-color: #002e5aae;
     height: 100vh;
     min-width: 320px;
  

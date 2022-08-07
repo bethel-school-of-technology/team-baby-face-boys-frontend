@@ -17,7 +17,7 @@ const Leaderboard = () => {
       </div>
       <div className="container px-0 leaderboard">
         <div className="table_holder">
-        <table className="table table-striped  table-borderless text-center">
+        <table className="table table-striped  table-borderless text-center py-5">
           <thead>
             <tr>
               <th></th>
@@ -82,6 +82,11 @@ const Leaderboard = () => {
               <th></th>
               <th>Connect 4 Champions</th>
               <th></th>
+            </tr>
+            <tr>
+              <th>Ranking</th>
+              <th>Username</th>
+              <th>High Score</th>
             </tr>
           </thead>
           <tbody>
