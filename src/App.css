@@ -1,15 +1,28 @@
 /* ------------------Font and text settings------------------ */
 
+.navbar {
+    font-size: 2.0rem;
+}
+
+
 label,input {
     font-size: 1.25rem;
 }
-
 
 .footer {
     font-size: 1.2rem;
 }
 
 /* ------------------Global settings------------------ */
+
+.nav-link:hover {
+    text-shadow: 1px 1px 14px rgb(238, 255, 0);
+}
+
+.nav-link {
+    color: rgb(255, 255, 0);    
+}
+
 div[class*="container"] {/* 
     background-color: hsl(208, 86%, 13%); */
     color:rgb(230, 230, 230);
@@ -189,4 +202,44 @@ th {
     color: crimson;
     background-color: rgba(255, 255, 255, 0.45);
     max-width: 450px;
+}
+
+
+
+/* ---------------Forum page settings------------------ */
+
+.forumBlog {
+    background-color: rgba(245, 245, 245, 0.652);
+    border-radius: 25px;
+}
+
+.forum-s1 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.forum-s2 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.forum-s3 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.bgnd_img-forum {
+    background-image: url('./images/page_bkgnds/forum_blur.jpg');
+    height: 1000px;
+    overflow-x: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.game_thumb {
+    max-height: 250px;
+}
+
+.img_grid {display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
