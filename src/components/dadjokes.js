@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import React from "react";
+import React, { useState } from "react";
 
 const API_URL = 'http://api.icndb.com/jokes/random';
 
@@ -15,9 +13,7 @@ const generateJoke = () => {
       .then(data => setJoke(data.value.joke));
 }
 
-    useEffect(() => {
-    },[])
-      
+
   return (
     <div class="wrapper">
       <div class="joke">
