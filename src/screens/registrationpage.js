@@ -62,7 +62,7 @@ const Registrationpage = () => {
              <div className="col text-center">
                  <div className="col-sm">
             <form className="Create Account form_regis mx-auto p-3" onSubmit={handleSubmit}>
-                <h4>Photo Placeholder</h4>
+            <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../../src/images/page_bkgnds/jan.jpg') } />
             {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
             <label>Full Name: </label><br></br>
             <input className='mb-2'  onChange={handleChange} name="fullName" /><br></br>

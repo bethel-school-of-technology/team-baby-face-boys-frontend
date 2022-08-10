@@ -18,7 +18,7 @@ const Navbar = () => {
               <a class="nav-link" href="/allgames">Arcade</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/forum">Gamer Forum</a>
+              <a class="nav-link" href="/forum">Forum</a>
               </li>
             <li class="nav-item">
               <a class="nav-link" href="/leaderboard">Leaderboard</a>
