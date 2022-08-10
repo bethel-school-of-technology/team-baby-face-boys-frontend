@@ -1,12 +1,13 @@
 /* ------------------Font and text settings------------------ */
 
-nav {
+.navbar {
     font-size: 2.0rem;
 }
 
 
-label,input {
+label,input,textarea {
     font-size: 1.25rem;
+    width: 100%;
 }
 
 .footer {
@@ -209,7 +210,17 @@ th {
 .forumBlog {
     background-color: rgba(245, 245, 245, 0.652);
     border-radius: 25px;
+    height:70vh;
+    width: 100%;
 }
+
+
+.forumBlog_plate {
+    background-color: rgba(245, 245, 245, 0.652);
+    border-radius: 25px;
+}
+
+
 
 .forum-s1 {
     background-color: rgba(245, 245, 245, 0.652);
@@ -237,7 +248,3 @@ th {
     max-height: 250px;
 }
 
-.img_grid {display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}

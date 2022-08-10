@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 const Preteen = () => {
+
   return (
     <div className="container bg-primary d-flex flex-column">
       <div className="row">
@@ -18,7 +19,6 @@ const Preteen = () => {
              
         <div className="row">
           <div className="col img_grid" >
-          {/* <div className="game_snap_1 rounded float-left mt-5 mx-3 "></div> */}
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/breakout.jpg') } />
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/cnnct4.jpg') } />
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/memory.jpg') } />
