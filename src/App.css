@@ -1,14 +1,34 @@
 /* ------------------Font and text settings------------------ */
 
+.navbar {
+    font-size: 2.0rem;
+}
+
+
 label,input {
     font-size: 1.25rem;
 }
 
+.footer {
+    font-size: 1.2rem;
+}
+
 /* ------------------Global settings------------------ */
+
+.nav-link:hover {
+    text-shadow: 1px 1px 14px rgb(238, 255, 0);
+}
+
+.nav-link {
+    color: rgb(255, 255, 0);    
+}
+
 div[class*="container"] {/* 
     background-color: hsl(208, 86%, 13%); */
     color:rgb(230, 230, 230);
     height: 100vh;
+    border: 10px inset rgb(30, 30, 67);
+    box-shadow: 1px 1px 8px black outset;
 }
 
 .container {
@@ -42,27 +62,24 @@ h4.title {
 
 /* ---------------Games page settings------------------ */
 
-.bgnd_img-leaderboard {
-    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+
+.bgnd_img-12under {
+    background-image: url('./images/page_bkgnds/12underb_kgnd_blur.jpg');
     height: 1000px;
     overflow-x: scroll;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;/* 
-    filter: blur(10px);
-    animation: blur_fadeout 3s 1; */
+    background-size: cover;
 
 }
 
-.bgnd_img-12under {
-    background-image: url('./images/page_bkgnds/12underb_kgnd.jpg');
+.bgnd_img-13up {
+    background-image: url('./images/page_bkgnds/all_games_blur.jpg');
     height: 1000px;
     overflow-x: scroll;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;/* 
-    filter: blur(10px);
-    animation: blur_fadeout 3s 1; */
+    background-size: cover;
 
 }
 
@@ -88,30 +105,37 @@ h4.title {
     overflow-y: scroll;
 } */
 
-.scoreboard {
-    background-image: url('./images/page_bkgnds/leaderboard.jpg');
+.leaderboard {
+    background-image: url('./images/page_bkgnds/leaderboard_blur.jpg');
     height: 1000px;
-    overflow-x: scroll;
+    overflow-x: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+th,td {
+    height: 10px;
+}
+
 th {
-    background-color: rgba(230, 230, 230, 0.069);
-    color: rgb(255, 0, 230);
+    background-color:#004c93ae;
+    color: rgb(255, 230, 0);
 }
 
 .table {
-    color: chartreuse;
-    overflow-x: scroll;
+    color: rgb(128, 255, 0);
 }
 
 .table_holder {
-    background-color: rgba(255, 89, 0, 0.673);
+    background-color: #002e5aae;
     height: 100vh;
     min-width: 320px;
  
+}
+
+.game_name {
+
 }
 
 /* ---------------Login Page settings------------------ */
@@ -178,4 +202,44 @@ th {
     color: crimson;
     background-color: rgba(255, 255, 255, 0.45);
     max-width: 450px;
+}
+
+
+
+/* ---------------Forum page settings------------------ */
+
+.forumBlog {
+    background-color: rgba(245, 245, 245, 0.652);
+    border-radius: 25px;
+}
+
+.forum-s1 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.forum-s2 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.forum-s3 {
+    background-color: rgba(245, 245, 245, 0.652);
+}
+
+.bgnd_img-forum {
+    background-image: url('./images/page_bkgnds/forum_blur.jpg');
+    height: 1000px;
+    overflow-x: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.game_thumb {
+    max-height: 250px;
+}
+
+.img_grid {display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
