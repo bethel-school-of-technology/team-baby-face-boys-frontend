@@ -5,7 +5,7 @@
 }
 
 
-label,input,textarea {
+label,textarea {
     font-size: 1.25rem;
     width: 100%;
 }
@@ -220,7 +220,10 @@ th {
     border-radius: 25px;
 }
 
+input.input {
+    width: 100%;
 
+}
 
 .forum-s1 {
     background-color: rgba(245, 245, 245, 0.652);
