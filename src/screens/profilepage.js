@@ -56,35 +56,63 @@ const Profilepage = () => {
             .then(res => console.log(res));
     };
     return (
-        <div>
-            <Navbar />
-            <div>
-                <h1>Welcome,  {user.gamerID}</h1>
-            </div>
-            <div>
-                <h3>Profile Photo Placeholder</h3>
-            </div>
-            <div>
-                <h3>High Scores Placeholder</h3>
-            </div>
-            <div>
-                <h3>Joke of the Day Placeholder</h3>
-            </div>
-            <div>
-                <div className="Post">
-                    <form>
-                        <input value={title}
-                            onChange={onTitleChange} required /><br></br>
-                        <textarea value={body}
-                            onChange={onBodyChange} required /><br></br>
-                        <button type="submit" onClick={handleSubmit}>
-                            Create Post
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <Footer />
+        <div className="container bg-primary d-flex flex-column">
+  <div className="row">
+    <div className="col p-3 text-center">
+      <Navbar />
+    </div>
+  </div>
+
+  <div className="row">
+    <div className="col md-3 
+ mx-auto">
+
+  <div>
+    <h1>Welcome, {user.gamerID}</h1>
+  </div>
+  <div>
+  <img className="profpic mx-auto d-block my-5" src={ require('../../src/images/page_bkgnds/jan.jpg') } />
+  </div>
+    </div>
+    <div className="col">
+        
+  <div>
+    <h3>High Scores Placeholder</h3>
+  </div>
+    </div>
+  </div>
+  <div className="row">
+    <div className="col">
+
+  <div>
+    <div className="Post">
+      <form>
+      <label className="mr-3">Post Title:</label>
+        <input className="my-3 input" value={title} onChange={onTitleChange} required />
+        <br></br>
+      <label className="mr-3">Post Body:</label>
+        <textarea value={body} onChange={onBodyChange} required />
+        <br></br>
+        <button className='mt-3' type="submit" onClick={handleSubmit}>
+          Create Post
+        </button>
+      </form>
+    </div>
+  </div>
+    </div>
+    <div className="col">
+        
+  <div>
+    <h3>Joke of the Day Placeholder</h3>
+  </div>
+    </div>
+  </div>
+  <div className="row footer">
+        <div className="col text-center p-3">
+          <Footer />
         </div>
+      </div>
+</div>
     );
 };
 

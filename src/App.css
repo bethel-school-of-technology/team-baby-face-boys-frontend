@@ -251,3 +251,8 @@ input.input {
     max-height: 250px;
 }
 
+/* ---------------Profile Page settings------------------ */
+
+img.profpic {
+    border-radius: 40%;
+}
