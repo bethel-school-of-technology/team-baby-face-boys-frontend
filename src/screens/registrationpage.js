@@ -8,7 +8,7 @@ import Navbar from '../components/navbar';
 
 const Registrationpage = () => {
 
-    let baseUrl = "http://localhost:3000/User"
+    let baseUrl = "http://localhost:3001/"
 
     let navigate = useNavigate();
 
@@ -49,38 +49,38 @@ const Registrationpage = () => {
         //     navigate("/profile")
         // })
     }
-    
+
 
     return (
         <div className="container-fluid  bg-primary d-flex flex-column">
-        <div className="row">
-          <div className="col-sm p-3 text-center">
-            <Header/>
-          </div>
-        </div>
-        <div className="row text-secondary bgnd_img-registration align-items-center ">
-             <div className="col text-center">
-                 <div className="col-sm">
-            <form className="Create Account form_regis mx-auto p-3" onSubmit={handleSubmit}>
-                <h4>Photo Placeholder</h4>
-            {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
-            <label>Full Name: </label><br></br>
-            <input className='mb-2'  onChange={handleChange} name="fullName" /><br></br>
-            <label>Gamer ID: </label><br></br>
-            <input className='mb-2'  onChange={handleChange} name="gamerID" /><br></br>
-            <label>Date of Birth: </label><br></br>
-            <input className='mb-2'  onChange={handleChange} name="DOB" /><br></br>
-            <label>Email: </label><br></br>
-            <input className='mb-2'  onChange={handleChange} name="email" /><br></br>
-            {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
-            {/* <input type="password" {...register("password")} /><br></br> */}
-            <label className='mb-2'>Password: </label><br></br>
-            <input onChange={handleChange} name="password" /><br></br>
+            <div className="row">
+                <div className="col-sm p-3 text-center">
+                    <Header />
+                </div>
+            </div>
+            <div className="row text-secondary bgnd_img-registration align-items-center ">
+                <div className="col text-center">
+                    <div className="col-sm">
+                        <form className="Create Account form_regis mx-auto p-3" onSubmit={handleSubmit}>
+                            <h4>Photo Placeholder</h4>
+                            {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
+                            <label>Full Name: </label><br></br>
+                            <input className='mb-2' onChange={handleChange} name="fullName" /><br></br>
+                            <label>Gamer ID: </label><br></br>
+                            <input className='mb-2' onChange={handleChange} name="gamerID" /><br></br>
+                            <label>Date of Birth: </label><br></br>
+                            <input className='mb-2' onChange={handleChange} name="DOB" /><br></br>
+                            <label>Email: </label><br></br>
+                            <input className='mb-2' onChange={handleChange} name="email" /><br></br>
+                            {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
+                            {/* <input type="password" {...register("password")} /><br></br> */}
+                            <label className='mb-2'>Password: </label><br></br>
+                            <input onChange={handleChange} name="password" /><br></br>
 
-            {/* <Link to='/profile'><input type={"submit"} /></Link> */}
-            <button className='my-4 ' type="submit">Create Account</button>
-        </form>
-            {/* <div>
+                            {/* <Link to='/profile'><input type={"submit"} /></Link> */}
+                            <button className='my-4 ' type="submit">Create Account</button>
+                        </form>
+                        {/* <div>
                 <form onSubmit={handleSubmit(handleRegistration)}>
                     <div>
                         <label>Full Name: </label>
@@ -105,17 +105,17 @@ const Registrationpage = () => {
                     <button>Submit</button>
                 </form>
             </div> */}
+                    </div>
+                </div>
+
             </div>
-          </div>
-          
-      </div>
-        <div className="row footer">
-          <div className="col text-center p-3">
-          <script src="./" ></script>
-            <Footer/>
+            <div className="row footer">
+                <div className="col text-center p-3">
+                    <script src="./" ></script>
+                    <Footer />
+                </div>
             </div>
         </div>
-      </div>
     );
 };
 

@@ -7,7 +7,7 @@ import axios from "axios";
 import Navbar from "../components/navbar";
 
 const Signuplogin = () => {
-  let baseUrl = "http://localhost:3000/User";
+  let baseUrl = "http://localhost:3000/users";
 
   let navigate = useNavigate();
 
@@ -53,10 +53,18 @@ const Signuplogin = () => {
     //     navigate("/profile")
     // })
 
-    axios.post("http://localhost:3000/login", user.gamerID).then((response) => {
+    // axios.post("http://localhost:3000/login", user.gamerID).then((response) => {
+    //   console.log(response);
+    //   navigate("/profile");
+    // });
+
+    axios.post("http://localhost:3000/login", user).then(response => {
       console.log(response);
-      navigate("/profile");
-    });
+
+      // localStorage.setItem("userId", JSON.stringify(response.data.id))
+      // TODO store response in localstorage
+      navigate("/profile")
+    })
   };
 
   return (
@@ -71,32 +79,32 @@ const Signuplogin = () => {
           </div> */}
       </div>
       <div className="row text-secondary bgnd_img-signup_login align-items-center ">
-            <div className=" col text-center ">
-        <div className="fuzzy_glass">
+        <div className=" col text-center ">
+          <div className="fuzzy_glass">
 
-          <form className="Login " onSubmit={handleSubmit}>
-          <h4 className="title">Login Form</h4>
-            {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
-            <input className="purple_glow_grntext my-2" onChange={handleChange} name="gamerID" />
-            <br></br>
-            {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
-            {/* <input type="password" {...register("password")} /><br></br> */}
+            <form className="Login " onSubmit={handleSubmit}>
+              <h4 className="title">Login Form</h4>
+              {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
+              <input className="purple_glow_grntext my-2" onChange={handleChange} name="gamerID" />
+              <br></br>
+              {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
+              {/* <input type="password" {...register("password")} /><br></br> */}
 
-            <input className="purple_glow_grntext my-2" onChange={handleChange} name="password" />
-            <br></br>
+              <input className="purple_glow_grntext my-2" onChange={handleChange} name="password" />
+              <br></br>
 
-            {/* <Link to='/profile'><input type={"submit"} /></Link> */}
-            <button className="my-2 login_btn"  type="submit">Login</button>
-          <div>
-            <Link to="/registration">
-              <button className="my-2 signup_btn" >Sign Up</button>
+              {/* <Link to='/profile'><input type={"submit"} /></Link> */}
+              <button className="my-2 login_btn" type="submit">Login</button>
+              <div>
+                <Link to="/registration">
+                  <button className="my-2 signup_btn" >Sign Up</button>
+                </Link>
+              </div>
+            </form>
+            <Link to="/account">
+              <div className="mx-auto d-block"></div>
             </Link>
-          </div>
-          </form>
-          <Link to="/account">
-            <div className="mx-auto d-block"></div>
-          </Link>
-        </div></div>
+          </div></div>
       </div>
       <div className="row footer">
         <div className="col text-center p-3">

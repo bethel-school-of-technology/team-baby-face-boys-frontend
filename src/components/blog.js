@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 function Blog() {
 
@@ -10,24 +10,24 @@ function Blog() {
 
     const [postList, setPostList] = useState([]);
 
-    const addPost = () => {
-        Axios.post('http://localhost:3000/forum', {
-            postTitle: setTitle,
-            postBody: setBody
-        }).then(response => {
-            setPostList([...postList, response
-            ]);
-        });
-    };
+    // const addPost = () => {
+    //     axios.post('http://localhost:3000/forum', {
+    //         postTitle: setTitle,
+    //         postBody: setBody
+    //     }).then(response => {
+    //         setPostList([...postList, response
+    //         ]);
+    //     });
+    // };
 
     const getPosts = () => {
-        Axios.get('http://localhost:3000/forum').then((response) => {
+        axios.get('http://localhost:3000/forum').then((response) => {
             setPostList(response)
         });
     };
 
     const updateTitlePost = (id) => {
-        Axios.put('http://localhost:3000/forum', { postTitle: newTitle, id: id }).then(
+        axios.put('http://localhost:3000/forum', { postTitle: newTitle, id: id }).then(
             (response) => {
                 setPostList(postList.map((val) => {
                     return val.id == id ? { id: val.id, postTitle: newTitle, postBody: val.postBody } : val
@@ -37,7 +37,7 @@ function Blog() {
     };
 
     const deletePost = (id) => {
-        Axios.delete(`http://localhost:3000/forum/${id}`).then((response) => {
+        axios.delete(`http://localhost:3000/forum/${id}`).then((response) => {
             setPostList(postList.filter((val) => {
                 return val.id != id
             }))
