@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { useState } from 'react';
 import axios from 'axios';
+import Dadjokes from "../components/dadjokes";
 
 
 const Profilepage = () => {
@@ -57,6 +58,7 @@ const Profilepage = () => {
     };
     return (
         <div className="container bg-primary d-flex flex-column">
+            
   <div className="row">
     <div className="col p-3 text-center">
       <Navbar />
@@ -100,15 +102,13 @@ const Profilepage = () => {
     </div>
   </div>
     </div>
-    <div className="col">
+    <div className="col  mx-auto text-center">
         
-  <div>
-    <h3>Joke of the Day Placeholder</h3>
-  </div>
+  <Dadjokes/>
     </div>
   </div>
-  <div className="row footer">
-        <div className="col text-center p-3">
+  <div className="row height align-items-end text-center">
+        <div className="col ">
           <Footer />
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Dadjokes from "../components/dadjokes";
 
 import { Link } from "react-router-dom";
 
@@ -26,7 +25,7 @@ const Titlepage = () => {
       <div className="col text-center p-3">
       <script src="./" ></script>
         <Footer/>
-        <Dadjokes/>
+        
         </div>
     </div>
   </div>

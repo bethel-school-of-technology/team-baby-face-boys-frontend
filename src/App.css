@@ -29,6 +29,7 @@ div[class*="container"] {/*
     color:rgb(230, 230, 230);
     height: 100vh;
     border: 10px inset rgb(30, 30, 67);
+    overflow-x: hidden;
     box-shadow: 1px 1px 8px black outset;
 }
 
@@ -253,6 +254,20 @@ input.input {
 
 /* ---------------Profile Page settings------------------ */
 
+.jokeholder {
+    max-height: 200px;
+    position: relative;
+    bottom: 0px;
+}
+
+.prof_backing {
+    background-color: darkviolet;
+}
 img.profpic {
     border-radius: 40%;
+    height: 200px;
+}
+
+.row.height {
+    height: 400px;
 }
