@@ -7,7 +7,11 @@ function Blog() {
 
   const [newTitle, setNewTitle] = useState("");
 
-  const [postList, setPostList] = useState([]);
+  const [postList, setPostList] = useState({
+    UserId: "",
+    postTitle: "",
+    postBody: ""
+  });
 
   const addPost = () => {
     Axios.post("http://localhost:3000/forum", {
@@ -20,7 +24,7 @@ function Blog() {
 
   const getPosts = () => {
     Axios.get("http://localhost:3000/forum").then((response) => {
-      setPostList(response);
+      setPostList.JSON.stringify(response);
     });
   };
 
