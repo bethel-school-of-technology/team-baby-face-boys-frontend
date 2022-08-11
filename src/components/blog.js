@@ -50,7 +50,7 @@ function Blog() {
   };
 
   return (
-    <div className="row text-primary m-2">
+    <div className="row text-primary m-3">
       <div className="col forumBlog p-5">
         <div className="row mb-4">
           <div>
@@ -78,7 +78,7 @@ function Blog() {
           </div>
         </div>
         <h4>Forum Posts:</h4>
-        <div className="row forumBlog p-5 my-3">
+        <div className="row forumBlog_plate p-5 my-3">
           <div>
             {postList.map((val, key) => {
               return (

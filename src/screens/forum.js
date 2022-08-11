@@ -15,10 +15,10 @@ const Forum = () => {
       </div>
       <div className="container bgnd_img-forum ">
         <div className="row">
-          <div className="col-9">
+          <div className="col md-3 col mx-auto">
             <Blog />
           </div>
-          <div className="col-sm-3 p-5 text-dark forumBlog">
+          <div className="col-md-3  m-3 d-none d-sm-none d-md-block  p-4 text-dark forumBlog ">
             <h4>Rabbits:</h4>
             <ul>
               <li>Username</li>
