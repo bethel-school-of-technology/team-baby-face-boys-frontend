@@ -13,8 +13,6 @@ import Titlepage from './screens/titlepage';
 import Preteen from './screens/users12';
 import Teen from './screens/users13';
 
-
-
 function App() {
   return (
     <BrowserRouter>
