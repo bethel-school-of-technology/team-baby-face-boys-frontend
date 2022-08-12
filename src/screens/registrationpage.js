@@ -8,7 +8,7 @@ import Navbar from '../components/navbar';
 
 const Registrationpage = () => {
 
-    let baseUrl = "http://localhost:3000/User"
+    let baseUrl = "http://localhost:3001"
 
     let navigate = useNavigate();
 
