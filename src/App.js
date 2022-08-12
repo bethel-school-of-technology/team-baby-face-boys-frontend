@@ -13,6 +13,7 @@ import Titlepage from './screens/titlepage';
 import Preteen from './screens/users12';
 import Teen from './screens/users13';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Titlepage />} />
         <Route path="/games" element={<Preteen />} />
         <Route path="/allgames" element={<Teen />} />
+       
       </Routes>
     </BrowserRouter>
   );

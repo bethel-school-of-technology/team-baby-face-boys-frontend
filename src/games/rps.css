@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+ 
+}
+
+button{
+    border-radius: .25em;
+}
+
+div{
+    position: flex;
+    text-align: center;
+   padding-top: 10em;
+}

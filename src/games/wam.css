@@ -1,0 +1,34 @@
+.grid{
+    display: flex;
+    width: 606px;
+    height: 606px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    align-items: center;
+    margin: auto;
+
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    border: solid black 1px;
+}
+
+.mole{
+    background-image: url(./gamePictures/mole.jpg);
+    background-size: cover;
+}
+
+h2{
+    display: inline;
+}
+
+button{
+    margin-top: 25px;
+    border-radius: .25em
+}
+
+body{
+    text-align: center;
+}
