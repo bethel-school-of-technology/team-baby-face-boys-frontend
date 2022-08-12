@@ -8,12 +8,16 @@ import axios from 'axios';
 const Profilepage = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-    const [user, setUserProfile] = useState({});
+    const [user, setUserProfile] = useState({
+        gamerID: "",
+        postTitle: "",
+        postBody: ""
+    });
 
     const onTitleChange = e => setTitle(e.target.value);
     const onBodyChange = e => setBody(e.target.value);
 
-    let userId = JSON.parse(localStorage.getItem("userId"))
+
 
 
     // axios.get("http://localhost:3000/User" + user.gamerID ).then(userProfile => {
@@ -27,10 +31,9 @@ const Profilepage = () => {
 
     useEffect(() => {
 
-        console.log(userId)
 
         function fetch() {
-            axios.get("http://localhost:3000/User/" + userId).then(response => {
+            axios.get("http://localhost:3000/profile").then(response => {
                 console.log(response)
 
                 setUserProfile(response.data)
@@ -42,19 +45,19 @@ const Profilepage = () => {
     }, [])
 
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    // const handleSubmit = e => {
+    //     e.preventDefault();
 
-        const data = { title, body };
-        const requestOptions = {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        };
-        fetch("https://localhost:3000/User", requestOptions)
-            .then(response => response.json())
-            .then(res => console.log(res));
-    };
+    //     const data = { title, body };
+    //     const requestOptions = {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json" },
+    //         body: JSON.stringify(data)
+    //     };
+    //     fetch("https://localhost:3000/User", requestOptions)
+    //         .then(response => response.json())
+    //         .then(res => console.log(res));
+    // };
     return (
         <div>
             <Navbar />
@@ -71,7 +74,7 @@ const Profilepage = () => {
                 <h3>Joke of the Day Placeholder</h3>
             </div>
             <div>
-                <div className="Post">
+                {/* <div className="Post">
                     <form>
                         <input value={title}
                             onChange={onTitleChange} required /><br></br>
@@ -81,7 +84,7 @@ const Profilepage = () => {
                             Create Post
                         </button>
                     </form>
-                </div>
+                </div> */}
             </div>
             <Footer />
         </div>
