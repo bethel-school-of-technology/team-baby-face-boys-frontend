@@ -1,115 +1,122 @@
-import React, { useEffect } from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import { useState } from "react";
-import axios from "axios";
-import Dadjokes from "../components/dadjokes";
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import { useNavigate } from 'react-router';
+import axios from 'axios';
+import Navbar from '../components/navbar';
 
-const Profilepage = () => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [user, setUserProfile] = useState({});
+const Registrationpage = () => {
 
-  const onTitleChange = (e) => setTitle(e.target.value);
-  const onBodyChange = (e) => setBody(e.target.value);
+    let baseUrl = "http://localhost:3001"
 
-  let userId = JSON.parse(localStorage.getItem("userId"));
+    let navigate = useNavigate();
 
-  // axios.get("http://localhost:3000/User" + user.gamerID ).then(userProfile => {
-  //     console.log(userProfile)
-  //     setUserProfile(userProfile);
-  // })
+    const [user, setUser] = useState({
+        fullName: "",
+        gamerID: "",
+        DOB: "",
+        email: "",
+        password: ""
+    })
+    // const { register, handleSubmit } = useForm();
+    // const handleRegistration = (data) => console.log(data);
 
-  useEffect(() => {
-    console.log(userId);
+    const handleChange = (event) => {
 
-    function fetch() {
-      axios.get("http://localhost:3000/User/" + userId).then((response) => {
-        console.log(response);
+        setUser((preValue) => {
+            return {
+                ...preValue,
+                [event.target.name]: event.target.value
+            }
+        })
 
-        setUserProfile(response.data);
-      });
     }
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    fetch();
-  }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+        axios.post("http://localhost:3000/createaccount", user).then(response => {
+            console.log(response);
 
-    const data = { title, body };
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-    fetch("https://localhost:3000/User", requestOptions)
-      .then((response) => response.json())
-      .then((res) => console.log(res));
-  };
-  return (
-    <div className="container bg-primary d-flex flex-column">
-      <div className="row">
-        <div className="col p-3 text-center">
-          <Navbar />
-        </div>
-      </div>
+            localStorage.setItem("userId", JSON.stringify(response.data.id))
+            // TODO store response in localstorage
+            navigate("/profile")
+        })
 
-      <div className="row mt-3">
-        <div
-          className="col-sm  
- mx-auto"
-        >
-          <div>
-            <h1>Welcome, {user.gamerID}</h1>
-          </div>
-          <div>
-            <img
-              className="profpic mx-auto d-block my-5"
-              src={require("../../src/images/page_bkgnds/jan.jpg")}
-            />
+        // axios.get("http://localhost:3000/User/" + user.gamerID ).then(response => {
+        //     console.log(response);
+        //     navigate("/profile")
+        // })
+    }
+    
+
+    return (
+        <div className="container-fluid  bg-primary d-flex flex-column">
+        <div className="row">
+          <div className="col-sm p-3 text-center">
+            <Header/>
           </div>
         </div>
-        <div className="col-sm ">
-          <div className="high-scores_profpage mx-auto  p-4">
-            <h3>High Scores Placeholder</h3>
-          </div>
-        </div>
-      </div>
-      <div className="row p-4">
-        <div className="col-sm  my-auto ">
-          <div>
-            <div className="Post ">
-              <form>
-                <label className="mr-3">Post Title:</label>
-                <input
-                  className="my-3 input"
-                  value={title}
-                  onChange={onTitleChange}
-                  required
-                />
-                <br></br>
-                <label className="mr-3">Post Body:</label>
-                <textarea value={body} onChange={onBodyChange} required />
-                <br></br>
-                <button className="mt-3" type="submit" onClick={handleSubmit}>
-                  Create Post
-                </button>
-              </form>
+        <div className="row text-secondary bgnd_img-registration align-items-center ">
+             <div className="col text-center">
+                 <div className="col-sm">
+            <form className="Create Account form_regis mx-auto p-3" onSubmit={handleSubmit}>
+            <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../../src/images/page_bkgnds/jan.jpg') } />
+            {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
+            <label>Full Name: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="fullName" /><br></br>
+            <label>Gamer ID: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="gamerID" /><br></br>
+            <label>Date of Birth: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="DOB" /><br></br>
+            <label>Email: </label><br></br>
+            <input className='mb-2'  onChange={handleChange} name="email" /><br></br>
+            {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
+            {/* <input type="password" {...register("password")} /><br></br> */}
+            <label className='mb-2'>Password: </label><br></br>
+            <input onChange={handleChange} name="password" /><br></br>
+
+            {/* <Link to='/profile'><input type={"submit"} /></Link> */}
+            <button className='my-4 ' type="submit">Create Account</button>
+        </form>
+            {/* <div>
+                <form onSubmit={handleSubmit(handleRegistration)}>
+                    <div>
+                        <label>Full Name: </label>
+                        <input name="fullName" {...register('fullName', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Gamer ID: </label>
+                        <input name="gamerID" {...register('gamerID', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Date of Birth: </label>
+                        <input name="DOB" {...register('DOB', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <input type="email" name="email" {...register('email', { required: true })} />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password" {...register('password', { required: true })} />
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div> */}
             </div>
           </div>
-        </div>
-        <div className="col-sm mt-3 mx-auto text-center">
-          <Dadjokes />
+          
+      </div>
+        <div className="row footer">
+          <div className="col text-center p-3">
+          <script src="./" ></script>
+            <Footer/>
+            </div>
         </div>
       </div>
-      <div className="row height align-items-end text-center">
-        <div className="col ">
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default Profilepage;
+export default Registrationpage;
