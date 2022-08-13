@@ -1,34 +1,48 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 
 function Blog() {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+  const [postTitle, setPostTitle] = useState("");
+  const [postBody, setPostBody] = useState("");
 
   const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
 
   const [postList, setPostList] = useState([]);
 
   const addPost = () => {
-    Axios.post("http://localhost:3000/forum", {
-      postTitle: setTitle,
-      postBody: setBody,
-    }).then((response) => {
-      setPostList([...postList, response]);
+    axios.post("http://localhost:3000/forum", {
+      postTitle: setPostTitle,
+      postBody: setPostBody,
+    }).then(() => {
+      setPostList([...postList, {
+        postTitle: postTitle,
+        postBody: postBody,
+      },
+      ]);
     });
   };
 
   const getPosts = () => {
-    Axios.get("http://localhost:3000/forum").then((response) => {
-      setPostList(response);
+    axios.get("http://localhost:3000/forum").then((response) => {
+      setPostList.JSON.stringify(response.data);
     });
   };
 
-  const updateTitlePost = (id) => {
-    Axios.put("http://localhost:3000/forum", {
+  // const getPosts = () => {
+  //   axios.get ("http://localhost:3000/", {
+  //     postTitle:setPostTitle,
+  //     postBody: setPostBody,
+  //   }).then((response) => {
+  //     setPostList([...postList, response]);
+  //   });
+  // };
+
+  const updatePostTitle = (id) => {
+    axios.put("http://localhost:3000/forum/:id", {
       postTitle: newTitle,
       id: id,
-    }).then((response) => {
+    }).then(() => {
       setPostList(
         postList.map((val) => {
           return val.id == id
@@ -39,8 +53,23 @@ function Blog() {
     });
   };
 
+  const updatePostBody = (id) => {
+    axios.put("http://localhost:3000/:id", {
+      postTitle: newBody,
+      id: id,
+    }).then(() => {
+      setPostList(
+        postList.map((val) => {
+          return val.id == id
+            ? { id: val.id, postTitle: newBody, postBody: val.postBody }
+            : val;
+        })
+      );
+    });
+  };
+
   const deletePost = (id) => {
-    Axios.delete(`http://localhost:3000/forum/${id}`).then((response) => {
+    axios.delete(`http://localhost:3000/forum/${id}`).then((response) => {
       setPostList(
         postList.filter((val) => {
           return val.id != id;
@@ -59,7 +88,7 @@ function Blog() {
               className="my-3 input"
               type="text"
               onChange={(event) => {
-                setTitle(event.target.value);
+                setPostTitle(event.target.value);
               }}
             />
             <br></br>
@@ -68,7 +97,7 @@ function Blog() {
               className="my-3 input"
               type="text"
               onChange={(event) => {
-                setBody(event.target.value);
+                setPostBody(event.target.value);
               }}
             />
             <br></br>
@@ -81,11 +110,13 @@ function Blog() {
         <h4>Forum Posts:</h4>
         <div className="row forumBlog_plate p-5 my-3">
           <div>
+            <button onClick={getPosts}></button>
             {postList.map((val, key) => {
               return (
                 <div>
                   <div>
-                    <strong>{val.postTitle}</strong> - {val.postBody}
+                    <strong>{val.postTitle}</strong>
+                    <strong> {val.postBody}</strong>
                   </div>
                   <div>
                     <input
@@ -97,7 +128,21 @@ function Blog() {
                     />
                     <button
                       onClick={() => {
-                        updateTitlePost(val.id);
+                        updatePostTitle(val.id);
+                      }}
+                    >
+                      Update
+                    </button>
+                    <input
+                      type="text"
+                      placeholder="New Body"
+                      onChange={(event) => {
+                        setNewBody(event.target.value);
+                      }}
+                    />
+                    <button
+                      onClick={() => {
+                        updatePostBody(val.id);
                       }}
                     >
                       Update
