@@ -15,7 +15,7 @@ const Titlepage = () => {
         <p>Right side icons?</p>
       </div> */}
     </div>
-    <div className="row text-secondary bgnd_img-ttlpg align-items-center ">
+    <div className="row text-primary bgnd_img-ttlpg align-items-center ">
          <div className="col text-center">
         <h3><strong>Click The Logo To Enter!</strong></h3> <br></br>
         <Link to='/account'><div className="car_btn  mx-auto d-block" ></div></Link>

@@ -11,7 +11,8 @@ label,textarea {
 }
 
 .footer {
-    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }
 
 /* ------------------Global settings------------------ */
@@ -61,6 +62,9 @@ h4.title {
     width: 300px;
 }
 
+.main_text,.sub_text{
+    font-family: 'Permanent Marker', cursive;
+}
 
 /* ---------------Games page settings------------------ */
 
