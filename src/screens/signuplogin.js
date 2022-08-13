@@ -7,7 +7,7 @@ import axios from "axios";
 import Navbar from "../components/navbar";
 
 const Signuplogin = () => {
-  let baseUrl = "http://localhost:3000/User";
+  let baseUrl = "http://localhost:3000/users";
 
   let navigate = useNavigate();
 
@@ -53,8 +53,10 @@ const Signuplogin = () => {
     //     navigate("/profile")
     // })
 
-    axios.post("http://localhost:3000/login", user.gamerID).then((response) => {
-      console.log(response);
+    axios.post("http://localhost:3000/login", user).then((response) => {
+      console.log(response.data);
+
+    localStorage.setItem("token", JSON.stringify(response.data))
       navigate("/profile");
     });
   };
