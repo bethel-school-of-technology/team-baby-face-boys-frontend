@@ -255,10 +255,10 @@ input.input {
 /* ---------------Profile Page settings------------------ */
 
 .jokeholder {
-    height: 195px;
+    height: 150px;
     position: relative;
     top: 0px;
-    background-color: darkviolet;
+    overflow-y:auto ;
 }
 /* 
 .joke_button {

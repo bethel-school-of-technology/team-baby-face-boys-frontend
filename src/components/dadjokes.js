@@ -12,19 +12,19 @@ function Dadjokes() {
   };
 
   return (
-    <div>
-      <div className="row">
-        <div className="col text-center">
-          <div className="joke_text">
-            <p className=" jokeholder">{joke}</p>
-          </div>
-        <div className="row">
+    <div className="">
+        <div className="row mb-3">
           <div className="col text-center">
             <div class="joke_button">
               <button onClick={generateJoke}>Get a Joke</button>
             </div>
           </div>
         </div>
+      <div className="row">
+        <div className="col text-center">
+          <div className="joke_text">
+            <p className=" jokeholder">{joke}</p>
+          </div>
         </div>
       </div>
     </div>
