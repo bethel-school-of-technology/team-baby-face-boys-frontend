@@ -15,6 +15,7 @@ label,textarea {
     font-size: 1.3rem;
 }
 
+
 /* ------------------Global settings------------------ */
 
 .nav-link:hover {
@@ -54,12 +55,20 @@ h4.title {
     background-color: rgb(38, 57, 92);
 }
 
-.car_btn {
-    background-image: url('./images/car-gaf6cfc371_640.png');
+.carrot_btn {
+    background-image: url('./images/carrot.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size:contain;
+    transform: rotate(20deg);
     height: 150px;
     width: 300px;
+}
+
+p.enter-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 .main_text,.sub_text{
