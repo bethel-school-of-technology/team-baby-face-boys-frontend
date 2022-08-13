@@ -254,6 +254,22 @@ input.input {
 
 /* ---------------Profile Page settings------------------ */
 
+.high-scores_profpage {
+    background-color: rgba(0, 213, 255, 0.344);
+    border-radius: 25px;
+    height:35vh;
+    width: 85%;
+}
+
+.prof_backing {
+    background-color: darkviolet;
+}
+
+img.profpic {
+    border-radius: 40%;
+    height: 200px;
+}
+
 .jokeholder {
     height: 150px;
     position: relative;
@@ -267,14 +283,6 @@ input.input {
     top: 200px;
     background-color: darkviolet;
 } */
-
-.prof_backing {
-    background-color: darkviolet;
-}
-img.profpic {
-    border-radius: 40%;
-    height: 200px;
-}
 
 .row.height {
     height: 400px;

@@ -55,7 +55,7 @@ const Profilepage = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div className="row mt-3">
         <div
           className="col-sm  
  mx-auto"
@@ -71,7 +71,7 @@ const Profilepage = () => {
           </div>
         </div>
         <div className="col-sm ">
-          <div>
+          <div className="high-scores_profpage mx-auto  p-4">
             <h3>High Scores Placeholder</h3>
           </div>
         </div>
