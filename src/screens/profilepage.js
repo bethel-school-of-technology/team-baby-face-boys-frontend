@@ -6,16 +6,15 @@ import axios from 'axios';
 
 
 const Profilepage = () => {
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [user, setUserProfile] = useState({
-        gamerID: "",
-        postTitle: "",
-        postBody: ""
-    });
+    const [postTitle, setPostTitle] = useState("");
+    const [postBody, setPostBody] = useState("");
+    const [user, setUserProfile] = useState({});
+    const [post, setPost] = useState([]);
 
-    const onTitleChange = e => setTitle(e.target.value);
-    const onBodyChange = e => setBody(e.target.value);
+    let token = JSON.parse(localStorage.getItem("token"))
+
+    // const onTitleChange = e => setTitle(e.target.value);
+    // const onBodyChange = e => setBody(e.target.value);
 
 
 
@@ -25,7 +24,23 @@ const Profilepage = () => {
     //     setUserProfile(userProfile);
     // })
 
+    const handleChange = (event) => {
 
+        setPostTitle((preValue) => {
+            return {
+                ...preValue,
+                [event.target.name]: event.target.value
+            }
+        })
+
+        setPostBody((preValue) => {
+            return {
+                ...preValue,
+                [event.target.name]: event.target.value
+            }
+        })
+
+    }
 
 
 
@@ -33,11 +48,17 @@ const Profilepage = () => {
 
 
         function fetch() {
-            axios.get("http://localhost:3000/profile").then(response => {
+            console.log(token)
+
+            axios.get("http://localhost:3000/profile/" + token).then(response => {
                 console.log(response)
 
                 setUserProfile(response.data)
             })
+
+            axios.get("http://localhost:3000/profile/:token").then((response) => {
+                setPost.JSON.stringify(response.data);
+              });
         }
 
         fetch();
@@ -45,46 +66,85 @@ const Profilepage = () => {
     }, [])
 
 
-    // const handleSubmit = e => {
-    //     e.preventDefault();
+    const handleSubmit = e => {
+        e.preventDefault();
 
-    //     const data = { title, body };
-    //     const requestOptions = {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify(data)
-    //     };
-    //     fetch("https://localhost:3000/User", requestOptions)
-    //         .then(response => response.json())
-    //         .then(res => console.log(res));
-    // };
+        axios.post("http://localhost:3000/profile", {
+            postTitle: setPostTitle,
+            postBody: setPostBody,
+        }).then(() => {
+            setPost([...post, {
+                postTitle: postTitle,
+                postBody: postBody,
+            },
+            ]);
+        });
+
+        // axios.put("http://localhost:3000/profile/:id", {
+        //     postTitle: newTitle,
+        //     id: id,
+        // }).then(() => {
+        //     setPost(
+        //         postList.map((val) => {
+        //             return val.id == id
+        //                 ? { id: val.id, postTitle: newTitle, postBody: val.postBody }
+        //                 : val;
+        //         })
+        //     );
+        // });
+        // axios.put("http://localhost:3000/:id", {
+        //     postTitle: newBody,
+        //     id: id,
+        // }).then(() => {
+        //     setPost(
+        //         postList.map((val) => {
+        //             return val.id == id
+        //                 ? { id: val.id, postTitle: newBody, postBody: val.postBody }
+        //                 : val;
+        //         })
+        //     );
+        // });
+        // axios.delete(`http://localhost:3000/profile/${id}`).then((response) => {
+        //     setPost(
+        //         postList.filter((val) => {
+        //             return val.id != id;
+        //         })
+        //     );
+        // });
+    };
+
+
+
     return (
         <div>
             <Navbar />
             <div>
-                <h1>Welcome,  {user.gamerID}</h1>
+                <h1>Welcome {user.gamerID}</h1>
             </div>
             <div>
-                <h3>Profile Photo Placeholder</h3>
+                <h3>Profile Photo Placeholder </h3>
             </div>
             <div>
                 <h3>High Scores Placeholder</h3>
             </div>
             <div>
-                <h3>Joke of the Day Placeholder</h3>
+                <p>{user.postTitle} </p><br></br>
+                <p>{user.postBody}</p>
             </div>
             <div>
-                {/* <div className="Post">
+                <div className="Post">
                     <form>
-                        <input value={title}
-                            onChange={onTitleChange} required /><br></br>
-                        <textarea value={body}
-                            onChange={onBodyChange} required /><br></br>
+                        <input value={postTitle}
+                            onChange={handleChange} required /><br></br>
+                        <textarea value={postBody}
+                            onChange={handleChange} required /><br></br>
                         <button type="submit" onClick={handleSubmit}>
                             Create Post
                         </button>
+                        <button>Edit Post</button>
+                        <button>Delete Post</button>
                     </form>
-                </div> */}
+                </div>
             </div>
             <Footer />
         </div>

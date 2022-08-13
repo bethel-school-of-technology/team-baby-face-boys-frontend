@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { response } from "express";
 
 function Blog() {
-  // const [postTitle, setPostTitle] = useState("");
-  // const [postBody, setPostBody] = useState("");
+  const [postTitle, setPostTitle] = useState("");
+  const [postBody, setPostBody] = useState("");
 
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
 
-  const [postList, setPostList] = useState({
-    postTitle: "",
-    postBody: ""
-  });
+  const [postList, setPostList] = useState([]);
 
   const addPost = () => {
-    axios.post("http://localhost:3000/", {
+    axios.post("http://localhost:3000/forum", {
       postTitle: setPostTitle,
       postBody: setPostBody,
     }).then(() => {
@@ -28,7 +24,7 @@ function Blog() {
   };
 
   const getPosts = () => {
-    axios.get("http://localhost:3000/").then((response) => {
+    axios.get("http://localhost:3000/forum").then((response) => {
       setPostList.JSON.stringify(response.data);
     });
   };
@@ -43,7 +39,7 @@ function Blog() {
   // };
 
   const updatePostTitle = (id) => {
-    axios.put("http://localhost:3000/:id", {
+    axios.put("http://localhost:3000/forum/:id", {
       postTitle: newTitle,
       id: id,
     }).then(() => {

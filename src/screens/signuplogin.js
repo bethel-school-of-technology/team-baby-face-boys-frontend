@@ -54,7 +54,9 @@ const Signuplogin = () => {
     // })
 
     axios.post("http://localhost:3000/login", user).then((response) => {
-      console.log(response);
+      console.log(response.data);
+
+    localStorage.setItem("token", JSON.stringify(response.data))
       navigate("/profile");
     });
   };
