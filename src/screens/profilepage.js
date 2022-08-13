@@ -66,7 +66,7 @@ const Profilepage = () => {
   </div>
 
   <div className="row">
-    <div className="col md-3 
+    <div className="col 
  mx-auto">
 
   <div>
@@ -76,7 +76,7 @@ const Profilepage = () => {
   <img className="profpic mx-auto d-block my-5" src={ require('../../src/images/page_bkgnds/jan.jpg') } />
   </div>
     </div>
-    <div className="col">
+    <div className="col ">
         
   <div>
     <h3>High Scores Placeholder</h3>
@@ -84,10 +84,10 @@ const Profilepage = () => {
     </div>
   </div>
   <div className="row">
-    <div className="col">
+    <div className="col  my-auto ">
 
   <div>
-    <div className="Post">
+    <div className="Post ">
       <form>
       <label className="mr-3">Post Title:</label>
         <input className="my-3 input" value={title} onChange={onTitleChange} required />

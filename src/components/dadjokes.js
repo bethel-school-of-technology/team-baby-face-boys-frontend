@@ -11,16 +11,23 @@ function Dadjokes() {
       .then((data) => setJoke(data.value.joke));
   };
 
-  return (<div className="">
-    
-    <div className="row">
-      <div className="col text-center">
-
-        <div className="joke_text">
-          <p className=" jokeholder">{joke}</p>
-        </div><div class="joke_button">
-        <button onClick={generateJoke}>Get a Joke</button></div></div>
-      </div></div>
+  return (
+    <div>
+      <div className="row">
+        <div className="col text-center">
+          <div className="joke_text">
+            <p className=" jokeholder">{joke}</p>
+          </div>
+        <div className="row">
+          <div className="col text-center">
+            <div class="joke_button">
+              <button onClick={generateJoke}>Get a Joke</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
