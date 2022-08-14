@@ -13,36 +13,6 @@ const Profilepage = () => {
 
     let token = JSON.parse(localStorage.getItem("token"))
 
-    // const onTitleChange = e => setTitle(e.target.value);
-    // const onBodyChange = e => setBody(e.target.value);
-
-
-
-
-    // axios.get("http://localhost:3000/User" + user.gamerID ).then(userProfile => {
-    //     console.log(userProfile)
-    //     setUserProfile(userProfile);
-    // })
-
-    const handleChange = (event) => {
-
-        setPostTitle((preValue) => {
-            return {
-                ...preValue,
-                [event.target.name]: event.target.value
-            }
-        })
-
-        setPostBody((preValue) => {
-            return {
-                ...preValue,
-                [event.target.name]: event.target.value
-            }
-        })
-
-    }
-
-
 
     useEffect(() => {
 
@@ -56,7 +26,7 @@ const Profilepage = () => {
                 setUserProfile(response.data)
             })
 
-            axios.get("http://localhost:3000/profile/:token").then((response) => {
+            axios.get("http://localhost:3000/profile/:jwt").then((response) => {
                 setPost.JSON.stringify(response.data);
               });
         }
@@ -68,17 +38,29 @@ const Profilepage = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        const Post = { postTitle, postBody };
 
-        axios.post("http://localhost:3000/forum", {
-            postTitle: setPostTitle,
-            postBody: setPostBody,
+        console.log(Post)
+
+        fetch ( "http://localhost:3000/profile/" + token, {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(Post)
         }).then(() => {
-            setPost([...post, {
-                postTitle: postTitle,
-                postBody: postBody,
-            },
-            ]);
-        });
+            console.log('new post added')
+        })
+
+
+        // axios.post("http://localhost:3000/forum", {
+        //     postTitle: setPostTitle,
+        //     postBody: setPostBody,
+        // }).then(() => {
+        //     setPost([...post, {
+        //         postTitle: postTitle,
+        //         postBody: postBody,
+        //     },
+        //     ]);
+        // });
 
         // axios.put("http://localhost:3000/profile/:id", {
         //     postTitle: newTitle,
@@ -134,13 +116,14 @@ const Profilepage = () => {
             <div>
                 <div className="Post">
                     <form>
-                        <textarea onChange={handleChange} name="setPostTitle" /><br></br>
-                        <textarea onChange={handleChange} name="setPostBody"/><br></br>
-                        <button type="submit" onClick={handleSubmit}>
+                        <label>Post Title: </label>
+                        <input type="text" value={postTitle}  onChange={(e)=> setPostTitle (e.target.value)} /><br></br>
+                        <label>Post Body:</label>
+                        <textarea value={postBody}  onChange={(e)=> setPostBody (e.target.value)} /><br></br>
+                        <button onClick={handleSubmit}>
                             Create Post
                         </button>
                         <button>Edit Post</button>
-                        <button>Delete Post</button>
                     </form>
                 </div>
             </div>

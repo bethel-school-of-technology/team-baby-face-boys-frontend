@@ -10,6 +10,8 @@ function Blog() {
 
   const [postList, setPostList] = useState([]);
 
+  let token = JSON.parse(localStorage.getItem("token"))
+
   const addPost = () => {
     axios.post("http://localhost:3000/forum", {
       postTitle: setPostTitle,
@@ -24,7 +26,7 @@ function Blog() {
   };
 
   const getPosts = () => {
-    axios.get("http://localhost:3000/forum").then((response) => {
+    axios.get("http://localhost:3000/profile" + token).then((response) => {
       setPostList.JSON.stringify(response.data);
     });
   };
