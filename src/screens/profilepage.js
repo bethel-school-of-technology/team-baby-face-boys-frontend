@@ -9,7 +9,7 @@ const Profilepage = () => {
     const [postTitle, setPostTitle] = useState("");
     const [postBody, setPostBody] = useState("");
     const [user, setUserProfile] = useState({});
-    const [post, setPost] = useState([]);
+    const [post, setPost] = useState("");
 
     let token = JSON.parse(localStorage.getItem("token"))
 
@@ -69,7 +69,7 @@ const Profilepage = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
-        axios.post("http://localhost:3000/profile", {
+        axios.post("http://localhost:3000/forum", {
             postTitle: setPostTitle,
             postBody: setPostBody,
         }).then(() => {
@@ -134,10 +134,8 @@ const Profilepage = () => {
             <div>
                 <div className="Post">
                     <form>
-                        <input value={postTitle}
-                            onChange={handleChange} required /><br></br>
-                        <textarea value={postBody}
-                            onChange={handleChange} required /><br></br>
+                        <textarea onChange={handleChange} name="setPostTitle" /><br></br>
+                        <textarea onChange={handleChange} name="setPostBody"/><br></br>
                         <button type="submit" onClick={handleSubmit}>
                             Create Post
                         </button>
