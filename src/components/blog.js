@@ -87,7 +87,7 @@ function Blog() {
           <div>
             <label className="mr-3">Post Title:</label>
             <input
-              className="my-3"
+              className="my-3 input"
               type="text"
               onChange={(event) => {
                 setPostTitle(event.target.value);
@@ -96,6 +96,7 @@ function Blog() {
             <br></br>
             <label className="mr-2">Post Body:</label>
             <input
+              className="my-3 input"
               type="text"
               onChange={(event) => {
                 setPostBody(event.target.value);
