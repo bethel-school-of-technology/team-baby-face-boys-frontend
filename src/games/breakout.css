@@ -38,12 +38,12 @@ left: 35%;
     background-color: red;
 }
 
-body {
+body.breakout {
     background-color: #e9ecef;
     text-align: center;
 }
 
-button {
+button.breakout {
     margin-top: 20px;
 }
 

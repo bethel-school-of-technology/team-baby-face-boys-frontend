@@ -72,14 +72,14 @@ function WAMModal({ closeWAM }) {
                 <button onClick={() => closeWAM(false)}>X</button>
                 <h1>Whack-A-Mole</h1>
 
-                <h2>Your Score:</h2>
-                <h2 id="score">0</h2>
+                <h2 className='wam'>Your Score:</h2>
+                <h2 className='wam' id="score">0</h2>
 
-                <h2>Time Left:</h2>
-                <h2 id="time-left">60</h2>
+                <h2 className='wam'>Time Left:</h2>
+                <h2 className='wam' id="time-left">60</h2>
 
-                <button class="btn-success" onclick="moveMole()">Start The Mole! [1]</button>
-                <button id="clock" class="btn-primary">Start The Timer! [2]</button>
+                <button className='wam' class="btn-success" onclick="moveMole()">Start The Mole! [1]</button>
+                <button className='wam' id="clock" class="btn-primary">Start The Timer! [2]</button>
 
                 <div class="grid">
                     <div class="square" id="1"></div>

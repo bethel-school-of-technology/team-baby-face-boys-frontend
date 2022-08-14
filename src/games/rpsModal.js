@@ -71,16 +71,16 @@ function RPSModal({ closeRPS }) {
     return (
         <div className="modalBackground">
             <div className="modalContainer">
-                <button onClick={() => closeRPS(false)}>X</button>
+                <button className="rps" onClick={() => closeRPS(false)}>X</button>
                 <h1>Rock | Paper | Scissors</h1>
                 
                     <h2>Computer Choice: <span id="computer-choice"></span></h2>
                     <h2>Your Choice: <span id="user-choice"></span></h2>
                     <h2>Result: <span id="result"></span></h2>
 
-                    <button id="Rock">Rock</button>
-                    <button id="Paper">Paper</button>
-                    <button id="Scissors">Scissors</button>
+                    <button className="rps" id="Rock">Rock</button>
+                    <button className="rps" id="Paper">Paper</button>
+                    <button className="rps" id="Scissors">Scissors</button>
             </div>
         </div>
     );

@@ -20,15 +20,15 @@
     background-size: cover;
 }
 
-h2{
+h2.wam{
     display: inline;
 }
 
-button{
+button.wam{
     margin-top: 25px;
     border-radius: .25em
 }
 
-body{
+body.wam{
     text-align: center;
 }

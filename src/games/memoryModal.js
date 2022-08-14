@@ -128,13 +128,13 @@ function MemoryModal({ closeMemory }) {
         <div className="modalBackground">
             <div className="modalContainer">
                 <button onClick={() => closeMemory(false)}>X</button>
-                <h1>Memory Game</h1>
+                <h1 className='memory'>Memory Game</h1>
                
                     <div id="game">
                         <div id="grid"></div>
                     </div>
                     <div id="score">
-                        <h3>Score: <span id="result"></span></h3>
+                        <h3 className='memory'>Score: <span id="result"></span></h3>
                     </div>
             </div>
         </div>

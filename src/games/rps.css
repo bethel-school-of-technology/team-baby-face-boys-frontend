@@ -1,13 +1,13 @@
-body{
+body.rps{
     background-color: lightblue;
  
 }
 
-button{
+button.rps{
     border-radius: .25em;
 }
 
-div{
+div.rps{
     position: flex;
     text-align: center;
    padding-top: 10em;

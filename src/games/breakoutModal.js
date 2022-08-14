@@ -202,7 +202,7 @@ function BreakoutModal({ closeBreakout }) {
     return (
         <div className="modalBackground">
             <div className="modalContainer">
-                <button onClick={() => closeBreakout(false)}>X</button>
+                <button className='breakout' onClick={() => closeBreakout(false)}>X</button>
                 <div>
                     <h1>Breakout</h1>
                     <div id="score">0</div>
