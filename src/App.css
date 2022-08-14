@@ -262,7 +262,6 @@ th {
 
 }
 
-
 .modalContainer {
     border: 1px solid black;
     background-color: #f4f4f4f4;
@@ -270,4 +269,24 @@ th {
     width: 70%;
     height: 70%;
     padding: 20px;
+}
+
+body.breakout {
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+body.c4{
+    text-align: center;
+    font-family: stencil, fantasy;
+    background-color: cyan;
+}
+
+body.rps{
+    background-color: lightblue;
+ 
+}
+
+body.wam{
+    text-align: center;
 }
