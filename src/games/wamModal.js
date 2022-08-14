@@ -15,6 +15,9 @@ function WAMModal({ closeWAM }) {
     let currentTime = 60
     let timerID = null
 
+
+    useEffect(() => {
+
     function randomSquare() {
         squares.forEach(square => {
             square.classList.remove('mole')
@@ -36,7 +39,7 @@ function WAMModal({ closeWAM }) {
     })
 
     function moveMole() {
-        timerId = setInterval(randomSquare, 500)
+        timerID = setInterval(randomSquare, 500)
     }
 
     /* moveMole() */
@@ -48,7 +51,7 @@ function WAMModal({ closeWAM }) {
 
             if (currentTime == 0) {
                 clearInterval(countDownTimerId)
-                clearInterval(timerId)
+                clearInterval(timerID)
                 alert('Game Over! Your final score is ' + result + "! Refresh the page to play again!")
             }
         }
@@ -59,6 +62,9 @@ function WAMModal({ closeWAM }) {
     })
 
 
+
+    
+},[])
 
     return (
         <div className="modalBackground">
