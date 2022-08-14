@@ -6,47 +6,96 @@ import axios from "axios";
 import Dadjokes from "../components/dadjokes";
 
 const Profilepage = () => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [user, setUserProfile] = useState({});
+    const [postTitle, setPostTitle] = useState("");
+    const [postBody, setPostBody] = useState("");
+    const [user, setUserProfile] = useState({});
+    const [post, setPost] = useState("");
 
-  const onTitleChange = (e) => setTitle(e.target.value);
-  const onBodyChange = (e) => setBody(e.target.value);
+    let token = JSON.parse(localStorage.getItem("token"))
 
-  let userId = JSON.parse(localStorage.getItem("userId"));
 
-  // axios.get("http://localhost:3000/User" + user.gamerID ).then(userProfile => {
-  //     console.log(userProfile)
-  //     setUserProfile(userProfile);
-  // })
+    useEffect(() => {
 
-  useEffect(() => {
-    console.log(userId);
 
-    function fetch() {
-      axios.get("http://localhost:3000/User/" + userId).then((response) => {
-        console.log(response);
+        function fetch() {
+            console.log(token)
 
-        setUserProfile(response.data);
-      });
-    }
+            axios.get("http://localhost:3000/profile/" + token).then(response => {
+                console.log(response)
 
-    fetch();
-  }, []);
+                setUserProfile(response.data)
+            })
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+            axios.get("http://localhost:3000/profile/:jwt").then((response) => {
+                setPost.JSON.stringify(response.data);
+              });
+        }
 
-    const data = { title, body };
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+        fetch();
+
+    }, [])
+
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        const Post = { postTitle, postBody };
+
+        console.log(Post)
+
+        fetch ( "http://localhost:3000/profile/" + token, {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(Post)
+        }).then(() => {
+            console.log('new post added')
+        })
+
+
+        // axios.post("http://localhost:3000/forum", {
+        //     postTitle: setPostTitle,
+        //     postBody: setPostBody,
+        // }).then(() => {
+        //     setPost([...post, {
+        //         postTitle: postTitle,
+        //         postBody: postBody,
+        //     },
+        //     ]);
+        // });
+
+        // axios.put("http://localhost:3000/profile/:id", {
+        //     postTitle: newTitle,
+        //     id: id,
+        // }).then(() => {
+        //     setPost(
+        //         postList.map((val) => {
+        //             return val.id == id
+        //                 ? { id: val.id, postTitle: newTitle, postBody: val.postBody }
+        //                 : val;
+        //         })
+        //     );
+        // });
+        // axios.put("http://localhost:3000/:id", {
+        //     postTitle: newBody,
+        //     id: id,
+        // }).then(() => {
+        //     setPost(
+        //         postList.map((val) => {
+        //             return val.id == id
+        //                 ? { id: val.id, postTitle: newBody, postBody: val.postBody }
+        //                 : val;
+        //         })
+        //     );
+        // });
+        // axios.delete(`http://localhost:3000/profile/${id}`).then((response) => {
+        //     setPost(
+        //         postList.filter((val) => {
+        //             return val.id != id;
+        //         })
+        //     );
+        // });
     };
-    fetch("https://localhost:3000/User", requestOptions)
-      .then((response) => response.json())
-      .then((res) => console.log(res));
-  };
+
+
   return (
     <div className="container bg-primary d-flex flex-column">
       <div className="row">
@@ -82,19 +131,14 @@ const Profilepage = () => {
             <div className="Post ">
               <form>
                 <label className="mr-3">Post Title:</label>
-                <input
-                  className="my-3 input"
-                  value={title}
-                  onChange={onTitleChange}
-                  required
-                />
-                <br></br>
+                <input className="my-3 input" type="text" value={postTitle}  onChange={(e)=> setPostTitle (e.target.value)} /><br></br>
+
                 <label className="mr-3">Post Body:</label>
-                <textarea value={body} onChange={onBodyChange} required />
-                <br></br>
-                <button className="mt-3" type="submit" onClick={handleSubmit}>
-                  Create Post
-                </button>
+                <textarea value={postBody}  onChange={(e)=> setPostBody (e.target.value)} /><br></br>
+                <button  className="mt-3"  onClick={handleSubmit}>
+                            Create Post
+                        </button>
+                        <button>Edit Post</button>
               </form>
             </div>
           </div>
