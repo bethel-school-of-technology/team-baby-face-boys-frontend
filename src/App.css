@@ -5,14 +5,16 @@
 }
 
 
-label,input,textarea {
+label,textarea {
     font-size: 1.25rem;
     width: 100%;
 }
 
 .footer {
-    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }
+
 
 /* ------------------Global settings------------------ */
 
@@ -29,6 +31,7 @@ div[class*="container"] {/*
     color:rgb(230, 230, 230);
     height: 100vh;
     border: 10px inset rgb(30, 30, 67);
+    overflow-x: hidden;
     box-shadow: 1px 1px 8px black outset;
 }
 
@@ -52,14 +55,25 @@ h4.title {
     background-color: rgb(38, 57, 92);
 }
 
-.car_btn {
-    background-image: url('./images/car-gaf6cfc371_640.png');
+.carrot_btn {
+    background-image: url('./images/carrot.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size:contain;
+    transform: rotate(20deg);
     height: 150px;
     width: 300px;
 }
 
+p.enter-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.main_text,.sub_text{
+    font-family: 'Permanent Marker', cursive;
+}
 
 /* ---------------Games page settings------------------ */
 
@@ -220,7 +234,10 @@ th {
     border-radius: 25px;
 }
 
+input.input {
+    width: 100%;
 
+}
 
 .forum-s1 {
     background-color: rgba(245, 245, 245, 0.652);
@@ -248,3 +265,38 @@ th {
     max-height: 250px;
 }
 
+/* ---------------Profile Page settings------------------ */
+
+.high-scores_profpage {
+    background-color: rgba(0, 213, 255, 0.344);
+    border-radius: 25px;
+    height:35vh;
+    width: 85%;
+}
+
+.prof_backing {
+    background-color: darkviolet;
+}
+
+img.profpic {
+    border-radius: 40%;
+    height: 200px;
+}
+
+.jokeholder {
+    height: 150px;
+    position: relative;
+    top: 0px;
+    overflow-y:auto ;
+}
+/* 
+.joke_button {
+    
+    position: relative;
+    top: 200px;
+    background-color: darkviolet;
+} */
+
+.row.height {
+    height: 400px;
+}
