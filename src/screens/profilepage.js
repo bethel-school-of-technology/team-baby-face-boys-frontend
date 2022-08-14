@@ -128,9 +128,9 @@ const Profilepage = () => {
       <div className="row p-4">
         <div className="col-sm  my-auto ">
           <div>
-            <div className="Post ">
+            <div className="Post "><div>Recent Posts:
             <p>{user.postTitle} </p><br></br>
-                <p>{user.postBody}</p>
+                <p>{user.postBody}</p></div>
               <form>
                 <label className="mr-3">Post Title:</label>
                 <input className="my-3 input" type="text" value={postTitle}  onChange={(e)=> setPostTitle (e.target.value)} /><br></br>
