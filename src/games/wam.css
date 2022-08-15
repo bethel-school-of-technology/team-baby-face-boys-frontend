@@ -1,4 +1,4 @@
-.grid{
+.gridwam{
     display: flex;
     width: 606px;
     height: 606px;
@@ -9,7 +9,7 @@
 
 }
 
-.square{
+.squarewam{
     height: 200px;
     width: 200px;
     border: solid black 1px;

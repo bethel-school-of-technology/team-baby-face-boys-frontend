@@ -6,7 +6,7 @@ function RPSModal({ closeRPS }) {
 
     const computerChoiceDisplay = document.getElementById('computer-choice');
     const userChoiceDisplay = document.getElementById('user-choice');
-    const resultDisplay = document.getElementById('result');
+    const resultDisplay = document.getElementById('resultrps');
     const possibleChoices = document.querySelectorAll('button');
     let userChoice;
     let computerChoice;
@@ -76,7 +76,7 @@ function RPSModal({ closeRPS }) {
                 
                     <h2>Computer Choice: <span id="computer-choice"></span></h2>
                     <h2>Your Choice: <span id="user-choice"></span></h2>
-                    <h2>Result: <span id="result"></span></h2>
+                    <h2>Result: <span id="resultrps"></span></h2>
 
                     <button className="rps" id="Rock">Rock</button>
                     <button className="rps" id="Paper">Paper</button>

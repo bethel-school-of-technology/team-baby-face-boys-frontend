@@ -141,7 +141,7 @@ function Connect4Modal({ closeConnect4 }) {
                 <h1>Connect 4</h1>
                 <h3> The Current Player Is: Player <span id="current-player">1</span></h3>
                 <h3 id="result"></h3>
-                <div class="grid">
+                <div class="gridc4">
                     <div></div>
                     <div></div>
                     <div></div>

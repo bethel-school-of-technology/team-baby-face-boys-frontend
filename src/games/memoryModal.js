@@ -57,8 +57,8 @@ function MemoryModal({ closeMemory }) {
     
     cardArray.sort(() => 0.5 - Math.random())
     
-    const gridDisplay = document.querySelector('#grid')
-    const resultDisplay = document.querySelector('#result')
+    const gridDisplay = document.querySelector('#gridmemory')
+    const resultDisplay = document.querySelector('#resultmemory')
     let cardsChosen = []
     let cardsChosenIds = []
     const cardsWon = []
@@ -66,7 +66,7 @@ function MemoryModal({ closeMemory }) {
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img')
-            card.setAttribute('src', 'images/blank.png')
+            card.setAttribute('src', 'gamePictures/blank.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             gridDisplay.append(card)
@@ -81,19 +81,19 @@ function MemoryModal({ closeMemory }) {
         const optionTwoId = cardsChosenIds[1]
         if (optionOneId == optionTwoId) {
             alert('You have clicked the same card!')
-            cards[optionOneId].setAttribute('src', 'images/blank.png')
-            cards[optionTwoId].setAttribute('src', 'images/blank.png')
+            cards[optionOneId].setAttribute('src', 'gamePictures/blank.png')
+            cards[optionTwoId].setAttribute('src', 'gamePictures/blank.png')
         }
         if (cardsChosen[0] == cardsChosen[1]) {
             alert('You found a match!')
-            cards[optionOneId].setAttribute('src', 'images/white.png')
-            cards[optionTwoId].setAttribute('src', 'images/white.png')
+            cards[optionOneId].setAttribute('src', 'gamePictures/white.png')
+            cards[optionTwoId].setAttribute('src', 'gamePictures/white.png')
             cards[optionOneId].removeEventListener('click', flipCard)
             cards[optionTwoId].removeEventListener('click', flipCard)
             cardsWon.push(cardsChosen)
         } else {
-            cards[optionOneId].setAttribute('src', 'images/blank.png')
-            cards[optionTwoId].setAttribute('src', 'images/blank.png')
+            cards[optionOneId].setAttribute('src', 'gamePictures/blank.png')
+            cards[optionTwoId].setAttribute('src', 'gamePictures/blank.png')
             alert("Sorry, try again!")
         }
         resultDisplay.textContent = cardsWon.length
@@ -130,11 +130,11 @@ function MemoryModal({ closeMemory }) {
                 <button onClick={() => closeMemory(false)}>X</button>
                 <h1 className='memory'>Memory Game</h1>
                
-                    <div id="game">
-                        <div id="grid"></div>
+                    <div id="gamememory">
+                        <div id="gridmemory"></div>
                     </div>
-                    <div id="score">
-                        <h3 className='memory'>Score: <span id="result"></span></h3>
+                    <div id="scorememory">
+                        <h3 className='memory'>Score: <span id="resultmemory"></span></h3>
                     </div>
             </div>
         </div>
