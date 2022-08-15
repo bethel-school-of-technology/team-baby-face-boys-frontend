@@ -1,0 +1,9 @@
+button.rps{
+    border-radius: .25em;
+}
+
+div.rps{
+    position: flex;
+    text-align: center;
+   padding-top: 10em;
+}

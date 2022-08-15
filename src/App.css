@@ -300,3 +300,46 @@ img.profpic {
 .row.height {
     height: 400px;
 }
+
+/* ---------------------------------- modal styling ------------------------------ */
+
+.modalBackground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0,0,0,0,5);
+
+}
+
+.modalContainer {
+    border: 1px solid black;
+    background-color: #f4f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+}
+
+body.breakout {
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+body.c4{
+    text-align: center;
+    font-family: stencil, fantasy;
+    background-color: cyan;
+}
+
+body.rps{
+    background-color: lightblue;
+ 
+}
+
+body.wam{
+    text-align: center;
+}
