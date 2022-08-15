@@ -1,0 +1,32 @@
+#grid {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+
+h3.memory{
+    padding-left: 20px;
+}
+
+#score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+h1.memory{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}

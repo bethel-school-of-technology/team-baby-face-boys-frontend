@@ -29,47 +29,37 @@ const Teen = () => {
         <div className="row">
           <div className="col img_grid">
             <img
+              onClick={() => { setOpenBreakout(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/breakout.jpg")}
             />
+            {openBreakout && <BreakoutModal closeBreakout={setOpenBreakout} />}
             <img
+              onClick={() => { setOpenConnect4(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/cnnct4.jpg")}
             />
+            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}
             <img
+              onClick={() => { setOpenMemory(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/memory.jpg")}
             />
+            {openMemory && <MemoryModal closeMemory={setOpenMemory} />}
             <img
+              onClick={() => { setOpenRPS(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/rockpaperscissors.jpg")}
             />
+            {openRPS && <RPSModal closeRPS={setOpenRPS} />}
             <img
+              onClick={() => { setOpenWAM(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/whackamole.jpg")}
             />
-          </div>
-        </div>
-        <div>
-            <button className="openBreakoutBtn" onClick={() => { setOpenBreakout(true); }}>Breakout</button>
-            {openBreakout && <BreakoutModal closeBreakout={setOpenBreakout} />}
-          </div>
-          <div>
-            <button className="openConnect4Btn" onClick={() => { setOpenConnect4(true); }}>Connect 4</button>
-            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}
-          </div>
-          <div>
-            <button className="openMemoryBtn" onClick={() => { setOpenMemory(true); }}>Memory</button>
-            {openMemory && <MemoryModal closeMemory={setOpenMemory} />}
-          </div>
-          <div>
-            <button className="openRPSBtn" onClick={() => { setOpenRPS(true); }}>Rock, Paper, Scissors</button>
-            {openRPS && <RPSModal closeRPS={setOpenRPS} />}
-          </div>
-          <div>
-            <button className="openWAMBtn" onClick={() => { setOpenWAM(true); }}>Whack-A-Mole</button>
             {openWAM && <WAMModal closeWAM={setOpenWAM} />}
           </div>
+        </div>
       </div>
       <div className="row footer">
         <div className="col text-center p-3">
