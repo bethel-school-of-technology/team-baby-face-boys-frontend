@@ -56,7 +56,7 @@ h4.title {
 }
 
 .carrot_btn {
-    background-image: url('./images/carrot.png');
+    background-image: url('./images/carrot1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
@@ -66,9 +66,8 @@ h4.title {
 }
 
 p.enter-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    text-decoration: underline;
+    font-family: 'DynaPuff', cursive;
+    font-size: 1.9rem;
 }
 
 .main_text,.sub_text{
