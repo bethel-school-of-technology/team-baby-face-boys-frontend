@@ -152,6 +152,11 @@ th {
 
 /* ---------------Login Page settings------------------ */
 
+h4.title {
+        font-family: 'DynaPuff', cursive;
+        color: rgb(0, 255, 55);
+}
+
 .bgnd_img-signup_login {
     background-image: url('./images/page_bkgnds/signup_login.jpg');
     height: 1000px;
@@ -164,14 +169,14 @@ th {
 }
 
 .fuzzy_glass {
-    background-color: rgba(37, 5, 71, 0.843);
+    background-color: rgba(0, 4, 62, 0.77);
     font-size: 1.2rem;
     width: 100vw;
 }
 
 .purple_glow_grntext {
     color: rgb(237, 241, 0);
-    background-color: rgb(53, 5, 53);
+    background-color: rgb(2, 23, 10);
     box-shadow: 1px 1px 4px fuchsia ;
 }
 
