@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import "./wam.css"
+import moleImg from './gamePictures/mole.jpg'
 
 
 function WAMModal({ closeWAM }) {
 
-    const squares = document.querySelectorAll('.squarewam')
-    const mole = document.querySelector('.mole')
-    const timeLeft = document.querySelector('#time-left')
-    const score = document.querySelector('#scorewam')
-    let clock = document.getElementById('clockwam')
 
-    let result = 0
-    let hitPosition
-    let currentTime = 60
-    let timerID = null
+
+
 
 
     useEffect(() => {
+
+        const squares = document.querySelectorAll('.squarewam')
+        const mole = document.querySelector('.mole')
+        const timeLeft = document.querySelector('#time-left')
+        const score = document.querySelector('#scorewam')
+        let clock = document.getElementById('clockwam')
+
+
+        let result = 0
+        let hitPosition
+        let currentTime = 60
+        let timerID = null
 
     function randomSquare() {
         squares.forEach(square => {

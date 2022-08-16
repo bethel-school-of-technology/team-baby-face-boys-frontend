@@ -16,7 +16,7 @@
 }
 
 .mole{
-    background-image: url(./gamePictures/mole.jpg);
+    background-image: url("./gamePictures/mole.jpg");
     background-size: cover;
 }
 

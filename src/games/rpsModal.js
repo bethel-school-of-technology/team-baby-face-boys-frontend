@@ -4,60 +4,64 @@ import "./rps.css"
 
 function RPSModal({ closeRPS }) {
 
-    const computerChoiceDisplay = document.getElementById('computer-choice');
-    const userChoiceDisplay = document.getElementById('user-choice');
-    const resultDisplay = document.getElementById('resultrps');
-    const possibleChoices = document.querySelectorAll('button');
-    let userChoice;
-    let computerChoice;
-    let result
+    useEffect(() => {
+        const computerChoiceDisplay = document.getElementById('computer-choice');
+        const userChoiceDisplay = document.getElementById('user-choice');
+        const resultDisplay = document.getElementById('resultrps');
+        const possibleChoices = document.querySelectorAll('button');
+        let userChoice;
+        let computerChoice;
+        let result
 
-    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',(e)=>{
-        userChoice = e.target.id
-        userChoiceDisplay.innerHTML = userChoice
-        generateComputerChoice()
-        getResult()
+        possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+            userChoice = e.target.id
+            userChoiceDisplay.innerHTML = userChoice
+            generateComputerChoice()
+            getResult()
         }))
-        
-        function generateComputerChoice(){
+
+        function generateComputerChoice() {
             const randomNumber = Math.floor(Math.random() * 3) + 1
-        
-            if (randomNumber === 1){
+
+            if (randomNumber === 1) {
                 computerChoice = 'Rock'
             }
-            if (randomNumber === 2){
+            if (randomNumber === 2) {
                 computerChoice = 'Scissors'
             }
-            if (randomNumber === 3){
+            if (randomNumber === 3) {
                 computerChoice = 'Paper'
             }
             computerChoiceDisplay.innerHTML = computerChoice
         }
-        
-        function getResult(){
-            if (computerChoice === userChoice){
+
+        function getResult() {
+            if (computerChoice === userChoice) {
                 result = "It's a Draw!"
             }
-            if (computerChoice === 'Rock' && userChoice === 'Paper'){
+            if (computerChoice === 'Rock' && userChoice === 'Paper') {
                 result = "You Win!"
             }
-            if (computerChoice === 'Rock' && userChoice === 'Scissors'){
+            if (computerChoice === 'Rock' && userChoice === 'Scissors') {
                 result = "Computer Wins!"
             }
-            if (computerChoice === 'Paper' && userChoice === 'Scissors'){
+            if (computerChoice === 'Paper' && userChoice === 'Scissors') {
                 result = "You Win!"
             }
-            if (computerChoice === 'Paper' && userChoice === 'Rock'){
+            if (computerChoice === 'Paper' && userChoice === 'Rock') {
                 result = "Computer Wins!"
             }
-            if (computerChoice === 'Scissors' && userChoice === 'Rock'){
+            if (computerChoice === 'Scissors' && userChoice === 'Rock') {
                 result = "You Win!"
             }
-            if (computerChoice === 'Scissors' && userChoice === 'Paper'){
+            if (computerChoice === 'Scissors' && userChoice === 'Paper') {
                 result = "Computer Wins!"
             }
             resultDisplay.innerHTML = result
         }
+
+    }, [])
+
 
 
 
@@ -73,14 +77,14 @@ function RPSModal({ closeRPS }) {
             <div className="modalContainer">
                 <button className="rps" onClick={() => closeRPS(false)}>X</button>
                 <h1>Rock | Paper | Scissors</h1>
-                
-                    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-                    <h2>Your Choice: <span id="user-choice"></span></h2>
-                    <h2>Result: <span id="resultrps"></span></h2>
 
-                    <button className="rps" id="Rock">Rock</button>
-                    <button className="rps" id="Paper">Paper</button>
-                    <button className="rps" id="Scissors">Scissors</button>
+                <h2>Computer Choice: <span id="computer-choice"></span></h2>
+                <h2>Your Choice: <span id="user-choice"></span></h2>
+                <h2>Result: <span id="resultrps"></span></h2>
+
+                <button className="rps" id="Rock">Rock</button>
+                <button className="rps" id="Paper">Paper</button>
+                <button className="rps" id="Scissors">Scissors</button>
             </div>
         </div>
     );
