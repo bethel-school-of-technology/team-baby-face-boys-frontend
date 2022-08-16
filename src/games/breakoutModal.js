@@ -23,7 +23,7 @@ function BreakoutModal({ closeBreakout }) {
     useEffect(() => {
         const grid = document.getElementById('gridCon')
 
-        const scoreDisplay = document.querySelector('#score')
+        const scoreDisplay = document.querySelector('#scorebreak')
         let launch = document.getElementById('launcher')
 
 
@@ -76,7 +76,7 @@ function BreakoutModal({ closeBreakout }) {
 
         //add User
         const user = document.createElement('div')
-        user.classList.add('user')
+        user.classList.add('userbreak')
         drawUser()
         grid.appendChild(user)
 
@@ -205,8 +205,8 @@ function BreakoutModal({ closeBreakout }) {
                 <button className='breakout' onClick={() => closeBreakout(false)}>X</button>
                 <div>
                     <h1>Breakout</h1>
-                    <div id="score">0</div>
-                    <div className="grid" id="gridCon"></div>
+                    <div id="scorebreak">0</div>
+                    <div className="gridbreak" id="gridCon"></div>
                     <button className="btn-info" id="launcher">Launch Ball</button>
                 </div>
             </div>
