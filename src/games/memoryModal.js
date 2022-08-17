@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 import "./memory.css"
 import fries from './gamePictures/fries.png';
 import blank from './gamePictures/blank.png';
-import cheeseburger from './gamePictures/cheeseburger.png'
+import cheeseburger from './gamePictures/cheeseburger.png';
+import hotdog from './gamePictures/hotdog.png';
+import icecream from './gamePictures/ice-cream.png';
+import milkshake from './gamePictures/milkshake.png';
+import pizza from './gamePictures/pizza.png';
+import white from './gamePictures/white.png';
 
 function MemoryModal({ closeMemory }) {
 
@@ -14,47 +19,47 @@ function MemoryModal({ closeMemory }) {
             },
             {
                 name: 'cheeseburger',
-                img: cheeseburger
+                img: cheeseburger,
             },
             {
                 name: 'hotdog',
-                img: './gamePictures/hotdog.png'
+                img: hotdog,
             },
             {
                 name: 'ice-cream',
-                img: './gamePictures/ice-cream.png'
+                img: icecream,
             },
             {
                 name: 'milkshake',
-                img: './gamePictures/milkshake.png'
+                img: milkshake,
             },
             {
                 name: 'pizza',
-                img: './gamePictures/pizza.png'
+                img: pizza,
             },
             {
                 name: 'fries',
-                img: './gamePictures/fries.png'
+                img: fries,
             },
             {
                 name: 'cheeseburger',
-                img: './gamePictures/cheeseburger.png'
+                img: cheeseburger,
             },
             {
                 name: 'hotdog',
-                img: './gamePictures/hotdog.png'
+                img: hotdog,
             },
             {
                 name: 'ice-cream',
-                img: './gamePictures/ice-cream.png'
+                img: icecream,
             },
             {
                 name: 'milkshake',
-                img: './gamePictures/milkshake.png'
+                img: milkshake,
             },
             {
                 name: 'pizza',
-                img: './gamePictures/pizza.png'
+                img: pizza,
             }
         ]
         
@@ -84,19 +89,19 @@ function MemoryModal({ closeMemory }) {
             const optionTwoId = cardsChosenIds[1]
             if (optionOneId == optionTwoId) {
                 alert('You have clicked the same card!')
-                cards[optionOneId].setAttribute('src', './gamePictures/blank.png')
-                cards[optionTwoId].setAttribute('src', './gamePictures/blank.png')
+                cards[optionOneId].setAttribute('src', blank)
+                cards[optionTwoId].setAttribute('src', blank)
             }
             if (cardsChosen[0] == cardsChosen[1]) {
                 alert('You found a match!')
-                cards[optionOneId].setAttribute('src', './gamePictures/white.png')
-                cards[optionTwoId].setAttribute('src', './gamePictures/white.png')
+                cards[optionOneId].setAttribute('src', white)
+                cards[optionTwoId].setAttribute('src', white)
                 cards[optionOneId].removeEventListener('click', flipCard)
                 cards[optionTwoId].removeEventListener('click', flipCard)
                 cardsWon.push(cardsChosen)
             } else {
-                cards[optionOneId].setAttribute('src', './gamePictures/blank.png')
-                cards[optionTwoId].setAttribute('src', './gamePictures/blank.png')
+                cards[optionOneId].setAttribute('src', blank)
+                cards[optionTwoId].setAttribute('src', blank)
                 alert("Sorry, try again!")
             }
             resultDisplay.textContent = cardsWon.length

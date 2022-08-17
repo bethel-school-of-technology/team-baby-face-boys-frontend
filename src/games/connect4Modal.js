@@ -6,7 +6,7 @@ function Connect4Modal({ closeConnect4 }) {
 
     useEffect(() => {
         const squares = document.querySelectorAll('.gridc4 div')
-        const result = document.querySelector('#result')
+        const result = document.querySelector('#resultc4')
         const displayCurrentPlayer = document.querySelector('#current-player')
         let currentPlayer = 1
 
@@ -144,7 +144,7 @@ function Connect4Modal({ closeConnect4 }) {
                 <button onClick={() => closeConnect4(false)}>X</button>
                 <h1>Connect 4</h1>
                 <h3> The Current Player Is: Player <span id="current-player">1</span></h3>
-                <h3 id="result"></h3>
+                <h3 id="resultc4"></h3>
                 <div className="gridc4">
                     <div></div>
                     <div></div>
