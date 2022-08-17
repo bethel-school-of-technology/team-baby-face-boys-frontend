@@ -12,8 +12,9 @@ function Blog() {
 
   let token = JSON.parse(localStorage.getItem("token"))
 
+  
   const addPost = () => {
-    axios.post("http://localhost:3000/forum", {
+    axios.post("http://localhost:3000/forum/:jwt/" + token, {
       postTitle: setPostTitle,
       postBody: setPostBody,
     }).then(() => {
@@ -25,20 +26,20 @@ function Blog() {
     });
   };
 
-  const getPosts = () => {
-    axios.get("http://localhost:3000/profile" + token).then((response) => {
-      setPostList.JSON.stringify(response.data);
-    });
-  };
-
   // const getPosts = () => {
-  //   axios.get ("http://localhost:3000/", {
-  //     postTitle:setPostTitle,
-  //     postBody: setPostBody,
-  //   }).then((response) => {
-  //     setPostList([...postList, response]);
+  //   axios.get("http://localhost:3000/forum/" + token).then((response) => {
+  //     setPostList.JSON.stringify(response.data);
   //   });
   // };
+
+  const getPosts = () => {
+    axios.get ("http://localhost:3000/forum/" + token, {
+      postTitle:setPostTitle,
+      postBody: setPostBody,
+    }).then((response) => {
+      setPostList([...postList, response]);
+    });
+  };
 
   const updatePostTitle = (id) => {
     axios.put("http://localhost:3000/forum/:id", {
@@ -117,8 +118,8 @@ function Blog() {
               return (
                 <div>
                   <div>
-                    <strong>{val.postTitle}</strong>
-                    <strong> {val.postBody}</strong>
+                    <strong>{val.user.postTitle}</strong>
+                    <strong> {val.user.postBody}</strong>
                   </div>
                   <div>
                     <input
