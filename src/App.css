@@ -1,114 +1,164 @@
+/*------------Responsive----------------*/
+
+/* phone */
+@media (max-width: 412px) {
+    * {
+
+        font-size: 0.7rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    img {
+        scale: 75%;
+    }
+    
+    /* 
+  .title_text,
+  .main_text {
+    font-size: 1.5rem;
+  }
+  .sub_text {
+    font-size: 1.3rem;
+  }
+
+  p,
+  .enter-text {
+    font-size: 1.2rem;
+  } */
+  
+
+
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    
+    * {
+        font-size: 1rem;
+    }
+
+    img {
+        scale: 100%;
+    }
+}
+
 /* ------------------Font and text settings------------------ */
 
 .navbar {
-    font-size: 2.0rem;
+  font-size: 2rem;
 }
 
-
-label,textarea {
-    font-size: 1.25rem;
-    width: 100%;
+label,
+textarea {
+  font-size: 1.25rem;
+  width: 100%;
 }
 
 .footer {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
 }
-
 
 /* ------------------Global settings------------------ */
 
 .nav-link:hover {
-    text-shadow: 1px 1px 14px rgb(238, 255, 0);
+  text-shadow: 1px 1px 14px rgb(238, 255, 0);
 }
 
 .nav-link {
-    color: rgb(255, 255, 0);    
+  color: rgb(255, 255, 0);
 }
 
-div[class*="container"] {/* 
+div[class*="container"] {
+  /* 
     background-color: hsl(208, 86%, 13%); */
-    color:rgb(230, 230, 230);
-    height: 100vh;
-    border: 10px inset rgb(30, 30, 67);
-    overflow-x: hidden;
-    box-shadow: 1px 1px 8px black outset;
+  color: rgb(230, 230, 230);
+  height: 100vh;
+  border: 10px inset rgb(30, 30, 67);
+  overflow-x: hidden;
+  box-shadow: 1px 1px 8px black outset;
 }
 
 .container {
-    border-radius: 30px;
+  border-radius: 30px;
 }
 
 h4.title {
-    color:crimson ;
+  color: crimson;
 }
-
 
 /* ---------------Title page settings------------------ */
 
 .bgnd_img-ttlpg {
-    background-image: url('./images/page_bkgnds/Rabbit-Hole.jpg');
-    height: 1000px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(38, 57, 92);
+  background-image: url("./images/page_bkgnds/Rabbit-Hole.jpg");
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(38, 57, 92);
 }
 
 .carrot_btn {
-    background-image: url('./images/carrot1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:contain;
-    transform: rotate(20deg);
-    height: 150px;
-    width: 300px;
+  background-image: url("./images/carrot1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(20deg);
+  height: 150px;
+  width: 300px;
 }
 
 p.enter-text {
-    font-family: 'DynaPuff', cursive;
-    font-size: 1.9rem;
+  font-family: "DynaPuff", cursive;
+  font-size: 2.2rem;
 }
 
-.main_text,.sub_text{
-    font-family: 'Permanent Marker', cursive;
+.main_text,
+.sub_text {
+  font-family: "Permanent Marker", cursive;
+  font-size:2.5em;
 }
 
 /* ---------------Games page settings------------------ */
 
-
 .bgnd_img-12under {
-    background-image: url('./images/page_bkgnds/12underb_kgnd_blur.jpg');
-    height: 1000px;
-    overflow-x: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-image: url("./images/page_bkgnds/12underb_kgnd_blur.jpg");
+  height: 1000px;
+  overflow-x: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bgnd_img-13up {
-    background-image: url('./images/page_bkgnds/all_games_blur.jpg');
-    height: 1000px;
-    overflow-x: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-image: url("./images/page_bkgnds/all_games_blur.jpg");
+  height: 1000px;
+  overflow-x: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @keyframes blur_fadeout {
-  from {filter: blur(0px);}
-  to {filter: blur(10px);}
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(10px);
+  }
 }
 
 .game_thumb {
-    max-height: 250px;
+  max-height: 250px;
 }
 
-.img_grid {display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.img_grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 /* ---------------Leaderboard settings------------------ */
@@ -120,178 +170,161 @@ p.enter-text {
 } */
 
 .leaderboard {
-    background-image: url('./images/page_bkgnds/leaderboard_blur.jpg');
-    height: 1000px;
-    overflow-x: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("./images/page_bkgnds/leaderboard_blur.jpg");
+  height: 1000px;
+  overflow-x: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-th,td {
-    height: 10px;
+th,
+td {
+  height: 10px;
 }
 
 th {
-    background-color:#004c93ae;
-    color: rgb(255, 230, 0);
+  background-color: #004c93ae;
+  color: rgb(255, 230, 0);
 }
 
 .table {
-    color: rgb(128, 255, 0);
+  color: rgb(128, 255, 0);
 }
 
 .table_holder {
-    background-color: #002e5aae;
-    height: 100vh;
-    min-width: 320px;
- 
+  background-color: #002e5aae;
+  height: 100vh;
+  min-width: 320px;
 }
-
-
 
 /* ---------------Login Page settings------------------ */
 
 h4.title {
-        font-family: 'DynaPuff', cursive;
-        color: rgb(0, 255, 55);
+  font-family: "DynaPuff", cursive;
+  color: rgb(255, 0, 144);
 }
 
 .bgnd_img-signup_login {
-    background-image: url('./images/page_bkgnds/signup_login.jpg');
-    height: 1000px;
-    overflow-x:hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*animation: blur_fadeout 3s 1; */
-
+  background-image: url("./images/page_bkgnds/signup_login.jpg");
+  height: 1000px;
+  overflow-x: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*animation: blur_fadeout 3s 1; */
 }
 
 .fuzzy_glass {
-    background-color: rgba(0, 4, 62, 0.77);
-    font-size: 1.2rem;
-    width: 100vw;
+  background-color: rgba(0, 4, 62, 0.859);
+  font-size: 1.2rem;
+  width: 330px;
+  height: 300px;
+}
+
+input:focus {
+  border: 2px solid yellow;
 }
 
 .purple_glow_grntext {
-    color: rgb(237, 241, 0);
-    background-color: rgb(2, 23, 10);
-    box-shadow: 1px 1px 4px fuchsia ;
+  color: rgb(237, 241, 0);
+  background-color: rgba(0, 0, 0, 0.212);
+  box-shadow: 1px 1px 4px fuchsia;
+  border: none;
 }
 
-
-
 .signup_btn {
-    width: 130px;
-    background-color:crimson;
-    font-size: 1.5rem;
-    border: 0px none white;
-    border-radius:30px;
-    color:antiquewhite;
-    box-shadow: 3px 3px 9px fuchsia ;
+  width: 130px;
+  background-color: crimson;
+  font-size: 1.5rem;
+  border: 0px none white;
+  border-radius: 30px;
+  color: antiquewhite;
+  box-shadow: 3px 3px 9px fuchsia;
 }
 
 .login_btn {
-    width: 130px;
-    background-color:crimson;
-    font-size: 1.5rem;
-    border: 0px none white;
-    border-radius:30px;
-    color:antiquewhite;
-    box-shadow: 3px 3px 9px fuchsia ;
+  width: 130px;
+  background-color: crimson;
+  font-size: 1.5rem;
+  border: 0px none white;
+  border-radius: 30px;
+  color: antiquewhite;
+  box-shadow: 3px 3px 9px fuchsia;
 }
 
 /* ---------------Registration Page settings------------------ */
 
 .bgnd_img-registration {
-    background-image: url('./images/page_bkgnds/registration.jpg');
-    height: 1000px;
-    overflow-x:hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*animation: blur_fadeout 3s 1; */
-
+  background-image: url("./images/page_bkgnds/registration.jpg");
+  height: 1000px;
+  overflow-x: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*animation: blur_fadeout 3s 1; */
 }
 
 .form_regis {
-    color: crimson;
-    background-color: rgba(255, 255, 255, 0.45);
-    max-width: 450px;
+  color: crimson;
+  background-color: rgba(255, 255, 255, 0.45);
+  max-width: 450px;
 }
-
-
 
 /* ---------------Forum page settings------------------ */
 
 .forumBlog {
-    background-color: rgba(245, 245, 245, 0.652);
-    border-radius: 25px;
-    height:70vh;
-    width: 100%;
+  background-color: rgba(245, 245, 245, 0.652);
+  border-radius: 25px;
+  height: 70vh;
+  width: 100%;
 }
 
-
 .forumBlog_plate {
-    background-color: rgba(245, 245, 245, 0.652);
-    border-radius: 25px;
+  background-color: rgba(245, 245, 245, 0.652);
+  border-radius: 25px;
 }
 
 input.input {
-    width: 100%;
-
-}
-
-.forum-s1 {
-    background-color: rgba(245, 245, 245, 0.652);
-}
-
-.forum-s2 {
-    background-color: rgba(245, 245, 245, 0.652);
-}
-
-.forum-s3 {
-    background-color: rgba(245, 245, 245, 0.652);
+  width: 100%;
 }
 
 .bgnd_img-forum {
-    background-image: url('./images/page_bkgnds/forum_blur.jpg');
-    height: 1000px;
-    overflow-x: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-image: url("./images/page_bkgnds/forum_blur.jpg");
+  height: 1000px;
+  overflow-x: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .game_thumb {
-    max-height: 250px;
+  max-height: 250px;
 }
 
 /* ---------------Profile Page settings------------------ */
 
 .high-scores_profpage {
-    background-color: rgba(0, 213, 255, 0.344);
-    border-radius: 25px;
-    height:35vh;
-    width: 85%;
+  background-color: rgba(0, 213, 255, 0.344);
+  border-radius: 25px;
+  height: 35vh;
+  width: 85%;
 }
 
 .prof_backing {
-    background-color: darkviolet;
+  background-color: darkviolet;
 }
 
 img.profpic {
-    border-radius: 40%;
-    height: 200px;
+  border-radius: 40%;
+  height: 200px;
 }
 
 .jokeholder {
-    height: 150px;
-    position: relative;
-    top: 0px;
-    overflow-y:auto ;
+  height: 150px;
+  position: relative;
+  top: 0px;
+  overflow-y: auto;
 }
 /* 
 .joke_button {
@@ -302,48 +335,52 @@ img.profpic {
 } */
 
 .row.height {
-    height: 400px;
+  height: 400px;
 }
 
 /* ---------------------------------- modal styling ------------------------------ */
 
 .modalBackground {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    overflow: auto;
-    background-color: rgba(0,0,0,0,5);
-
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0, 5);
 }
 
 .modalContainer {
-    border: 1px solid black;
-    background-color: #f4f4f4f4;
-    margin: 20% auto;
-    width: 70%;
-    height: 70%;
-    padding: 20px;
+  border: 1px solid black;
+  background-color: #f4f4f4f4;
+  margin: 20% auto;
+  width: 70%;
+  height: 70%;
+  padding: 20px;
 }
 
 body.breakout {
-    background-color: #e9ecef;
-    text-align: center;
+  background-color: #e9ecef;
+  text-align: center;
 }
 
-body.c4{
-    text-align: center;
-    font-family: stencil, fantasy;
-    background-color: cyan;
+body.c4 {
+  text-align: center;
+  font-family: stencil, fantasy;
+  background-color: cyan;
 }
 
-body.rps{
-    background-color: lightblue;
- 
+body.rps {
+  background-color: lightblue;
 }
 
-body.wam{
-    text-align: center;
+body.wam {
+  text-align: center;
 }
+
+/* @media only screen and (max-width: 600px) {
+    h1,h2,h3,h4,h5,h6,input,label,textarea {
+font-size: 5rem;
+}
+} */

@@ -10,7 +10,7 @@ const Forum = () => {
       <div className="row">
         <div className="col p-3 text-center">
           <Navbar />
-          <h1>Rabbit Water Cooler</h1>
+          <h1 className="title_text">Rabbit Water Cooler</h1>
         </div>
       </div>
       <div className="container bgnd_img-forum ">

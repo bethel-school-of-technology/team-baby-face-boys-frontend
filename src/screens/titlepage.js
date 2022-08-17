@@ -18,7 +18,7 @@ const Titlepage = () => {
     <div className="row text-primary bgnd_img-ttlpg align-items-center ">
          <div className="col text-center">
         <Link to='/account'><div className="carrot_btn  mx-auto d-block" ></div></Link>
-        <p className="enter-text"><strong>Chomp that carrot!</strong></p>
+        <p className="enter-text">Chomp that carrot!</p>
       </div>
   </div>
     <div className="row footer">

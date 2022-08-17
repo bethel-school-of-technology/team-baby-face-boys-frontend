@@ -62,7 +62,7 @@ const Signuplogin = () => {
   };
 
   return (
-    <div className="container-fluid  bg-primary d-flex flex-column">
+    <div className="container bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Header />
@@ -74,9 +74,9 @@ const Signuplogin = () => {
       </div>
       <div className="row text-secondary bgnd_img-signup_login align-items-center ">
             <div className=" col text-center ">
-        <div className="fuzzy_glass">
+        <div className="fuzzy_glass mx-auto">
 
-          <form className="Login " onSubmit={handleSubmit}>
+          <form className="Login pt-4" onSubmit={handleSubmit}>
           <h4 className="title">Login Form</h4>
             {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
             <input className="purple_glow_grntext my-2" onChange={handleChange} name="gamerID" />
@@ -88,10 +88,10 @@ const Signuplogin = () => {
             <br></br>
 
             {/* <Link to='/profile'><input type={"submit"} /></Link> */}
-            <button className="my-2 login_btn"  type="submit">Login</button>
+            <button className="my-2  btn-success"  type="submit">Login</button>
           <div>
             <Link to="/registration">
-              <button className="my-2 signup_btn" >Sign Up</button>
+              <button className="my-2 btn btn-success" >Sign Up</button>
             </Link>
           </div>
           </form>
