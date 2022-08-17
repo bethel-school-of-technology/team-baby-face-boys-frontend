@@ -2,47 +2,60 @@
 
 /* phone */
 @media (max-width: 412px) {
-    * {
+  * {
+    font-size: 0.73rem;
+  }
 
-        font-size: 0.7rem;
-    }
-
-    p {
-        font-size: 1.5rem;
-    }
-
-    img {
-        scale: 75%;
-    }
-    
-    /* 
-  .title_text,
-  .main_text {
+  p {
     font-size: 1.5rem;
   }
-  .sub_text {
-    font-size: 1.3rem;
+
+  img {
+    scale: 75%;
   }
 
-  p,
-  .enter-text {
-    font-size: 1.2rem;
+/*   h1.title_text  {
+    font-size: 1.0rem;
   } */
+
+  div.fuzzy_glass {
+    background-color: rgba(0, 4, 62, 0.859);
+    width: 330px;
+    height: 295px;
+  }
+
+  .purple_glow_grntext,
+  .title {
+    font-size: 1.7rem;
+  }
+
+  div.carrot_btn {
+    scale: 100%;
+  }
+
+  div.footer {
+   top: 3px;
+  }
   
-
-
+  .arcade_text  {
+    font-size: 0rem;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1600px) {
-    
-    * {
-        font-size: 1rem;
-    }
+  * {
+    font-size: 1.0rem;
+  }
 
-    img {
-        scale: 100%;
-    }
+  
+  div.carrot_btn {
+    scale: 200%;
+  }
+
+  img {
+    scale: 100%;
+  }
 }
 
 /* ------------------Font and text settings------------------ */
@@ -60,9 +73,16 @@ textarea {
 .footer {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
+  position: relative;
+  top: 5px;
 }
 
 /* ------------------Global settings------------------ */
+
+.descroller {
+    overflow-y: hidden;/* 
+    overflow-x: hidden; */
+}
 
 .nav-link:hover {
   text-shadow: 1px 1px 14px rgb(238, 255, 0);
@@ -75,10 +95,11 @@ textarea {
 div[class*="container"] {
   /* 
     background-color: hsl(208, 86%, 13%); */
-  color: rgb(230, 230, 230);
+  color: rgb(255, 255, 255);
   height: 100vh;
   border: 10px inset rgb(30, 30, 67);
   overflow-x: hidden;
+  border-radius: 30px;
   box-shadow: 1px 1px 8px black outset;
 }
 
@@ -96,6 +117,7 @@ h4.title {
   background-image: url("./images/page_bkgnds/Rabbit-Hole.jpg");
   height: 1000px;
   background-position: center;
+  overflow-y: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(38, 57, 92);
@@ -119,7 +141,7 @@ p.enter-text {
 .main_text,
 .sub_text {
   font-family: "Permanent Marker", cursive;
-  font-size:2.5em;
+  font-size: 2.5em;
 }
 
 /* ---------------Games page settings------------------ */
@@ -200,15 +222,19 @@ th {
 
 /* ---------------Login Page settings------------------ */
 
+.login_page {
+    
+  overflow-y: hidden;
+}
+
 h4.title {
   font-family: "DynaPuff", cursive;
-  color: rgb(255, 0, 144);
+  color: rgb(0, 251, 255);
 }
 
 .bgnd_img-signup_login {
   background-image: url("./images/page_bkgnds/signup_login.jpg");
   height: 1000px;
-  overflow-x: hidden;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -217,6 +243,7 @@ h4.title {
 
 .fuzzy_glass {
   background-color: rgba(0, 4, 62, 0.859);
+  border-radius: 25px;
   font-size: 1.2rem;
   width: 330px;
   height: 300px;
@@ -229,31 +256,36 @@ input:focus {
 .purple_glow_grntext {
   color: rgb(237, 241, 0);
   background-color: rgba(0, 0, 0, 0.212);
-  box-shadow: 1px 1px 4px fuchsia;
+  box-shadow: 1px 1px 4px  rgb(0, 255, 68);;
   border: none;
 }
 
 .signup_btn {
   width: 130px;
-  background-color: crimson;
+  background-color: rgb(0, 55, 255);
   font-size: 1.5rem;
   border: 0px none white;
   border-radius: 30px;
   color: antiquewhite;
-  box-shadow: 3px 3px 9px fuchsia;
 }
 
 .login_btn {
   width: 130px;
-  background-color: crimson;
+  background-color: rgb(255, 0, 0);
   font-size: 1.5rem;
   border: 0px none white;
   border-radius: 30px;
   color: antiquewhite;
-  box-shadow: 3px 3px 9px fuchsia;
 }
 
 /* ---------------Registration Page settings------------------ */
+
+
+.placeholder {
+    height: 250px;
+    width: 250px;
+}
+
 
 .bgnd_img-registration {
   background-image: url("./images/page_bkgnds/registration.jpg");
@@ -266,10 +298,20 @@ input:focus {
 }
 
 .form_regis {
-  color: crimson;
+    font-weight:bolder ;
+  color: rgb(223, 75, 105);
   background-color: rgba(255, 255, 255, 0.45);
   max-width: 450px;
 }
+
+.create_account {
+    width: 230px;
+    background-color: rgb(0, 55, 255);
+    font-size: 1.5rem;
+    border: 0px none white;
+    border-radius: 30px;
+    color: antiquewhite;
+  }
 
 /* ---------------Forum page settings------------------ */
 
@@ -290,7 +332,7 @@ input.input {
 }
 
 .bgnd_img-forum {
-  background-image: url("./images/page_bkgnds/forum_blur.jpg");
+  background-image: url("./images/page_bkgnds/forum_blur1.jpg");
   height: 1000px;
   overflow-x: scroll;
   background-position: center;
@@ -301,6 +343,10 @@ input.input {
 .game_thumb {
   max-height: 250px;
 }
+
+h1.title_text  {
+    font-size: 3.0rem;
+  }
 
 /* ---------------Profile Page settings------------------ */
 

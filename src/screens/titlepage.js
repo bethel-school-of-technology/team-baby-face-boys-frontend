@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Titlepage = () => {
   return (
-    <div className="container-fluid  bg-primary d-flex flex-column">
+    <div className="container-fluid descroller bg-primary d-flex flex-column">
     <div className="row">
       <div className="col-sm p-3 text-center">
         <Header/>
@@ -22,8 +22,8 @@ const Titlepage = () => {
       </div>
   </div>
     <div className="row footer">
-      <div className="col text-center p-3">
-      <script src="./" ></script>
+      <div className="col text-center p-3 ">
+    
         <Footer/>
         
         </div>
