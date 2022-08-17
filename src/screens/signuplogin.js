@@ -57,7 +57,7 @@ const Signuplogin = () => {
       console.log(response.data);
 
     localStorage.setItem("token", JSON.stringify(response.data))
-      navigate("/profile");
+     navigate("/profile");
     });
   };
 
