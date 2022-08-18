@@ -133,18 +133,15 @@ function Connect4Modal({ closeConnect4 }) {
         }
     }, [])
 
-
-
-
-
-
     return (
         <div className="modalBackground">
-            <div className="modalContainer">
-                <button onClick={() => closeConnect4(false)}>X</button>
-                <h1>Connect 4</h1>
+            <div className="c4-Container">
+                <button className='btn-danger rounded breakout mt-0 float-right' onClick={() => closeConnect4(false)}>X</button>
+                <div className='text-center'>
+                    <h1>Connect 4</h1>
                 <h3> The Current Player Is: Player <span id="current-player">1</span></h3>
                 <h3 id="resultc4"></h3>
+                </div>
                 <div className="gridc4">
                     <div></div>
                     <div></div>

@@ -17,7 +17,7 @@ const Teen = () => {
   const [openWAM, setOpenWAM] = useState(false);
 
   return (
-    <div className="container-fluid  bg-primary d-flex flex-column">
+    <div className="container-fluid descroller bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Navbar />
@@ -39,25 +39,25 @@ const Teen = () => {
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/cnnct4.jpg")}
             />
-            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}
+            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}{/* 
             <img
               onClick={() => { setOpenMemory(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/memory.jpg")}
             />
-            {openMemory && <MemoryModal closeMemory={setOpenMemory} />}
+            {openMemory && <MemoryModal closeMemory={setOpenMemory} />} */}
             <img
               onClick={() => { setOpenRPS(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/rockpaperscissors.jpg")}
             />
-            {openRPS && <RPSModal closeRPS={setOpenRPS} />}
+            {openRPS && <RPSModal closeRPS={setOpenRPS} />}{/* 
             <img
               onClick={() => { setOpenWAM(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/whackamole.jpg")}
             />
-            {openWAM && <WAMModal closeWAM={setOpenWAM} />}
+            {openWAM && <WAMModal closeWAM={setOpenWAM} />} */}
           </div>
         </div>
       </div>

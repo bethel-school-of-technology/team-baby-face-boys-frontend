@@ -14,7 +14,8 @@
     scale: 75%;
   }
 
-/*   h1.title_text  {
+  /* ----------- Rabbit Watercooler ----------------*/
+/*   div.title_text  {
     font-size: 1.0rem;
   } */
 
@@ -33,16 +34,38 @@
     scale: 100%;
   }
 
-  div.footer {
-   top: 3px;
-  }
   
+  button.login_btn {
+    width: 130px;
+    position: relative;
+    top: 13px;
+  }
+
+  button.signup_btn {
+    width: 130px;
+    position: relative;
+    top: 13px;
+  }
+
+  form.form_regis {
+    font-weight:bolder ;
+  color: rgb(223, 75, 105);
+  background-color: rgba(255, 255, 255, 0.45);
+  max-width: 450px;
+}b
+
   .arcade_text  {
     font-size: 0rem;
   }
 }
 
-/* Desktop */
+
+  div.footer {
+   top: 3px;
+  }
+  
+/*------------- Desktop -------------------*/
+
 @media (min-width: 1600px) {
   * {
     font-size: 1.0rem;
@@ -50,12 +73,38 @@
 
   
   div.carrot_btn {
+    position: relative;
+    bottom: 50px;
+    left: 3px;
     scale: 200%;
   }
 
   img {
     scale: 100%;
   }
+
+  
+  button.login_btn {
+    width: 130px;
+    position: relative;
+    bottom: 5px;
+  }
+
+  button.signup_btn {
+    width: 130px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  
+
+div.fuzzy_glass {
+    font-size: 1.2rem;
+    width: 330px;
+    height: 315px;
+  }
+  
+
 }
 
 /* ------------------Font and text settings------------------ */
@@ -78,6 +127,8 @@ textarea {
 }
 
 /* ------------------Global settings------------------ */
+
+
 
 .descroller {
     overflow-y: hidden;/* 
@@ -185,11 +236,11 @@ p.enter-text {
 
 /* ---------------Leaderboard settings------------------ */
 
-/* .scoreboard {
-    background-color: rgba(196, 227, 255, 0.232);
-    height:50vh;
-    overflow-y: scroll;
-} */
+.top-rabbits {
+  font-family: "Permanent Marker", cursive;
+  position: relative;
+  bottom: 5px;
+}
 
 .leaderboard {
   background-image: url("./images/page_bkgnds/leaderboard_blur.jpg");
@@ -200,9 +251,13 @@ p.enter-text {
   background-size: cover;
 }
 
+table {
+    width: 10%;
+}
+
 th,
-td {
-  height: 10px;
+td {width: 10%;
+  font-size: 1.1em;
 }
 
 th {
@@ -282,8 +337,8 @@ input:focus {
 
 
 .placeholder {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
 }
 
 
@@ -302,6 +357,7 @@ input:focus {
   color: rgb(223, 75, 105);
   background-color: rgba(255, 255, 255, 0.45);
   max-width: 450px;
+  border-radius: 20px;
 }
 
 .create_account {
@@ -384,7 +440,14 @@ img.profpic {
   height: 400px;
 }
 
-/* ---------------------------------- modal styling ------------------------------ */
+/* ----------------- modal styling ---------------------- */
+
+.game_titles {
+    
+    font-family: "Permanent Marker", cursive;
+    font-size: 50px;
+    color: rgb(88, 255, 104);
+  }
 
 .modalBackground {
   position: fixed;
@@ -398,6 +461,21 @@ img.profpic {
 }
 
 .modalContainer {
+  position: relative;
+  
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #0d2858f4;
+  margin: 10% auto;
+  width: 650px;
+  
+  height: 700px;
+  padding: 20px;
+
+}
+
+
+.c4-Container {
   border: 1px solid black;
   background-color: #f4f4f4f4;
   margin: 20% auto;
@@ -420,13 +498,3 @@ body.c4 {
 body.rps {
   background-color: lightblue;
 }
-
-body.wam {
-  text-align: center;
-}
-
-/* @media only screen and (max-width: 600px) {
-    h1,h2,h3,h4,h5,h6,input,label,textarea {
-font-size: 5rem;
-}
-} */

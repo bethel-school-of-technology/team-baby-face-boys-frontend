@@ -4,15 +4,15 @@ import Footer from "../components/footer";
 
 const Leaderboard = () => {
   return (
-    <div className="container-fluid  bg-primary d-flex flex-column">
+    <div className="container-fluid descroller bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Navbar />
         </div>
       </div>
       <div className="row">
-        <div className="col-sm p-3 text-center">
-         <h1>Top Rabbits</h1>
+        <div className="col-sm  p-3 text-center">
+         <h1 className="top-rabbits">Top Rabbits</h1>
         </div>
       </div>
       <div className="container px-0 leaderboard">
@@ -21,7 +21,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Breakout Masters</th>
+              <th>Breakout</th>
               <th></th>
             </tr>
             <tr>
@@ -51,7 +51,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Whack-A-Mole Smashers</th>
+              <th>Connect 4</th>
               <th></th>
             </tr>
             <tr>
@@ -80,7 +80,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Connect 4 Champions</th>
+              <th>Rock, Paper, Scissors</th>
               <th></th>
             </tr>
             <tr>
