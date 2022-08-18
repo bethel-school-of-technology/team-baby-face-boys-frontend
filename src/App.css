@@ -7,7 +7,7 @@
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   img {
@@ -48,11 +48,27 @@
   }
 
   form.form_regis {
+    font-size: 1.5rem;
     font-weight:bolder ;
   color: rgb(223, 75, 105);
   background-color: rgba(255, 255, 255, 0.45);
   max-width: 450px;
-}b
+  border-radius: 20px;
+}
+
+.formlabel {
+    
+    font-size: 1.85rem;
+}
+
+.create_account {
+    width: 230px;
+    background-color: rgb(0, 55, 255);
+    font-size: 1.5rem;
+    border: 0px none white;
+    border-radius: 30px;
+    color: antiquewhite;
+  }
 
   .arcade_text  {
     font-size: 0rem;
@@ -121,7 +137,7 @@ textarea {
 
 .footer {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   position: relative;
   top: 5px;
 }
@@ -449,6 +465,13 @@ img.profpic {
     color: rgb(88, 255, 104);
   }
 
+.game_subtitles {
+    
+    font-family: "Permanent Marker", cursive;
+    font-size: 25px;
+    color: rgb(88, 255, 104);
+  }
+
 .modalBackground {
   position: fixed;
   width: 100%;
@@ -474,17 +497,29 @@ img.profpic {
 
 }
 
+.rpsContainer {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #0d2858f4;
+  margin: auto;
+  top: 35%;
+  width: 650px;
+  
+  height: 330px;
+  padding: 20px;
+
+}
 
 .c4-Container {
     position: relative;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #0d2858f4;
-    margin: auto;
-    top: 15%;
-    width: 650px;
-    
-    height: 900px;
+    margin: auto;/* 
+    top: 15%; */
+    width: 750px;    
+    height: 950px;
     padding: 20px;
   
 }

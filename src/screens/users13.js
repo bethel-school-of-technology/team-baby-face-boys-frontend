@@ -9,7 +9,6 @@ import RPSModal from "../games/rpsModal";
 import WAMModal from "../games/wamModal";
 
 const Teen = () => {
-
   const [openBreakout, setOpenBreakout] = useState(false);
   const [openConnect4, setOpenConnect4] = useState(false);
   const [openMemory, setOpenMemory] = useState(false);
@@ -29,17 +28,22 @@ const Teen = () => {
         <div className="row">
           <div className="col img_grid">
             <img
-              onClick={() => { setOpenBreakout(true); }}
+              onClick={() => {
+                setOpenBreakout(true);
+              }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/breakout.jpg")}
             />
             {openBreakout && <BreakoutModal closeBreakout={setOpenBreakout} />}
             <img
-              onClick={() => { setOpenConnect4(true); }}
+              onClick={() => {
+                setOpenConnect4(true);
+              }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/cnnct4.jpg")}
             />
-            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}{/* 
+            {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}
+            {/* 
             <img
               onClick={() => { setOpenMemory(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
@@ -47,11 +51,14 @@ const Teen = () => {
             />
             {openMemory && <MemoryModal closeMemory={setOpenMemory} />} */}
             <img
-              onClick={() => { setOpenRPS(true); }}
+              onClick={() => {
+                setOpenRPS(true);
+              }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/rockpaperscissors.jpg")}
             />
-            {openRPS && <RPSModal closeRPS={setOpenRPS} />}{/* 
+            {openRPS && <RPSModal closeRPS={setOpenRPS} />}
+            {/* 
             <img
               onClick={() => { setOpenWAM(true); }}
               className="game_thumb img-fluid rounded float-left mt-5 mx-3"
