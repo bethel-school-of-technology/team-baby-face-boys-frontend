@@ -6,8 +6,12 @@
     font-size: 0.73rem;
   }
 
+  a.nav-link {
+    font-size: 2rem;
+  }
+
   p {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 
   img {
@@ -15,7 +19,7 @@
   }
 
   /* ----------- Rabbit Watercooler ----------------*/
-/*   div.title_text  {
+  /*   div.title_text  {
     font-size: 1.0rem;
   } */
 
@@ -34,7 +38,6 @@
     scale: 100%;
   }
 
-  
   button.login_btn {
     width: 130px;
     position: relative;
@@ -49,19 +52,18 @@
 
   form.form_regis {
     font-size: 1.5rem;
-    font-weight:bolder ;
-  color: rgb(223, 75, 105);
-  background-color: rgba(255, 255, 255, 0.45);
-  max-width: 450px;
-  border-radius: 20px;
-}
+    font-weight: bolder;
+    color: rgb(223, 75, 105);
+    background-color: rgba(255, 255, 255, 0.45);
+    max-width: 450px;
+    border-radius: 20px;
+  }
 
-.formlabel {
-    
+  .formlabel {
     font-size: 1.85rem;
-}
+  }
 
-.create_account {
+  .create_account {
     width: 230px;
     background-color: rgb(0, 55, 255);
     font-size: 1.5rem;
@@ -70,24 +72,23 @@
     color: antiquewhite;
   }
 
-  .arcade_text  {
+  .arcade_text {
     font-size: 0rem;
   }
 }
 
+div.footer {
+  top: 3px;
+}
 
-  div.footer {
-   top: 3px;
-  }
-  
 /*------------- Desktop -------------------*/
 
 @media (min-width: 1600px) {
-  * {
+  /*    * {
     font-size: 1.0rem;
   }
+*/
 
-  
   div.carrot_btn {
     position: relative;
     bottom: 50px;
@@ -99,7 +100,6 @@
     scale: 100%;
   }
 
-  
   button.login_btn {
     width: 130px;
     position: relative;
@@ -112,15 +112,11 @@
     bottom: 20px;
   }
 
-  
-
-div.fuzzy_glass {
+  div.fuzzy_glass {
     font-size: 1.2rem;
     width: 330px;
     height: 315px;
   }
-  
-
 }
 
 /* ------------------Font and text settings------------------ */
@@ -144,10 +140,8 @@ textarea {
 
 /* ------------------Global settings------------------ */
 
-
-
 .descroller {
-    overflow-y: hidden;/* 
+  overflow-y: hidden; /* 
     overflow-x: hidden; */
 }
 
@@ -268,12 +262,12 @@ p.enter-text {
 }
 
 table {
-    width: 10%;
+  width: 10%;
 }
 
-th,
-td {width: 10%;
-  font-size: 1.1em;
+th,td {
+  width: 10%;
+  font-size: 1em;
 }
 
 th {
@@ -294,7 +288,6 @@ th {
 /* ---------------Login Page settings------------------ */
 
 .login_page {
-    
   overflow-y: hidden;
 }
 
@@ -327,7 +320,7 @@ input:focus {
 .purple_glow_grntext {
   color: rgb(237, 241, 0);
   background-color: rgba(0, 0, 0, 0.212);
-  box-shadow: 1px 1px 4px  rgb(0, 255, 68);;
+  box-shadow: 1px 1px 4px rgb(0, 255, 68);
   border: none;
 }
 
@@ -351,12 +344,10 @@ input:focus {
 
 /* ---------------Registration Page settings------------------ */
 
-
 .placeholder {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
 }
-
 
 .bgnd_img-registration {
   background-image: url("./images/page_bkgnds/registration.jpg");
@@ -369,7 +360,7 @@ input:focus {
 }
 
 .form_regis {
-    font-weight:bolder ;
+  font-weight: bolder;
   color: rgb(223, 75, 105);
   background-color: rgba(255, 255, 255, 0.45);
   max-width: 450px;
@@ -377,13 +368,13 @@ input:focus {
 }
 
 .create_account {
-    width: 230px;
-    background-color: rgb(0, 55, 255);
-    font-size: 1.5rem;
-    border: 0px none white;
-    border-radius: 30px;
-    color: antiquewhite;
-  }
+  width: 230px;
+  background-color: rgb(0, 55, 255);
+  font-size: 1.5rem;
+  border: 0px none white;
+  border-radius: 30px;
+  color: antiquewhite;
+}
 
 /* ---------------Forum page settings------------------ */
 
@@ -416,9 +407,9 @@ input.input {
   max-height: 250px;
 }
 
-h1.title_text  {
-    font-size: 3.0rem;
-  }
+h1.title_text {
+  font-size: 3rem;
+}
 
 /* ---------------Profile Page settings------------------ */
 
@@ -459,18 +450,16 @@ img.profpic {
 /* ----------------- modal styling ---------------------- */
 
 .game_titles {
-    
-    font-family: "Permanent Marker", cursive;
-    font-size: 50px;
-    color: rgb(88, 255, 104);
-  }
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+  color: rgb(88, 255, 104);
+}
 
 .game_subtitles {
-    
-    font-family: "Permanent Marker", cursive;
-    font-size: 25px;
-    color: rgb(88, 255, 104);
-  }
+  font-family: "Permanent Marker", cursive;
+  font-size: 25px;
+  color: rgb(88, 255, 104);
+}
 
 .modalBackground {
   position: fixed;
@@ -491,10 +480,9 @@ img.profpic {
   margin: auto;
   top: 15%;
   width: 650px;
-  
+
   height: 700px;
   padding: 20px;
-
 }
 
 .rpsContainer {
@@ -505,23 +493,21 @@ img.profpic {
   margin: auto;
   top: 35%;
   width: 650px;
-  
+
   height: 330px;
   padding: 20px;
-
 }
 
 .c4-Container {
-    position: relative;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: #0d2858f4;
-    margin: auto;/* 
+  position: relative;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #0d2858f4;
+  margin: auto; /* 
     top: 15%; */
-    width: 750px;    
-    height: 950px;
-    padding: 20px;
-  
+  width: 750px;
+  height: 950px;
+  padding: 20px;
 }
 
 body.breakout {
