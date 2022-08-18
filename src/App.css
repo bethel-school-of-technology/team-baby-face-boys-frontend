@@ -462,11 +462,11 @@ img.profpic {
 
 .modalContainer {
   position: relative;
-  
   border: 1px solid black;
   border-radius: 20px;
   background-color: #0d2858f4;
-  margin: 10% auto;
+  margin: auto;
+  top: 15%;
   width: 650px;
   
   height: 700px;
@@ -476,12 +476,17 @@ img.profpic {
 
 
 .c4-Container {
-  border: 1px solid black;
-  background-color: #f4f4f4f4;
-  margin: 20% auto;
-  width: 70%;
-  height: 70%;
-  padding: 20px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #0d2858f4;
+    margin: auto;
+    top: 15%;
+    width: 650px;
+    
+    height: 900px;
+    padding: 20px;
+  
 }
 
 body.breakout {
