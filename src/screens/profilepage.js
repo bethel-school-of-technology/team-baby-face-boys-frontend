@@ -28,9 +28,9 @@ const Profilepage = () => {
         console.log(response.data.Posts)
       })
 
-      // axios.get("http://localhost:3000/profile/:jwt").then((response) => {
-      //     setPost.JSON.stringify(response.data);
-      //   });
+      axios.get("http://localhost:3000/profile/:jwt").then((response) => {
+          setPost.JSON.stringify(response.data);
+        });
     }
 
     fetch();
