@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Blog() {
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
 
-  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
+  const [newPostTitle, setNewPostTitle] = useState("");
+  const [newPostBody, setNewPostBody] = useState("");
 
   const [postList, setPostList] = useState([]);
 
   let token = JSON.parse(localStorage.getItem("token"))
 
+
+
+  useEffect(() => {
+
+    getPosts();
+
+
+  }, [])
+
+
   
   const addPost = () => {
-    axios.post("http://localhost:3000/forum/:jwt/" + token, {
-      postTitle: setPostTitle,
-      postBody: setPostBody,
+    axios.post("http://localhost:3000/forum/" + token, {
+      postTitle: postTitle,
+      postBody: postBody,
     }).then(() => {
       setPostList([...postList, {
         postTitle: postTitle,
@@ -33,23 +43,20 @@ function Blog() {
   // };
 
   const getPosts = () => {
-    axios.get ("http://localhost:3000/forum/" + token, {
-      postTitle:setPostTitle,
-      postBody: setPostBody,
-    }).then((response) => {
-      setPostList([...postList, response]);
+    axios.get ("http://localhost:3000/forum/" + token).then((response) => {
+      setPostList(response.data.postList);
     });
   };
 
   const updatePostTitle = (id) => {
-    axios.put("http://localhost:3000/forum/:id", {
-      postTitle: newTitle,
+    axios.put("http://localhost:3000/forum/" + token, {
+      postTitle: newPostTitle,
       id: id,
     }).then(() => {
       setPostList(
         postList.map((val) => {
           return val.id == id
-            ? { id: val.id, postTitle: newTitle, postBody: val.postBody }
+            ? { id: val.id, postTitle: newPostTitle, postBody: val.postBody }
             : val;
         })
       );
@@ -57,14 +64,14 @@ function Blog() {
   };
 
   const updatePostBody = (id) => {
-    axios.put("http://localhost:3000/:id", {
-      postTitle: newBody,
+    axios.put("http://localhost:3000/forum/" + token, {
+      postBody: newPostBody,
       id: id,
     }).then(() => {
       setPostList(
         postList.map((val) => {
           return val.id == id
-            ? { id: val.id, postTitle: newBody, postBody: val.postBody }
+            ? { id: val.id, postTitle: val.postTitle, postBody: newPostBody }
             : val;
         })
       );
@@ -72,7 +79,7 @@ function Blog() {
   };
 
   const deletePost = (id) => {
-    axios.delete(`http://localhost:3000/forum/${id}`).then((response) => {
+    axios.delete(`http://localhost:3000/forum/${token}/${id}`).then(() => {
       setPostList(
         postList.filter((val) => {
           return val.id != id;
@@ -113,20 +120,21 @@ function Blog() {
         <h4>Forum Posts:</h4>
         <div className="row forumBlog_plate p-5 my-3">
           <div>
-            <button onClick={getPosts}></button>
+            <button onClick={getPosts}>Get All Posts</button>
             {postList.map((val, key) => {
+              console.log(val);
               return (
                 <div>
                   <div>
-                    <strong>{val.user.postTitle}</strong>
-                    <strong> {val.user.postBody}</strong>
+                    <h3>{val.postTitle}</h3>
+                    <p>{val.postBody}</p>
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="New Title"
                       onChange={(event) => {
-                        setNewTitle(event.target.value);
+                        setNewPostTitle(event.target.value);
                       }}
                     />
                     <button
@@ -140,7 +148,7 @@ function Blog() {
                       type="text"
                       placeholder="New Body"
                       onChange={(event) => {
-                        setNewBody(event.target.value);
+                        setNewPostBody(event.target.value);
                       }}
                     />
                     <button
