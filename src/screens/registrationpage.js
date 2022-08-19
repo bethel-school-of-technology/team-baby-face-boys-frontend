@@ -64,17 +64,17 @@ const Registrationpage = () => {
             <form className="form_regis mx-auto p-3" onSubmit={handleSubmit}>
             <img className=" placeholder img-fluid rounded  my-3 mx-auto" src={ require('../../src/images/placeholder.png') } />
             {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
-            <label> Full Name: </label><br></br>
+            <label className='formlabel'> Full Name: </label><br></br>
             <input className='mb-2'  onChange={handleChange} name="fullName" /><br></br>
-            <label>Gamer ID: </label><br></br>
+            <label className='formlabel'>Gamer ID: </label><br></br>
             <input className='mb-2'  onChange={handleChange} name="gamerID" /><br></br>
-            <label>Date of Birth: </label><br></br>
+            <label className='formlabel'>Date of Birth: </label><br></br>
             <input className='mb-2'  onChange={handleChange} name="DOB" /><br></br>
-            <label>Email: </label><br></br>
+            <label className='formlabel'>Email: </label><br></br>
             <input className='mb-2'  onChange={handleChange} name="email" /><br></br>
             {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
             {/* <input type="password" {...register("password")} /><br></br> */}
-            <label className='mb-2'>Password: </label><br></br>
+            <label className='mb-2 formlabel'>Password: </label><br></br>
             <input onChange={handleChange} name="password" /><br></br>
 
             {/* <Link to='/profile'><input type={"submit"} /></Link> */}

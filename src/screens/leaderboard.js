@@ -12,7 +12,7 @@ const Leaderboard = () => {
       </div>
       <div className="row">
         <div className="col-sm  p-3 text-center">
-         <h1 className="top-rabbits">Top Rabbits</h1>
+         <h1 className=" mt-2 mb-4 rabbit-title text-center">Top Rabbits</h1>
         </div>
       </div>
       <div className="container px-0 leaderboard">

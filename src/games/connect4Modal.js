@@ -137,9 +137,9 @@ function Connect4Modal({ closeConnect4 }) {
         <div className="modalBackground">
             <div className="c4-Container">
                 <button className='btn-danger rounded breakout mt-0 float-right' onClick={() => closeConnect4(false)}>X</button>
-                <div className='text-center'>
-                    <h1>Connect 4</h1>
-                <h3> The Current Player Is: Player <span id="current-player">1</span></h3>
+                <div className='text-center  mt-4 mb-4 game_titles'>
+                    Connect 4
+                <h3 className="game_subtitles"> The Current Player Is: Player <span id="current-player">1</span></h3>
                 <h3 id="resultc4"></h3>
                 </div>
                 <div className="gridc4">
@@ -193,6 +193,9 @@ function Connect4Modal({ closeConnect4 }) {
                     <div class="taken"></div>
                     <div class="taken"></div>
                 </div>
+                <div className="game_subtitles my-2 text-center">2 Player Game.  The first one to get 4 in a row wins! Player 1 = Red || Player 2 = Black
+
+</div>
             </div>
         </div>
     );
