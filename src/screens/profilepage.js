@@ -113,13 +113,13 @@ const Profilepage = () => {
 
   return (
     <div className="container bg-primary d-flex flex-column">
-      <div className="row">
+            <div className="row">
         <div className="col p-3 text-center">
           <Navbar />
         </div>
       </div>
 
-      <div className="row mt-3">
+      <div className="row px-5 mt-3">
         <div
           className="col-sm  
  mx-auto"
@@ -134,8 +134,8 @@ const Profilepage = () => {
             />
           </div>
         </div>
-        <div className="col-sm ">
-          <div className="high-scores_profpage mx-auto  p-4">
+        <div className="col ">
+          <div className="high-scores_profpage mx-auto p-4">
             <h3>High Scores Placeholder</h3>
           </div>
         </div>
@@ -143,22 +143,22 @@ const Profilepage = () => {
       <div className="row p-4">
         <div className="col-sm  my-auto ">
           <div>
-            <div className="Post ">
+            <div className="post_area py-4 px-3 ">
 
 
-              <div>Recent Posts:</div><br></br>
+              <div><h4>Recent Posts:</h4> </div><br></br>
                 <div>
                   {/* {generatePosts()} */}
                   {user.postTitle}<br></br>
                   {user.postBody}
                 </div><br></br>
               <form>
-                <label className="mr-3">Post Title:</label>
+                <label className="mr-3 prof_label">Post Title:</label>
                 <input className="my-3 input" type="text" value={postTitle} onChange={(e) => setPostTitle(e.target.value)} /><br></br>
 
-                <label className="mr-3">Post Body:</label>
-                <textarea value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
-                <button className="mt-3" onClick={handleSubmit}>
+                <label className="my-3 prof_label">Post Body:</label>
+                <textarea className="my-2" value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
+                <button className="mt-4 mr-5" onClick={handleSubmit}>
                   Create Post
                 </button>
                 <button>Edit Post</button>
