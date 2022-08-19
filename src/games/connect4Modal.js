@@ -193,6 +193,9 @@ function Connect4Modal({ closeConnect4 }) {
                     <div class="taken"></div>
                     <div class="taken"></div>
                 </div>
+                <div className="game_subtitles my-2 text-center">2 Player Game.  The first one to get 4 in a row wins! Player 1 = Red || Player 2 = Black
+
+</div>
             </div>
         </div>
     );

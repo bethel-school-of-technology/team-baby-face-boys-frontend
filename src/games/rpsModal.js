@@ -70,9 +70,9 @@ function RPSModal({ closeRPS }) {
         >
           X
         </button>
-        <div className=" mt-4 mb-4 game_titles">
+        <div className=" mt-4 mb-4 game_titles text-center">
           Rock | Paper | Scissors
-          <h2 className="game_subtitles">
+          <h2 className="game_subtitles mt-3">
             Computer Choice: <span id="computer-choice"></span>
           </h2>
           <h2 className="game_subtitles">
@@ -89,10 +89,13 @@ function RPSModal({ closeRPS }) {
           <button className="btn-success mr-3  rounded " id="Paper">
             Paper
           </button>
-          <button className="btn-success mr-3  rounded " id="Scissors">
+          <button className="btn-success mr-3  my-2  rounded " id="Scissors">
             Scissors
           </button>
+          
         </div>
+        <div className="game_subtitles my-2 text-center">Make your choice!
+</div>
       </div>
     </div>
   );

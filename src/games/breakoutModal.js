@@ -203,7 +203,7 @@ function BreakoutModal({ closeBreakout }) {
         </button>
         <div className="text-center">
           <div className=" mb-3 game_titles">
-            Breakout
+          Breakout
             <div id="scorebreak">0</div>
           </div>
           
@@ -211,8 +211,12 @@ function BreakoutModal({ closeBreakout }) {
           <button className="btn-success rounded mt-5" id="launcher">
             Launch Ball
           </button>
-        </div>
+        </div><br></br>
+        <div className="game_subtitles text-center">Use the Left & Right Arrow Keys to move the paddle.  Clear out the Blue Bricks to Win!
+</div>
+        
       </div>
+      
     </div>
   );
 }
