@@ -46,17 +46,11 @@ const Forum = () => {
               return (
                 <div>
                   <div>
-                    <h3>{val.gamerID}</h3>
+                    <h5>{val.gamerID}</h5>
                   </div>
                 </div>
               );
             })}
-            {/* <ul>
-              <li>Username</li>
-              <li>Username</li>
-              <li>Username</li>
-              <li>Username</li>
-            </ul> */}
           </div>
         </div>
       </div>

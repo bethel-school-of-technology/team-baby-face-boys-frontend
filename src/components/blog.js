@@ -9,6 +9,7 @@ function Blog() {
   const [newPostBody, setNewPostBody] = useState("");
 
   const [postList, setPostList] = useState([]);
+  const [gamerID, setGamerID] = useState([]);
 
   let token = JSON.parse(localStorage.getItem("token"))
 
@@ -18,11 +19,13 @@ function Blog() {
 
     getPosts();
 
+    getGamerID();
+
 
   }, [])
 
 
-  
+
   const addPost = () => {
     axios.post("http://localhost:3000/forum/" + token, {
       postTitle: postTitle,
@@ -36,42 +39,59 @@ function Blog() {
     });
   };
 
-  // const getPosts = () => {
-  //   axios.get("http://localhost:3000/forum/" + token).then((response) => {
-  //     setPostList.JSON.stringify(response.data);
-  //   });
-  // };
+
+  const getGamerID = () => {
+    axios.get("http://localhost:3000/forum/" + token).then((response) => {
+      setGamerID(response.data.gamerID);
+    });
+  };
 
   const getPosts = () => {
-    axios.get ("http://localhost:3000/forum/" + token).then((response) => {
+    axios.get("http://localhost:3000/forum/" + token).then((response) => {
       setPostList(response.data.postList);
     });
   };
 
-  const updatePostTitle = (id) => {
+  // const updatePostTitle = (id) => {
+  //   axios.put("http://localhost:3000/forum/" + token, {
+  //     postTitle: newPostTitle,
+  //     id: id,
+  //   }).then(() => {
+  //     setPostList(
+  //       postList.map((val) => {
+  //         return val.id == id
+  //           ? { id: val.id, postTitle: newPostTitle, postBody: val.postBody }
+  //           : val;
+  //       })
+  //     );
+  //   });
+  // };
+
+  // const updatePostBody = (id) => {
+  //   axios.put("http://localhost:3000/forum/" + token, {
+  //     postBody: newPostBody,
+  //     id: id,
+  //   }).then(() => {
+  //     setPostList(
+  //       postList.map((val) => {
+  //         return val.id == id
+  //           ? { id: val.id, postTitle: val.postTitle, postBody: newPostBody }
+  //           : val;
+  //       })
+  //     );
+  //   });
+  // };
+
+  const updatePost = (id) => {
     axios.put("http://localhost:3000/forum/" + token, {
       postTitle: newPostTitle,
-      id: id,
-    }).then(() => {
-      setPostList(
-        postList.map((val) => {
-          return val.id == id
-            ? { id: val.id, postTitle: newPostTitle, postBody: val.postBody }
-            : val;
-        })
-      );
-    });
-  };
-
-  const updatePostBody = (id) => {
-    axios.put("http://localhost:3000/forum/" + token, {
       postBody: newPostBody,
       id: id,
     }).then(() => {
       setPostList(
         postList.map((val) => {
           return val.id == id
-            ? { id: val.id, postTitle: val.postTitle, postBody: newPostBody }
+            ? { id: val.id, postTitle: newPostTitle, postBody: newPostBody }
             : val;
         })
       );
@@ -113,51 +133,63 @@ function Blog() {
             <br></br>
 
             <button className="mt-3" onClick={addPost}>
-              Submit Post
+              Add a New Post
             </button>
           </div>
         </div>
         <h4>Forum Posts:</h4>
         <div className="row forumBlog_plate p-5 my-3">
           <div>
-            <button onClick={getPosts}>Get All Posts</button>
+            {/* <button onClick={getPosts}>Get All Posts</button> */}
             {postList.map((val, key) => {
               console.log(val);
               return (
                 <div>
                   <div>
-                    <h3>{val.postTitle}</h3>
-                    <p>{val.postBody}</p>
+                    <h5>{val.gamerID}</h5>
+                    <h4>{val.postTitle}</h4>
+                    <h5>{val.postBody}</h5>
                   </div>
                   <div>
                     <input
                       type="text"
-                      placeholder="New Title"
                       onChange={(event) => {
                         setNewPostTitle(event.target.value);
                       }}
-                    />
-                    <button
+                    /><br></br>
+                    <input
+                      type="text"
+                      onChange={(event) => {
+                        setNewPostBody(event.target.value);
+                      }}
+                    /><br></br>
+                    <br></br>
+                    <button onClick={() => {
+                      updatePost(val.id);
+                    }}
+                    >
+                      Update
+                    </button>
+                    {/* <button
                       onClick={() => {
                         updatePostTitle(val.id);
                       }}
                     >
                       Update
-                    </button>
-                    <input
+                    </button> */}
+                    {/* <input
                       type="text"
-                      placeholder="New Body"
                       onChange={(event) => {
                         setNewPostBody(event.target.value);
                       }}
-                    />
-                    <button
+                    /> */}
+                    {/* <button
                       onClick={() => {
                         updatePostBody(val.id);
                       }}
                     >
                       Update
-                    </button>
+                    </button> */}
                     <button
                       onClick={() => {
                         deletePost(val.id);

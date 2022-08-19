@@ -51,50 +51,6 @@ const Profilepage = () => {
     }).then(() => {
       console.log('new post added')
     })
-
-
-    // axios.post("http://localhost:3000/forum", {
-    //     postTitle: setPostTitle,
-    //     postBody: setPostBody,
-    // }).then(() => {
-    //     setPost([...post, {
-    //         postTitle: postTitle,
-    //         postBody: postBody,
-    //     },
-    //     ]);
-    // });
-
-    // axios.put("http://localhost:3000/profile/:id", {
-    //     postTitle: newTitle,
-    //     id: id,
-    // }).then(() => {
-    //     setPost(
-    //         postList.map((val) => {
-    //             return val.id == id
-    //                 ? { id: val.id, postTitle: newTitle, postBody: val.postBody }
-    //                 : val;
-    //         })
-    //     );
-    // });
-    // axios.put("http://localhost:3000/:id", {
-    //     postTitle: newBody,
-    //     id: id,
-    // }).then(() => {
-    //     setPost(
-    //         postList.map((val) => {
-    //             return val.id == id
-    //                 ? { id: val.id, postTitle: newBody, postBody: val.postBody }
-    //                 : val;
-    //         })
-    //     );
-    // });
-    // axios.delete(`http://localhost:3000/profile/${id}`).then((response) => {
-    //     setPost(
-    //         postList.filter((val) => {
-    //             return val.id != id;
-    //         })
-    //     );
-    // });
   };
 
 
@@ -125,7 +81,7 @@ const Profilepage = () => {
  mx-auto"
         >
           <div>
-            <h1>Welcome, {user.gamerID}!</h1>
+            <h3>Welcome, {user.gamerID}!</h3>
           </div>
           <div>
             <img
@@ -136,7 +92,7 @@ const Profilepage = () => {
         </div>
         <div className="col-sm ">
           <div className="high-scores_profpage mx-auto  p-4">
-            <h3>High Scores Placeholder</h3>
+            <h3>Your High Scores:</h3>
           </div>
         </div>
       </div>
@@ -146,11 +102,13 @@ const Profilepage = () => {
             <div className="Post ">
 
 
-              <div>Recent Posts:</div><br></br>
+              <div>
+                <h3>Your Most Recent Post:</h3>
+                </div><br></br>
                 <div>
                   {/* {generatePosts()} */}
-                  {user.postTitle}<br></br>
-                  {user.postBody}
+                  <h5>{user.postTitle}</h5><br></br>
+                  <h5>{user.postBody}</h5>
                 </div><br></br>
               <form>
                 <label className="mr-3">Post Title:</label>
@@ -159,9 +117,8 @@ const Profilepage = () => {
                 <label className="mr-3">Post Body:</label>
                 <textarea value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
                 <button className="mt-3" onClick={handleSubmit}>
-                  Create Post
+                  Add New Post:
                 </button>
-                <button>Edit Post</button>
               </form>
             </div>
           </div>

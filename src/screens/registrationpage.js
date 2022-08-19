@@ -41,7 +41,7 @@ const Registrationpage = () => {
 
             localStorage.setItem("userId", JSON.stringify(response.data.id))
             // TODO store response in localstorage
-            navigate("/profile")
+            navigate("/account")
         })
 
         // axios.get("http://localhost:3000/User/" + user.gamerID ).then(response => {
