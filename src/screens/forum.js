@@ -2,9 +2,30 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Blog from "../components/blog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 
 const Forum = () => {
+
+
+  let token = JSON.parse(localStorage.getItem("token"))
+
+  const [userList, setUserList] = useState([]);
+
+  useEffect(() => {
+
+    getUserList();
+
+
+  }, [])
+
+  const getUserList = () => {
+    axios.get("http://localhost:3000/forum/" + token).then((response) => {
+      setUserList(response.data.userList);
+    });
+  };
+
   return (<div>
     <div className="container bg-primary d-flex flex-column">
       <div className="row">
@@ -20,12 +41,22 @@ const Forum = () => {
           </div>
           <div className="col-md-3  m-3 d-none d-sm-none d-md-block  p-4 text-dark forumBlog ">
             <h4>Rabbits:</h4>
-            <ul>
+            {userList.map((val, key) => {
+              console.log(val);
+              return (
+                <div>
+                  <div>
+                    <h3>{val.gamerID}</h3>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <ul>
               <li>Username</li>
               <li>Username</li>
               <li>Username</li>
               <li>Username</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
@@ -35,7 +66,7 @@ const Forum = () => {
         </div>
       </div>
     </div>
-    </div>
+  </div>
   );
 };
 
