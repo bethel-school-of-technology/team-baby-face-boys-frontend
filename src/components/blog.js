@@ -21,7 +21,7 @@ function Blog() {
 
     getPosts();
 
-    getGamerID();
+    // getGamerID();
 
 
   }, [])
@@ -42,14 +42,15 @@ function Blog() {
   };
 
 
-  const getGamerID = () => {
-    axios.get("http://localhost:3000/forum/" + token).then((response) => {
-      setGamerID(response.data.gamerID);
-    });
-  };
+  // const getGamerID = () => {
+  //   axios.get("http://localhost:3000/forum/" + token).then((response) => {
+  //     setGamerID(response.data.gamerID);
+  //   });
+  // };
 
   const getPosts = () => {
     axios.get("http://localhost:3000/forum/" + token).then((response) => {
+      console.log('response postlost', setPostList(response.data.postList))
       setPostList(response.data.postList);
     });
   };
@@ -116,7 +117,7 @@ function Blog() {
         <div className="row mb-4">
           <div>
 
-          
+
             <label className="mr-3">Post Title:</label>
             <input
               className="my-3 input"
@@ -134,7 +135,7 @@ function Blog() {
                 setPostBody(event.target.value);
               }}
             />
-          
+
 
             <br></br>
 
@@ -152,61 +153,61 @@ function Blog() {
               return (
                 <div>
                   <div>
-                    <h5>{val.gamerID}</h5><br></br>
+                    <h5>Posted By: {val.User.gamerID}</h5>
                     <h4>{val.postTitle}</h4>
                     <h5>{val.postBody}</h5><br></br>
                   </div>
 
-                  { user.id == val.UserId && 
-                  <div>
-                    <input
-                      type="text"
-                      onChange={(event) => {
-                        setNewPostTitle(event.target.value);
+                  {user.id == val.UserId &&
+                    <div>
+                      <input
+                        type="text"
+                        onChange={(event) => {
+                          setNewPostTitle(event.target.value);
+                        }}
+                      /><br></br>
+                      <input
+                        type="text"
+                        onChange={(event) => {
+                          setNewPostBody(event.target.value);
+                        }}
+                      /><br></br>
+                      <br></br>
+                      <button onClick={() => {
+                        updatePost(val.id);
                       }}
-                    /><br></br>
-                    <input
-                      type="text"
-                      onChange={(event) => {
-                        setNewPostBody(event.target.value);
-                      }}
-                    /><br></br>
-                    <br></br>
-                    <button onClick={() => {
-                      updatePost(val.id);
-                    }}
-                    >
-                      Update
-                    </button>
-                    {/* <button
+                      >
+                        Update
+                      </button>
+                      {/* <button
                       onClick={() => {
                         updatePostTitle(val.id);
                       }}
                     >
                       Update
                     </button> */}
-                    {/* <input
+                      {/* <input
                       type="text"
                       onChange={(event) => {
                         setNewPostBody(event.target.value);
                       }}
                     /> */}
-                    {/* <button
+                      {/* <button
                       onClick={() => {
                         updatePostBody(val.id);
                       }}
                     >
                       Update
                     </button> */}
-                    <button
-                      onClick={() => {
-                        deletePost(val.id);
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </div>
-            }
+                      <button
+                        onClick={() => {
+                          deletePost(val.id);
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  }
 
 
                 </div>
