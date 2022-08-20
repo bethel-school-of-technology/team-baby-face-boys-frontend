@@ -10,50 +10,81 @@ function Blog() {
 
   const [postList, setPostList] = useState([]);
   const [gamerID, setGamerID] = useState([]);
+  
 
   let token = JSON.parse(localStorage.getItem("token"))
 
   let user = JSON.parse(localStorage.getItem("user"))
 
 
+  function fetchPostList() {
+
+      axios.get("http://localhost:3000/forum/" + token).then((response) => {
+        setGamerID(response.data.postList)
+
+        console.log('response postList', setPostList(response.data.postList))
+        setPostList(response.data.postList);
+      });
+    
+  }
 
   useEffect(() => {
 
-    getPosts();
 
-    // getGamerID();
+    // getPosts();
+
+    fetchPostList();
+
+    getGamerID();
 
 
   }, [])
 
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    const postList = { postTitle, postBody };
 
+    console.log(postList)
 
-  const addPost = () => {
-    axios.post("http://localhost:3000/forum/" + token, {
-      postTitle: postTitle,
-      postBody: postBody,
+    fetch("http://localhost:3000/forum/" + token, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(postList)
     }).then(() => {
-      setPostList([...postList, {
-        postTitle: postTitle,
-        postBody: postBody,
-      },
-      ]);
-    });
+      setPostBody('');
+      setPostTitle('');
+      console.log('new post added');
+      fetchPostList();
+    })
   };
 
-
-  // const getGamerID = () => {
-  //   axios.get("http://localhost:3000/forum/" + token).then((response) => {
-  //     setGamerID(response.data.gamerID);
+  // const addPost = () => {
+  //   axios.post("http://localhost:3000/forum/" + token, {
+  //     postTitle: postTitle,
+  //     postBody: postBody,
+  //   }).then(() => {
+  //     setPostList([...postList, {
+  //       postTitle: postTitle,
+  //       postBody: postBody,
+  //     },
+  //     ]);
   //   });
   // };
 
-  const getPosts = () => {
+
+  const getGamerID = () => {
     axios.get("http://localhost:3000/forum/" + token).then((response) => {
-      console.log('response postlost', setPostList(response.data.postList))
-      setPostList(response.data.postList);
+      setGamerID(response.data.gamerID);
     });
   };
+
+  // const getPosts = () => {
+  //   axios.get("http://localhost:3000/forum/" + token).then((response) => {
+  //     console.log('response postlost', setPostList(response.data.postList))
+  //     setPostList(response.data.postList);
+  //   });
+  // };
 
   // const updatePostTitle = (id) => {
   //   axios.put("http://localhost:3000/forum/" + token, {
@@ -93,7 +124,7 @@ function Blog() {
     }).then(() => {
       setPostList(
         postList.map((val) => {
-          return val.id == id
+          return val.id == id 
             ? { id: val.id, postTitle: newPostTitle, postBody: newPostBody }
             : val;
         })
@@ -121,7 +152,7 @@ function Blog() {
             <label className="mr-3">Post Title:</label>
             <input
               className="my-3 input"
-              type="text"
+              type="text" value={postTitle}
               onChange={(event) => {
                 setPostTitle(event.target.value);
               }}
@@ -130,7 +161,7 @@ function Blog() {
             <label className="mr-2">Post Body:</label>
             <input
               className="my-3 input"
-              type="text"
+              type="text" value={postBody}
               onChange={(event) => {
                 setPostBody(event.target.value);
               }}
@@ -139,7 +170,7 @@ function Blog() {
 
             <br></br>
 
-            <button className="mt-3" onClick={addPost}>
+            <button className="mt-3" onClick={handleSubmit}>
               Add a New Post
             </button>
           </div>
@@ -147,8 +178,7 @@ function Blog() {
         <h4>Forum Posts:</h4>
         <div className="row forumBlog_plate p-5 my-3">
           <div>
-            {/* <button onClick={getPosts}>Get All Posts</button> */}
-            {postList.map((val, key) => {
+            {postList.map((val) => {
               console.log(val);
               return (
                 <div>
@@ -158,16 +188,16 @@ function Blog() {
                     <h5>{val.postBody}</h5><br></br>
                   </div>
 
-                  {user.id == val.UserId &&
+                  {user.id == val.UserId && 
                     <div>
                       <input
-                        type="text"
+                        type="text" 
                         onChange={(event) => {
                           setNewPostTitle(event.target.value);
                         }}
                       /><br></br>
                       <input
-                        type="text"
+                        type="text" 
                         onChange={(event) => {
                           setNewPostBody(event.target.value);
                         }}
@@ -179,26 +209,6 @@ function Blog() {
                       >
                         Update
                       </button>
-                      {/* <button
-                      onClick={() => {
-                        updatePostTitle(val.id);
-                      }}
-                    >
-                      Update
-                    </button> */}
-                      {/* <input
-                      type="text"
-                      onChange={(event) => {
-                        setNewPostBody(event.target.value);
-                      }}
-                    /> */}
-                      {/* <button
-                      onClick={() => {
-                        updatePostBody(val.id);
-                      }}
-                    >
-                      Update
-                    </button> */}
                       <button
                         onClick={() => {
                           deletePost(val.id);
@@ -208,8 +218,6 @@ function Blog() {
                       </button>
                     </div>
                   }
-
-
                 </div>
               );
             })}
