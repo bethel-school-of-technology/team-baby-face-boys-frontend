@@ -13,27 +13,25 @@ const Profilepage = () => {
 
   let token = JSON.parse(localStorage.getItem("token"))
 
+  function fetchProfile() {
+    console.log(token)
+
+    axios.get("http://localhost:3000/profile/" + token).then(response => {
+
+
+      setUserProfile(response.data)
+
+      console.log(response.data.Posts)
+    })
+
+    // axios.get("http://localhost:3000/profile/:jwt").then((response) => {
+    //     setPost.JSON.stringify(response.data);
+    //   });
+  }
 
   useEffect(() => {
 
-
-    function fetch() {
-      console.log(token)
-
-      axios.get("http://localhost:3000/profile/" + token).then(response => {
-
-
-        setUserProfile(response.data)
-
-        console.log(response.data.Posts)
-      })
-
-      axios.get("http://localhost:3000/profile/:jwt").then((response) => {
-          setPost.JSON.stringify(response.data);
-        });
-    }
-
-    fetch();
+    fetchProfile();
 
   }, [])
 
@@ -49,52 +47,11 @@ const Profilepage = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(Posts)
     }).then(() => {
-      console.log('new post added')
+      setPostBody('');
+      setPostTitle('');
+      console.log('new post added');
+      fetchProfile();
     })
-
-
-    // axios.post("http://localhost:3000/forum", {
-    //     postTitle: setPostTitle,
-    //     postBody: setPostBody,
-    // }).then(() => {
-    //     setPost([...post, {
-    //         postTitle: postTitle,
-    //         postBody: postBody,
-    //     },
-    //     ]);
-    // });
-
-    // axios.put("http://localhost:3000/profile/:id", {
-    //     postTitle: newTitle,
-    //     id: id,
-    // }).then(() => {
-    //     setPost(
-    //         postList.map((val) => {
-    //             return val.id == id
-    //                 ? { id: val.id, postTitle: newTitle, postBody: val.postBody }
-    //                 : val;
-    //         })
-    //     );
-    // });
-    // axios.put("http://localhost:3000/:id", {
-    //     postTitle: newBody,
-    //     id: id,
-    // }).then(() => {
-    //     setPost(
-    //         postList.map((val) => {
-    //             return val.id == id
-    //                 ? { id: val.id, postTitle: newBody, postBody: val.postBody }
-    //                 : val;
-    //         })
-    //     );
-    // });
-    // axios.delete(`http://localhost:3000/profile/${id}`).then((response) => {
-    //     setPost(
-    //         postList.filter((val) => {
-    //             return val.id != id;
-    //         })
-    //     );
-    // });
   };
 
 
@@ -125,7 +82,7 @@ const Profilepage = () => {
  mx-auto"
         >
           <div>
-            <h1>Welcome, {user.gamerID}!</h1>
+            <h3>Welcome, {user.gamerID}!</h3>
           </div>
           <div>
             <img
@@ -134,9 +91,9 @@ const Profilepage = () => {
             />
           </div>
         </div>
-        <div className="col ">
-          <div className="high-scores_profpage mx-auto p-4">
-            <h3>High Scores Placeholder</h3>
+        <div className="col-sm ">
+          <div className="high-scores_profpage mx-auto  p-4">
+            <h3>Your High Scores:</h3>
           </div>
         </div>
       </div>
@@ -144,24 +101,22 @@ const Profilepage = () => {
         <div className="col-sm  my-auto ">
           <div>
             <div className="post_area py-4 px-3 ">
-
-
-              <div><h4>Recent Posts:</h4> </div><br></br>
+              <div>
+                <h3>Your Most Recent Post:</h3>
+                </div><br></br>
                 <div>
                   {/* {generatePosts()} */}
-                  {user.postTitle}<br></br>
-                  {user.postBody}
+                  <h5>{user.postTitle}</h5><br></br>
+                  <h5>{user.postBody}</h5>
                 </div><br></br>
               <form>
                 <label className="mr-3 prof_label">Post Title:</label>
                 <input className="my-3 input" type="text" value={postTitle} onChange={(e) => setPostTitle(e.target.value)} /><br></br>
-
-                <label className="my-3 prof_label">Post Body:</label>
-                <textarea className="my-2" value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
-                <button className="mt-4 mr-5" onClick={handleSubmit}>
-                  Create Post
+                <label className="mr-3">Post Body:</label>
+                <textarea value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
+                <button className="mt-3" onClick={handleSubmit}>
+                  Add New Post:
                 </button>
-                <button>Edit Post</button>
               </form>
             </div>
           </div>
