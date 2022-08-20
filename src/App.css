@@ -6,9 +6,9 @@
     font-size: 0.73rem;
   }
 
- /*  a.nav-link {
+  a.nav-link {
     font-size: 2rem;
-  } */
+  }
 
   p {
     font-size: 0.5rem;
@@ -433,8 +433,12 @@ h1.title_text {
 .high-scores_profpage {
   background-color: rgba(0, 213, 255, 0.344);
   border-radius: 25px;
-  height: 35vh;
+  height: 34vh;
   width: 85%;
+}
+
+.prof_label {
+  font-size: 1.35rem;
 }
 
 .prof_backing {
@@ -444,6 +448,13 @@ h1.title_text {
 img.profpic {
   border-radius: 40%;
   height: 200px;
+}
+
+.post_area {/* 
+  background-color: rgba(0, 168, 201, 0.322); */
+  border-radius: 25px;
+  
+  
 }
 
 .jokeholder {
