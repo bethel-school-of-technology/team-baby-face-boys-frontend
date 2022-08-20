@@ -6,6 +6,12 @@ const Navbar = () => {
 
   let navigate = useNavigate();
 
+  const logout = () => {
+    axios.get("http://localhost:3000/logout").then(response => {
+    localStorage.clear()
+    console.log('User signed out')
+    })
+  }
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -38,7 +44,7 @@ const Navbar = () => {
           <a class="nav-link" href="/leaderboard">Leaderboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/account">Logout</a>
+          <a onClick={logout} class="nav-link" href="/account">Logout</a>
         </li>
       </ul>
     </div>
