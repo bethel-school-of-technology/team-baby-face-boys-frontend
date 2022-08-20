@@ -7,10 +7,7 @@ const Navbar = () => {
   let navigate = useNavigate();
 
   const logout = () => {
-    axios.get("http://localhost:3000/logout").then(response => {
     localStorage.clear()
-    console.log('User signed out')
-    })
   }
 
   // const handleSubmit = (e) => {
