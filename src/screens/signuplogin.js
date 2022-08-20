@@ -85,7 +85,7 @@ const Signuplogin = () => {
             {/* {errors.email && <span >*Email* is mandatory </span>}<br></br> */}
             {/* <input type="password" {...register("password")} /><br></br> */}
 
-            <input className="purple_glow_grntext my-2" onChange={handleChange} name="password" />
+            <input className="purple_glow_grntext my-2" type="password" onChange={handleChange} name="password" />
             <br></br>
 
             {/* <Link to='/profile'><input type={"submit"} /></Link> */}
@@ -99,7 +99,9 @@ const Signuplogin = () => {
           <Link to="/account">
             <div className="mx-auto d-block"></div>
           </Link>
-        </div></div>
+        </div><br></br>
+            <Link to="/">Exit the Rabbit Hole ...</Link>
+        </div>
       </div>
       <div className="row footer">
         <div className="col text-center p-3">
