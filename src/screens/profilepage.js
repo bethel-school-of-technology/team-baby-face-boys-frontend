@@ -76,13 +76,13 @@ const Profilepage = () => {
         </div>
       </div>
 
-      <div className="row px-5 mt-3">
+      <div className="row px-5 mt-3 text-center">
         <div
           className="col-sm  
  mx-auto"
         >
           <div>
-            <h3>Welcome, {user.gamerID}!</h3>
+            <h4 className="titles">Welcome, {user.gamerID}!</h4>
           </div>
           <div>
             <img
@@ -90,19 +90,19 @@ const Profilepage = () => {
               src={require("../../src/images/page_bkgnds/jan.jpg")}
             />
           </div>
-        </div>
+        </div>{/* ---- Look down there, Between these col is missing the "-sm" annotation */}
         <div className="col-sm ">
           <div className="high-scores_profpage mx-auto  p-4">
-            <h3>Your High Scores:</h3>
+            <h4 className="titles">Your High Scores:</h4>
           </div>
         </div>
       </div>
       <div className="row p-4">
-        <div className="col-sm  my-auto ">
+        <div className="col-sm my-auto ">
           <div>
             <div className="post_area py-4 px-3 ">
               <div>
-                <h3>Your Most Recent Post:</h3>
+                <h4 className="titles  text-md-left text-center">Your Most Recent Post:</h4>
                 </div><br></br>
                 <div>
                   {/* {generatePosts()} */}
@@ -110,12 +110,12 @@ const Profilepage = () => {
                   <h5>{user.postBody}</h5>
                 </div><br></br>
               <form>
-                <label className="mr-3 prof_label">Post Title:</label>
-                <input className="my-3 input" type="text" value={postTitle} onChange={(e) => setPostTitle(e.target.value)} /><br></br>
-                <label className="mr-3">Post Body:</label>
-                <textarea value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
-                <button className="mt-3" onClick={handleSubmit}>
-                  Add New Post:
+                <label className="font-weight-bold mr-3 prof_label">Post Title:</label>
+                <input className="mt-1 mb-3 input" type="text" value={postTitle} onChange={(e) => setPostTitle(e.target.value)} /><br></br>
+                <label className="mt-2 font-weight-bold prof_label">Post Body:</label>
+                <textarea className="mt-1 mb-3 " value={postBody} onChange={(e) => setPostBody(e.target.value)} /><br></br>
+                <button className="forum_button-g btn-success rounded mt-4 mr-5" onClick={handleSubmit}>
+                  Add Post
                 </button>
               </form>
             </div>

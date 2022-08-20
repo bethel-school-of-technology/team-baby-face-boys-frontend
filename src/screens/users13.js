@@ -31,22 +31,23 @@ const Teen = () => {
           <h4>*Games not Optomized for Mobile Experience*</h4>
         </div>
       </div>
-      <div className="container text-secondary  bgnd_img-13up align-items-center">
+      <div className="container text-secondary  bgnd_img-13up align-items-center">{/* 
+        <div className="modal_blur_box "></div> */}
         <div className="row">
           <div className="col img_grid">
             <img
               onClick={() => {
                 setOpenBreakout(true);
               }}
-              className="game_thumb img-fluid rounded float-left mt-5 mx-3"
+              className="game_thumb rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/breakout.jpg")}
-            />
+              />
             {openBreakout && <BreakoutModal closeBreakout={setOpenBreakout} />}
             <img
               onClick={() => {
                 setOpenConnect4(true);
               }}
-              className="game_thumb img-fluid rounded float-left mt-5 mx-3"
+              className="game_thumb rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/cnnct4.jpg")}
             />
             {openConnect4 && <Connect4Modal closeConnect4={setOpenConnect4} />}
@@ -61,7 +62,7 @@ const Teen = () => {
               onClick={() => {
                 setOpenRPS(true);
               }}
-              className="game_thumb img-fluid rounded float-left mt-5 mx-3"
+              className="game_thumb rounded float-left mt-5 mx-3"
               src={require("../images/game_thumbs/rockpaperscissors.jpg")}
             />
             {openRPS && <RPSModal closeRPS={setOpenRPS} />}
