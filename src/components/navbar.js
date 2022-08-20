@@ -6,6 +6,9 @@ const Navbar = () => {
 
   let navigate = useNavigate();
 
+  const logout = () => {
+    localStorage.clear()
+  }
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -38,7 +41,7 @@ const Navbar = () => {
           <a class="nav-link" href="/leaderboard">Leaderboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/account">Logout</a>
+          <a onClick={logout} class="nav-link" href="/account">Logout</a>
         </li>
       </ul>
     </div>
