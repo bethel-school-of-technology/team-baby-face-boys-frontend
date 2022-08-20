@@ -13,27 +13,25 @@ const Profilepage = () => {
 
   let token = JSON.parse(localStorage.getItem("token"))
 
+  function fetchProfile() {
+    console.log(token)
+
+    axios.get("http://localhost:3000/profile/" + token).then(response => {
+
+
+      setUserProfile(response.data)
+
+      console.log(response.data.Posts)
+    })
+
+    // axios.get("http://localhost:3000/profile/:jwt").then((response) => {
+    //     setPost.JSON.stringify(response.data);
+    //   });
+  }
 
   useEffect(() => {
 
-
-    function fetch() {
-      console.log(token)
-
-      axios.get("http://localhost:3000/profile/" + token).then(response => {
-
-
-        setUserProfile(response.data)
-
-        console.log(response.data.Posts)
-      })
-
-      axios.get("http://localhost:3000/profile/:jwt").then((response) => {
-          setPost.JSON.stringify(response.data);
-        });
-    }
-
-    fetch();
+    fetchProfile();
 
   }, [])
 
@@ -49,7 +47,10 @@ const Profilepage = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(Posts)
     }).then(() => {
-      console.log('new post added')
+      setPostBody('');
+      setPostTitle('');
+      console.log('new post added');
+      fetchProfile();
     })
   };
 

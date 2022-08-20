@@ -8,6 +8,7 @@ import axios from "axios";
 
 const Forum = () => {
 
+  // let user = JSON.parse(localStorage.getItem("user"))
 
   let token = JSON.parse(localStorage.getItem("token"))
 
@@ -24,6 +25,7 @@ const Forum = () => {
     axios.get("http://localhost:3000/forum/" + token).then((response) => {
       setUserList(response.data.userList);
     });
+
   };
 
   return (<div>

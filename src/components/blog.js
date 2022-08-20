@@ -13,6 +13,8 @@ function Blog() {
 
   let token = JSON.parse(localStorage.getItem("token"))
 
+  let user = JSON.parse(localStorage.getItem("user"))
+
 
 
   useEffect(() => {
@@ -113,6 +115,8 @@ function Blog() {
       <div className="col forumBlog p-5">
         <div className="row mb-4">
           <div>
+
+          
             <label className="mr-3">Post Title:</label>
             <input
               className="my-3 input"
@@ -130,6 +134,8 @@ function Blog() {
                 setPostBody(event.target.value);
               }}
             />
+          
+
             <br></br>
 
             <button className="mt-3" onClick={addPost}>
@@ -146,10 +152,12 @@ function Blog() {
               return (
                 <div>
                   <div>
-                    <h5>{val.gamerID}</h5>
+                    <h5>{val.gamerID}</h5><br></br>
                     <h4>{val.postTitle}</h4>
-                    <h5>{val.postBody}</h5>
+                    <h5>{val.postBody}</h5><br></br>
                   </div>
+
+                  { user.id == val.UserId && 
                   <div>
                     <input
                       type="text"
@@ -198,6 +206,9 @@ function Blog() {
                       Delete
                     </button>
                   </div>
+            }
+
+
                 </div>
               );
             })}
