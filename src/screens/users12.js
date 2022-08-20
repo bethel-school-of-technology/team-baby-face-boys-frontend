@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 const Preteen = () => {
 
   return (
-    <div className="container bg-primary d-flex flex-column">
+    <div className="container descroller bg-primary d-flex flex-column">
       <div className="row">
         <div className="col-sm p-3 text-center">
           <Navbar />
@@ -24,13 +24,6 @@ const Preteen = () => {
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/memory.jpg') } />
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/rockpaperscissors.jpg') } />
           <img className="game_thumb img-fluid rounded float-left mt-5 mx-3" src={ require('../images/game_thumbs/whackamole.jpg') } />
-          
-          
-          {/* 
-          <div className="game_snap_2 rounded float-left mt-5 mx-3 "></div>
-          <div className="game_snap_3 rounded float-left mt-5 mx-3 "></div>
-          <div className="game_snap_4 rounded float-left mt-5 mx-3 "></div>
-          <div className="game_snap_5 rounded float-left mt-5 mx-3 "></div> */}
           
           </div>
         </div>

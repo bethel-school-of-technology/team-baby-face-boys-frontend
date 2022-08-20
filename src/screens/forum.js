@@ -33,12 +33,12 @@ const Forum = () => {
       <div className="row">
         <div className="col p-3 text-center">
           <Navbar />
-          <h1 className="title_text">Rabbit Water Cooler</h1>
         </div>
       </div>
       <div className="container bgnd_img-forum ">
         <div className="row">
           <div className="col md-3 col mx-auto">
+          <h1 className="title_text mt-3">Rabbit Water Cooler</h1>
             <Blog />
           </div>
           <div className="col-md-3  m-3 d-none d-sm-none d-md-block  p-4 text-dark forumBlog ">
