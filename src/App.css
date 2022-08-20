@@ -63,7 +63,7 @@
     font-family: "Permanent Marker", cursive;
     font-size: 3.65em;
     color: #d96716;
-}
+  }
   .formlabel {
     font-size: 1.85rem;
   }
@@ -77,9 +77,12 @@
     color: antiquewhite;
   }
 
-
   .arcade_text {
     font-size: 0rem;
+  }
+
+  h4.titles {
+    font-size: 1.95rem;
   }
 }
 
@@ -153,7 +156,7 @@ textarea {
 
 .main_text,
 .sub_text {
-    color: #d96716;
+  color: #d96716;
   font-family: "Permanent Marker", cursive;
   font-size: 2.5em;
 }
@@ -208,10 +211,9 @@ h4.title {
 }
 
 p.enter-text {
-    
   font-family: "Permanent Marker", cursive;
-  text-shadow:5px 5px 10px #22527a;
-    /* 
+  text-shadow: 5px 5px 10px #22527a;
+  /* 
   font-family: "DynaPuff", cursive; */
   font-size: 2.2rem;
 }
@@ -219,18 +221,9 @@ p.enter-text {
 /* ---------------Games page settings------------------ */
 
 .rabbit-title {
-    font-family: "Permanent Marker", cursive;
-    font-size: 2.5em;
-    color: #d96716;
-}
-
-.bgnd_img-12under {
-  background-image: url("./images/page_bkgnds/12underb_kgnd_blur.jpg");
-  height: 1000px;
-  overflow-x: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.5em;
+  color: #d96716;
 }
 
 .bgnd_img-13up {
@@ -242,17 +235,10 @@ p.enter-text {
   background-size: cover;
 }
 
-@keyframes blur_fadeout {
-  from {
-    filter: blur(0px);
-  }
-  to {
-    filter: blur(10px);
-  }
-}
-
 .game_thumb {
-  max-height: 250px;
+  max-height: 500px;
+  width: 300px;
+  box-shadow: 16px 16px 10px #00000087;
 }
 
 .img_grid {
@@ -282,7 +268,8 @@ table {
   width: 10%;
 }
 
-th,td {
+th,
+td {
   width: 10%;
   font-size: 1em;
 }
@@ -430,11 +417,16 @@ h1.title_text {
 
 /* ---------------Profile Page settings------------------ */
 
+.titles {
+  font-size: 1.5rem;
+}
+
 .high-scores_profpage {
   background-color: rgba(0, 213, 255, 0.344);
   border-radius: 25px;
   height: 34vh;
   width: 85%;
+  text-decoration: underline;
 }
 
 .prof_label {
@@ -450,11 +442,15 @@ img.profpic {
   height: 200px;
 }
 
-.post_area {/* 
+.post_area {
+  /* 
   background-color: rgba(0, 168, 201, 0.322); */
   border-radius: 25px;
-  
-  
+}
+
+.forum_button-g {
+  font-size: 1.2rem;
+  border-radius: 10px;
 }
 
 .jokeholder {
@@ -463,13 +459,15 @@ img.profpic {
   top: 0px;
   overflow-y: auto;
 }
-/* 
+
 .joke_button {
-    
-    position: relative;
-    top: 200px;
-    background-color: darkviolet;
-} */
+  background-color: chartreuse;
+  font-size: 1.2rem;
+  font-family: "DynaPuff", cursive;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 10px;
+}
 
 .row.height {
   height: 400px;
@@ -497,7 +495,17 @@ img.profpic {
   left: 0;
   top: 0;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0, 5);
+  background-color: #00000087;
+  animation: modalfade 0.5s 1;
+}
+
+@keyframes modalfade {
+  from {
+    background-color: #00000000;
+  }
+  to {
+    background-color: #00000087;
+  }
 }
 
 .modalContainer {
@@ -508,9 +516,15 @@ img.profpic {
   margin: auto;
   top: 15%;
   width: 650px;
-
   height: 700px;
   padding: 20px;
+}
+
+
+.modalContainer,
+.rpsContainer,
+.c4-Container {
+  box-shadow: 16px 16px 10px #00000087;
 }
 
 .rpsContainer {

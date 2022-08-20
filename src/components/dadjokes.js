@@ -15,9 +15,7 @@ function Dadjokes() {
     <div className="">
         <div className="row mb-3">
           <div className="col text-center">
-            <div class="joke_button">
-              <button onClick={generateJoke}>Get a Joke</button>
-            </div>
+              <button  className="joke_button" onClick={generateJoke}>Get Joke</button>
           </div>
         </div>
       <div className="row">
