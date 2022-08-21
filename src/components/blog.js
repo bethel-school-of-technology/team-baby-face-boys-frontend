@@ -122,13 +122,14 @@ function Blog() {
       postBody: newPostBody,
       id: id,
     }).then(() => {
-      setPostList(
-        postList.map((val) => {
-          return val.id == id 
-            ? { id: val.id, postTitle: newPostTitle, postBody: newPostBody }
-            : val;
-        })
-      );
+      // setPostList(
+      //   postList.map((val) => {
+      //     return val.id == id 
+      //       ? { id: val.id, postTitle: newPostTitle, postBody: newPostBody }
+      //       : val;
+      //   })
+      // );
+      fetchPostList();
     });
   };
 
@@ -191,13 +192,13 @@ function Blog() {
                   {user.id == val.UserId && 
                     <div>
                       <input
-                        type="text" 
+                        type="text"
                         onChange={(event) => {
                           setNewPostTitle(event.target.value);
                         }}
                       /><br></br>
                       <input
-                        type="text" 
+                        type="text"
                         onChange={(event) => {
                           setNewPostBody(event.target.value);
                         }}
