@@ -484,7 +484,7 @@ input.input {
 .high-scores_profpage {
   background-color: rgba(0, 213, 255, 0.344);
   border-radius: 25px;
-  height: 34vh;
+  height: 400px;
   width: 85%;
 }
 
@@ -493,15 +493,12 @@ h1.titles{
   text-decoration: underline;
 }
 
-h4.scores {
-  
+h4.scores {  
   text-decoration: none;
 }
 
 .scores {
-  position: relative;
-  right: 5px;
-  text-align: right;
+  text-align: center;
 }
 
 h4.underline{
