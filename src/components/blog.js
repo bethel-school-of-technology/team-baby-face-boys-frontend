@@ -149,19 +149,19 @@ function Blog() {
         <div className="row mb-4">
           <div>
 
-
-            <label className="mr-3">Post Title:</label>
+<h2 className=" bold">Share a Carrot!</h2>
+            <label className="mt-3 mr-3 bold">Title:</label>
             <input
-              className="my-3 input"
+              className="my-1 input"
               type="text" value={postTitle}
               onChange={(event) => {
                 setPostTitle(event.target.value);
               }}
             />
             <br></br>
-            <label className="mr-2">Post Body:</label>
+            <label className="mt-3 mr-2 bold">Message:</label>
             <input
-              className="my-3 input"
+              className="my-1  input"
               type="text" value={postBody}
               onChange={(event) => {
                 setPostBody(event.target.value);
@@ -171,46 +171,47 @@ function Blog() {
 
             <br></br>
 
-            <button className="mt-3" onClick={handleSubmit}>
-              Add a New Post
+            <button className="mt-3 rounded btn-success" onClick={handleSubmit}>
+              Add Message
             </button>
           </div>
         </div>
-        <h4>Forum Posts:</h4>
-        <div className="row forumBlog_plate p-5 my-3">
+        <div className=" bold row forumBlog_plate p-5 my-3">
           <div>
+            
+        <h4 className="mb-4">Bunny Blog:</h4>
             {postList.map((val) => {
               console.log(val);
               return (
                 <div>
                   <div>
-                    <h5>Posted By: {val.User.gamerID}</h5>
-                    <h4>{val.postTitle}</h4>
-                    <h5>{val.postBody}</h5><br></br>
+                    <h5 className="mt-4">Posted By: {val.User.gamerID}</h5>
+                    <h6>{val.postTitle}</h6>
+                    <p>{val.postBody}</p>
                   </div>
 
                   {user.id == val.UserId && 
                     <div>
-                      <input
-                        type="text"
+                      <input className="mb-2"
+                        type="text" placeholder="Edit Title"
                         onChange={(event) => {
                           setNewPostTitle(event.target.value);
                         }}
                       /><br></br>
                       <input
-                        type="text"
+                        type="text" placeholder="Edit Message"
                         onChange={(event) => {
                           setNewPostBody(event.target.value);
                         }}
-                      /><br></br>
+                      />
                       <br></br>
-                      <button onClick={() => {
+                      <button className="mt-2 mr-1  forum-btn-success" onClick={() => {
                         updatePost(val.id);
                       }}
                       >
                         Update
                       </button>
-                      <button
+                      <button className="mr-3  btn-warning"
                         onClick={() => {
                           deletePost(val.id);
                         }}

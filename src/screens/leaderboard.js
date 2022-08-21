@@ -11,8 +11,8 @@ const Leaderboard = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-sm  p-3 text-center">
-         <h1 className=" mt-2 mb-4 rabbit-title text-center">Top Rabbits</h1>
+        <div className="col-sm p-3 text-center">
+         <h1 className="mb-2 top-rabbits leader-title text-center">Top Rabbits</h1>
         </div>
       </div>
       <div className="container px-0 leaderboard">
@@ -21,7 +21,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Breakout</th>
+              <th className="gamename">Breakout</th>
               <th></th>
             </tr>
             <tr>
@@ -51,7 +51,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Connect 4</th>
+              <th className="gamename">Connect 4</th>
               <th></th>
             </tr>
             <tr>
@@ -80,7 +80,7 @@ const Leaderboard = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Rock, Paper, Scissors</th>
+              <th className="gamename">Rock, Paper, Scissors</th>
               <th></th>
             </tr>
             <tr>

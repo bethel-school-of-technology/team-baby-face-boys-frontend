@@ -26,9 +26,9 @@ const Teen = () => {
       {/* the game name Should be in a mostly transparent colored stripe across the top?*/}
       {/* <div className="game_name"> </div>*/}
       <div className="row">
-        <div className="col-sm p-3 text-center">
-          <h1 className="rabbit-title">Welcome to the Rabbit Hole Arcade!</h1>
-          <h4>*Games not Optomized for Mobile Experience*</h4>
+        <div className="col-sm pb-3 text-center">
+          <h1 className="mt-0 mb-4 rabbit-title">Welcome to the Rabbit Hole Arcade!</h1>
+          <h6 className="d-block mb-3 d-sm-none">*Games not Optomized for Mobile Experience*</h6>
         </div>
       </div>
       <div className="container text-secondary  bgnd_img-13up align-items-center">{/* 
