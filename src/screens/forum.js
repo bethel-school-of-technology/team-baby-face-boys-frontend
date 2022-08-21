@@ -29,7 +29,7 @@ const Forum = () => {
   };
 
   return (<div>
-    <div className="container bg-primary d-flex flex-column">
+    <div className="container descroller bg-primary d-flex flex-column">
       <div className="row">
         <div className="col pt-3 text-center">
           <Navbar />
@@ -41,8 +41,8 @@ const Forum = () => {
           <div className="col md-3 col mx-auto">
             <Blog />
           </div>
-          <div className="col-md-3  m-3 d-none d-sm-none d-md-block  p-4 text-dark forumBlog ">
-            <h4>Rabbits:</h4>
+          <div className="col-md-3  m-3 d-none d-sm-none d-md-block  p-4 text-dark rabbits_list ">
+            <h4 className="text-center underline">Rabbits</h4>
             {userList.map((val, key) => {
               console.log(val);
               return (
@@ -56,11 +56,9 @@ const Forum = () => {
           </div>
         </div>
       </div>
-      <div className="row footer">
-        <div className="col text-center p-3">
+        <div className="col text-center mb-5 forum_footer">
           <Footer />
         </div>
-      </div>
     </div>
   </div>
   );

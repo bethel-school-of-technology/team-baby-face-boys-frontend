@@ -90,6 +90,13 @@
   h4.titles {
     font-size: 1.95rem;
   }
+
+
+  div.forum_footer {
+    position: relative;
+    top: 3px;
+  }
+
 }
 
 div.footer {
@@ -181,8 +188,7 @@ textarea {
 }
 
 div[class*="container"] {
-  /* 
-    background-color: hsl(208, 86%, 13%); */
+  
   color: rgb(255, 255, 255);
   height: 100vh;
   border: 10px inset rgb(30, 30, 67);
@@ -263,12 +269,19 @@ p.enter-text {
   justify-content: center;
 }
 
+
 /* ---------------Leaderboard settings------------------ */
 
 .top-rabbits {
   font-family: "Permanent Marker", cursive;
   position: relative;
-  bottom: 5px;
+  bottom: 10px;
+  color: #d96716;
+}
+
+
+.leader-title {
+  font-size: 3.5rem;
 }
 
 .leaderboard {
@@ -284,15 +297,27 @@ table {
   width: 10%;
 }
 
+th.gamename {
+
+  font-size: 1.5em;
+  line-height: 25px;
+  color: #49e7ff;
+  text-decoration:none;
+}
+
+td {
+  line-height: 15px;
+}
+
 th,
 td {
   width: 10%;
   font-size: 1em;
 }
-
 th {
   background-color: #004c93ae;
   color: rgb(255, 230, 0);
+  text-decoration: underline;
 }
 
 .table {
@@ -401,8 +426,26 @@ input:focus {
 .forumBlog {
   background-color: rgba(245, 245, 245, 0.652);
   border-radius: 25px;
-  height: 70vh;
+  max-height: 1000px;
+  overflow-y: auto;
   width: 100%;
+}
+
+.rabbits_list {
+  background-color: rgba(245, 245, 245, 0.652);
+  border-radius: 25px;
+  max-height: 500px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+h1.title_text {
+  font-size: 3rem;
+}
+
+label.bold, h2.bold {
+  font-family: 'DynaPuff', cursive;
+  font-weight: 900;
 }
 
 .forumBlog_plate {
@@ -427,8 +470,9 @@ input.input {
   max-height: 250px;
 }
 
-h1.title_text {
-  font-size: 3rem;
+.forum_footer {
+  position: relative;
+  top: 10px;
 }
 
 /* ---------------Profile Page settings------------------ */
@@ -444,6 +488,10 @@ h1.title_text {
   width: 85%;
   text-decoration: underline;
 }
+
+h4.underline{
+text-decoration: underline;
+font-weight: 900;}
 
 .prof_label {
   font-size: 1.35rem;
@@ -488,6 +536,17 @@ img.profpic {
 
 .row.height {
   height: 400px;
+}
+
+.btn-warning, .forum-btn-success {
+  border: none;
+  border-radius: 50px;
+  width: 80px;
+}
+
+.forum-btn-success {
+  color:rgb(255, 255, 255) ;
+  background-color: #5cb700;
 }
 
 /* ----------------- modal styling ---------------------- */
