@@ -93,7 +93,11 @@ const Profilepage = () => {
         </div>{/* ---- Look down there, Between these col is missing the "-sm" annotation */}
         <div className="col-sm ">
           <div className="high-scores_profpage mx-auto  p-4">
-            <h4 className="titles">Your High Scores:</h4>
+            <h1 className="titles mb-3">Your High Scores:</h1>
+            <div className="scores"><br></br>
+            <h4 className="">Breakout: 9,900</h4><br></br>
+            <h4>Connect 4: 600</h4><br></br>
+            <h4>Rock, Paper, Scissors: 850</h4></div>
           </div>
         </div>
       </div>
