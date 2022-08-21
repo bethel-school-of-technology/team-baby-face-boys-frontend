@@ -486,7 +486,22 @@ input.input {
   border-radius: 25px;
   height: 34vh;
   width: 85%;
+}
+
+h1.titles{
+  font-size: 2rem;
   text-decoration: underline;
+}
+
+h4.scores {
+  
+  text-decoration: none;
+}
+
+.scores {
+  position: relative;
+  right: 5px;
+  text-align: right;
 }
 
 h4.underline{
