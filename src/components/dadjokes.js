@@ -20,7 +20,7 @@ function Dadjokes() {
         </div>
       <div className="row">
         <div className="col text-center">
-          <div className="joke_text">
+          <div>
             <p className=" jokeholder">{joke}</p>
           </div>
         </div>

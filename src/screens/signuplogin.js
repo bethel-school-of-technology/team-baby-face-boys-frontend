@@ -78,7 +78,7 @@ const Signuplogin = () => {
         <div className="fuzzy_glass mx-auto">
 
           <form className="Login pt-4" onSubmit={handleSubmit}>
-          <h4 className="title p-3">Please, Login</h4>
+          <h4 className="title p-3">Welcome, Join The Fun!</h4>
             {/* <input type="gamerID" {...register("gamerID", { required: true })} /> */}
             <input className="purple_glow_grntext my-2" onChange={handleChange} name="gamerID" />
             <br></br>
@@ -98,9 +98,9 @@ const Signuplogin = () => {
           </form>
           <Link to="/account">
             <div className="mx-auto d-block"></div>
-          </Link>
-        </div><br></br>
-            <Link to="/">Exit the Rabbit Hole ...</Link>
+          </Link><br></br>
+            <Link className="exit_the_rabbit text-info " to="/">Back Up the Rabbit Hole!</Link>
+        </div>
         </div>
       </div>
       <div className="row footer">
